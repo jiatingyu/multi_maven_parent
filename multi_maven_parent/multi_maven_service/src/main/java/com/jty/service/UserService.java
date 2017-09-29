@@ -4,7 +4,7 @@ package com.jty.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.jty.dao.UserDao;
+import com.jty.manage.dao.UserDao;
 
 
 @Service

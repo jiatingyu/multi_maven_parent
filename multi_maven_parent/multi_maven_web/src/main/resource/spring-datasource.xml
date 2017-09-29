@@ -51,11 +51,11 @@
 		<property name="dataSource" ref="dataSource" />
 		<!--configLocation属性指定mybatis的核心配置文件-->
 		<property name="mapperLocations" value="classpath*:mybatis/*.xml"></property>
-		<property name="typeAliasesPackage" value="com.jty.entity" />  
+		<property name="typeAliasesPackage" value="com.jty.manage.entity" />  
 	</bean>
 	<!-- dao层的扫描 -->
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com.jty.dao" />
+		<property name="basePackage" value="com.jty.manage.dao" />
 	</bean>
 	
     
@@ -65,7 +65,7 @@
 		<property name="dataSource" ref="dataSource" />
 	</bean>
 	<!--  拦截器方式配置事务 -->
-	<tx:advice id="mysqlTransactionAdvice" transaction-manager="mysqlTransactionManager">
+	<!-- <tx:advice id="mysqlTransactionAdvice" transaction-manager="mysqlTransactionManager">
 		<tx:attributes>
 			<tx:method name="save*" propagation="REQUIRED" />
 			<tx:method name="insert*" propagation="REQUIRED" />
@@ -80,6 +80,17 @@
 		<aop:advisor pointcut-ref="mysqlTransactionPointcut" advice-ref="mysqlTransactionAdvice" />
 	</aop:config>
 	<tx:annotation-driven transaction-manager="mysqlTransactionManager" proxy-target-class="true" />
+	 -->
+	<bean id="syslogUtils" class="com.jty.util.SyslogUtils">
+		<property name="commonService" ref="commonService"></property>
+	</bean>
+	
+	<aop:config proxy-target-class="false">
+		<aop:pointcut expression="execution(* com.jty.service..*.*(..))" id="syslogpoint"  />
+		<aop:aspect ref="syslogUtils" id="testAspect"  >
+			<aop:after method="insertDb" pointcut-ref="syslogpoint"  />
+		</aop:aspect>
+	</aop:config>
 	
 	
 </beans>

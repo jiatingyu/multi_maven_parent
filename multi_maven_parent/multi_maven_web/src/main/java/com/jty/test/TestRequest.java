@@ -1,6 +1,8 @@
 package com.jty.test;
 
 
+import static org.junit.Assert.*;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -14,14 +16,29 @@ import javax.servlet.ServletInputStream;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.junit.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.jty.manage.entity.User;
+import com.jty.service.manage.PermissionService;
 import com.jty.util.XmlUtils;
 
 @Controller
 public class TestRequest {
+	@Test
+	public void testName() throws Exception {
+//		ApplicationContext context=new ClassPathXmlApplicationContext(new String[]{"classpath:/spring-datasource.xml","classpath:/spring-mvc.xml"});
+//		PermissionService bean = (PermissionService) context.getBean("PermissionService");
+//		bean.insertUser(new User());
+//		
+	}
+	
+	
+	
 	@ResponseBody
 	@RequestMapping("/request")
 	public String testName(HttpServletRequest request,HttpServletResponse response)  {
