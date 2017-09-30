@@ -81,16 +81,7 @@
 	</aop:config>
 	<tx:annotation-driven transaction-manager="mysqlTransactionManager" proxy-target-class="true" />
 	 -->
-	<bean id="syslogUtils" class="com.jty.util.SyslogUtils">
-		<property name="commonService" ref="commonService"></property>
-	</bean>
 	
-	<aop:config proxy-target-class="false">
-		<aop:pointcut expression="execution(* com.jty.service..*.*(..))" id="syslogpoint"  />
-		<aop:aspect ref="syslogUtils" id="testAspect"  >
-			<aop:after method="insertDb" pointcut-ref="syslogpoint"  />
-		</aop:aspect>
-	</aop:config>
 	
 	
 </beans>
