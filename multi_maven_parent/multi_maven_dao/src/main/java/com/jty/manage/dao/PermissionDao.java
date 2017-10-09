@@ -1,7 +1,10 @@
 package com.jty.manage.dao;
 
 import java.util.List;
+import java.util.Map;
 
+import org.apache.ibatis.annotations.Delete;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import com.jty.manage.entity.Permission;
@@ -68,8 +71,6 @@ public interface PermissionDao {
     @SuppressWarnings("unchecked")  
     List<Role> fineAllRole();  
     
-    
-    
     // 插入用户  
     void insertUser(User user);  
   
@@ -87,5 +88,10 @@ public interface PermissionDao {
     @SuppressWarnings("unchecked")  
     List<User> findAllUser();  
       
-    User login(String username, String password);  
+    User login(String username, String password);
+    //生成权限数据
+	void generatePrivilege(@Param("priviMap")Map<String, String> priviMap);
+	
+	@Delete("delete from privilege")
+	void deletePrivilege();  
 }

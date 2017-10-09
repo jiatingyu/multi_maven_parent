@@ -1,10 +1,13 @@
 package com.jty.controller.manage;
 
 
+import static org.junit.Assert.*;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -16,6 +19,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.jty.common.Resource;
 import com.jty.manage.entity.User;
 import com.jty.service.manage.PermissionService;
+import com.jty.util.ClassScaner;
 import com.jty.util.RequestUtils;
 
 @Controller
@@ -24,7 +28,14 @@ public class PermissionController {
 	@Autowired
 	PermissionService permissionService;
 	
-
+	@ResponseBody
+	@Resource(ResourceName="权限url生成")
+	@RequestMapping("/generatePrivilege")
+	public String generatePrivilege() {
+		Map<String, String> map = ClassScaner.getAllResourceInterface();
+		permissionService.generatePrivilege(map);
+		return "1";
+	}
 	
 	@ResponseBody
 	@RequestMapping("/login")

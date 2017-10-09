@@ -1,6 +1,7 @@
 package com.jty.service.manage;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.stereotype.Service;
 
@@ -13,4 +14,6 @@ public interface PermissionService {
 	void insertUser(User user);
 
 	void deleteUser(String id);
+
+	void generatePrivilege(Map<String, String> map);
 }

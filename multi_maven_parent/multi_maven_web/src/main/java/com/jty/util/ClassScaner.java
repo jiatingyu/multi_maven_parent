@@ -1,4 +1,4 @@
-package aplication.test;
+package com.jty.util;
 import org.apache.commons.lang.ArrayUtils;
 import org.springframework.beans.factory.BeanDefinitionStoreException;
 import org.springframework.context.ResourceLoaderAware;
@@ -18,9 +18,11 @@ import org.springframework.util.SystemPropertyUtils;
 import java.io.IOException;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 public class ClassScaner implements ResourceLoaderAware {
@@ -125,7 +127,12 @@ public class ClassScaner implements ResourceLoaderAware {
 
     public static void main(String[] args) {
 //        Set<Class> scan = ClassScaner.scan("com.jty.controller.manage", Class.forName("com.jty.util.Resource").getClass());
-        Set<Class> scan = ClassScaner.scan("com.jty.controller.manage",null);
+    	getAllResourceInterface();
+    }
+    
+    public static Map<String,String> getAllResourceInterface() {
+    	Map<String, String> map=new HashMap<String,String>();
+    	Set<Class> scan = ClassScaner.scan("com.jty.controller.manage",null);
         for (Class clazz : scan) {
         	System.out.println(clazz.getName());
         	try {
@@ -136,19 +143,20 @@ public class ClassScaner implements ResourceLoaderAware {
 						Class<? extends Annotation> annotationType = annotation.annotationType();
 						System.err.println(annotationType);
 						if(com.jty.common.Resource.class == annotationType){
-		                      
 		                    // 打印出java.lang.annotation.Annotation，注解类其实都实现了Annotation这个接口  
 		                    System.err.println(annotationType);
 		                    com.jty.common.Resource resource = method.getAnnotation(com.jty.common.Resource.class);
 		                    String resourceName = resource.ResourceName();
 		                    System.out.println(clazz.getName()+":"+method.getName()+"()--->"+resourceName);  
+		                    map.put(clazz.getName()+":"+method.getName(),resourceName);
 						}
 					}
 				}
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-        	
         }
+        return map;
     }
+    
 }

@@ -1,6 +1,7 @@
 package com.jty.service.manage;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -23,6 +24,13 @@ public class PermissionServiceImpl implements PermissionService {
 	
 	public void deleteUser(String id) {
 		dao.deleteUser(id);
+	}
+	public void generatePrivilege(Map<String, String> map) {
+		// TODO Auto-generated method stub
+		//重新生成权限数据的时候先全部删除
+		dao.deletePrivilege();
+		//重新生成全部数据
+		dao.generatePrivilege(map);
 	}
 	
 }

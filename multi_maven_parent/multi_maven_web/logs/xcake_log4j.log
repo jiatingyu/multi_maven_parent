@@ -16181,4 +16181,1350 @@ Mapped URL path [/static/**] onto handler 'org.springframework.web.servlet.resou
 Mapped URL path [/easyui/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
  [INFO ][2017/09/30 11:02:44730][org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:507)]
 FrameworkServlet 'springMvc': initialization completed in 380 ms
+ [INFO ][2017/10/09 09:33:54132][org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:307)]
+Root WebApplicationContext: initialization started
+ [INFO ][2017/10/09 09:33:54369][org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:573)]
+Refreshing Root WebApplicationContext: startup date [Mon Oct 09 09:33:54 GMT+08:00 2017]; root of context hierarchy
+ [INFO ][2017/10/09 09:33:54556][org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)]
+Loading XML bean definitions from file [D:\yhcode\multi_maven_parent\multi_maven_web\target\classes\applicationContext.xml]
+ [INFO ][2017/10/09 09:33:54638][org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)]
+Loading XML bean definitions from file [D:\yhcode\multi_maven_parent\multi_maven_web\target\classes\spring-datasource.xml]
+ [INFO ][2017/10/09 09:33:54769][org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)]
+Loading XML bean definitions from file [D:\yhcode\multi_maven_parent\multi_maven_web\target\classes\spring-datasource.xml]
+ [INFO ][2017/10/09 09:33:54795][org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)]
+Loading XML bean definitions from file [D:\yhcode\multi_maven_parent\multi_maven_web\target\classes\spring-mvc.xml]
+ [WARN ][2017/10/09 09:33:55236][org.mybatis.spring.mapper.ClassPathMapperScanner.checkCandidate(ClassPathMapperScanner.java:223)]
+Skipping MapperFactoryBean with name 'commonDao' and 'com.jty.manage.dao.CommonDao' mapperInterface. Bean already defined with the same name!
+ [WARN ][2017/10/09 09:33:55237][org.mybatis.spring.mapper.ClassPathMapperScanner.checkCandidate(ClassPathMapperScanner.java:223)]
+Skipping MapperFactoryBean with name 'permissionDao' and 'com.jty.manage.dao.PermissionDao' mapperInterface. Bean already defined with the same name!
+ [WARN ][2017/10/09 09:33:55237][org.mybatis.spring.mapper.ClassPathMapperScanner.checkCandidate(ClassPathMapperScanner.java:223)]
+Skipping MapperFactoryBean with name 'userDao' and 'com.jty.manage.dao.UserDao' mapperInterface. Bean already defined with the same name!
+ [WARN ][2017/10/09 09:33:55237][org.mybatis.spring.mapper.ClassPathMapperScanner.doScan(ClassPathMapperScanner.java:155)]
+No MyBatis mapper was found in '[com.jty.manage.dao]' package. Please check your configuration.
+ [INFO ][2017/10/09 09:33:55247][org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)]
+Loading properties file from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/db.properties]
+ [INFO ][2017/10/09 09:33:55261][org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)]
+Loading properties file from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/db.properties]
+ [ERROR][2017/10/09 09:34:16817][com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:745)]
+init datasource error, url: jdbc:mysql://192.168.0.10:3306/test?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+ com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+Last packet sent to the server was 0 ms ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1074)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2103)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:718)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:46)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:302)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:220)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1463)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1525)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:734)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1060)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1056)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:104)
+	at org.apache.ibatis.mapping.VendorDatabaseIdProvider.getDatabaseProductName(VendorDatabaseIdProvider.java:76)
+	at org.apache.ibatis.mapping.VendorDatabaseIdProvider.getDatabaseName(VendorDatabaseIdProvider.java:61)
+	at org.apache.ibatis.mapping.VendorDatabaseIdProvider.getDatabaseId(VendorDatabaseIdProvider.java:49)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:445)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1637)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:545)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:305)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:301)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:753)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:834)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:537)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:446)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:328)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:107)
+	at org.eclipse.jetty.server.handler.ContextHandler.callContextInitialized(ContextHandler.java:800)
+	at org.eclipse.jetty.servlet.ServletContextHandler.callContextInitialized(ServletContextHandler.java:444)
+	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:791)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:294)
+	at org.eclipse.jetty.webapp.WebAppContext.startWebapp(WebAppContext.java:1349)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1342)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:741)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:505)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.server.Server.start(Server.java:387)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:354)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at MavenJettyService.start(MavenJettyService.java:69)
+	at MavenJettyService.main(MavenJettyService.java:78)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at java.net.Socket.connect(Socket.java:528)
+	at java.net.Socket.<init>(Socket.java:425)
+	at java.net.Socket.<init>(Socket.java:241)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:253)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:280)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2026)
+	... 58 more
+[ERROR][2017/10/09 09:34:16955][com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:776)]
+{dataSource-1} init error
+ com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+Last packet sent to the server was 0 ms ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1074)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2103)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:718)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:46)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:302)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:220)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1463)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1525)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:734)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1060)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1056)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:104)
+	at org.apache.ibatis.mapping.VendorDatabaseIdProvider.getDatabaseProductName(VendorDatabaseIdProvider.java:76)
+	at org.apache.ibatis.mapping.VendorDatabaseIdProvider.getDatabaseName(VendorDatabaseIdProvider.java:61)
+	at org.apache.ibatis.mapping.VendorDatabaseIdProvider.getDatabaseId(VendorDatabaseIdProvider.java:49)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:445)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1637)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:545)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:305)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:301)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:753)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:834)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:537)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:446)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:328)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:107)
+	at org.eclipse.jetty.server.handler.ContextHandler.callContextInitialized(ContextHandler.java:800)
+	at org.eclipse.jetty.servlet.ServletContextHandler.callContextInitialized(ServletContextHandler.java:444)
+	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:791)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:294)
+	at org.eclipse.jetty.webapp.WebAppContext.startWebapp(WebAppContext.java:1349)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1342)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:741)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:505)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.server.Server.start(Server.java:387)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:354)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at MavenJettyService.start(MavenJettyService.java:69)
+	at MavenJettyService.main(MavenJettyService.java:78)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at java.net.Socket.connect(Socket.java:528)
+	at java.net.Socket.<init>(Socket.java:425)
+	at java.net.Socket.<init>(Socket.java:241)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:253)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:280)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2026)
+	... 58 more
+[INFO ][2017/10/09 09:34:16957][com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:785)]
+{dataSource-1} inited
+ [ERROR][2017/10/09 09:34:16957][org.apache.ibatis.mapping.VendorDatabaseIdProvider.getDatabaseId(VendorDatabaseIdProvider.java:51)]
+Could not get a databaseId from dataSource
+ com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+Last packet sent to the server was 0 ms ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1074)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2103)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:718)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:46)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:302)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:220)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1463)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1525)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:734)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1060)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1056)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:104)
+	at org.apache.ibatis.mapping.VendorDatabaseIdProvider.getDatabaseProductName(VendorDatabaseIdProvider.java:76)
+	at org.apache.ibatis.mapping.VendorDatabaseIdProvider.getDatabaseName(VendorDatabaseIdProvider.java:61)
+	at org.apache.ibatis.mapping.VendorDatabaseIdProvider.getDatabaseId(VendorDatabaseIdProvider.java:49)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:445)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1637)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:545)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:305)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:301)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:753)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:834)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:537)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:446)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:328)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:107)
+	at org.eclipse.jetty.server.handler.ContextHandler.callContextInitialized(ContextHandler.java:800)
+	at org.eclipse.jetty.servlet.ServletContextHandler.callContextInitialized(ServletContextHandler.java:444)
+	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:791)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:294)
+	at org.eclipse.jetty.webapp.WebAppContext.startWebapp(WebAppContext.java:1349)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1342)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:741)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:505)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.server.Server.start(Server.java:387)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:354)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at MavenJettyService.start(MavenJettyService.java:69)
+	at MavenJettyService.main(MavenJettyService.java:78)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at java.net.Socket.connect(Socket.java:528)
+	at java.net.Socket.<init>(Socket.java:425)
+	at java.net.Socket.<init>(Socket.java:241)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:253)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:280)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2026)
+	... 58 more
+[INFO ][2017/10/09 09:34:17330][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/api/index]}" onto public org.springframework.web.servlet.ModelAndView com.jty.controller.MainController.index() throws java.lang.Exception
+ [INFO ][2017/10/09 09:34:17332][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/api/test.json]}" onto public java.lang.String com.jty.controller.MainController.testName() throws java.lang.Exception
+ [INFO ][2017/10/09 09:34:17338][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/login]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.login(java.lang.String,java.lang.String)
+ [INFO ][2017/10/09 09:34:17340][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/deleteUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.deleteUser(java.lang.String)
+ [INFO ][2017/10/09 09:34:17341][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/findAllUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.findAllUser(java.lang.String,java.lang.String)
+ [INFO ][2017/10/09 09:34:17342][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/addUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.addUser(com.jty.manage.entity.User)
+ [INFO ][2017/10/09 09:34:17378][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/haha]}" onto public void com.jty.controller.test.client.testName(java.lang.String) throws java.lang.Exception
+ [INFO ][2017/10/09 09:34:17382][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/request]}" onto public java.lang.String com.jty.test.TestRequest.testName(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+ [INFO ][2017/10/09 09:34:17723][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:532)]
+Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Mon Oct 09 09:33:54 GMT+08:00 2017]; root of context hierarchy
+ [INFO ][2017/10/09 09:34:17783][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:532)]
+Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Mon Oct 09 09:33:54 GMT+08:00 2017]; root of context hierarchy
+ [INFO ][2017/10/09 09:34:17847][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:341)]
+Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+ [INFO ][2017/10/09 09:34:17916][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:341)]
+Mapped URL path [/html/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+ [INFO ][2017/10/09 09:34:17919][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:341)]
+Mapped URL path [/static/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+ [INFO ][2017/10/09 09:34:17923][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:341)]
+Mapped URL path [/easyui/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
+ [INFO ][2017/10/09 09:34:1830 ][org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:347)]
+Root WebApplicationContext: initialization completed in 23787 ms
+ [INFO ][2017/10/09 09:34:18108][org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:488)]
+FrameworkServlet 'springMvc': initialization started
+ [INFO ][2017/10/09 09:34:18111][org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:573)]
+Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Mon Oct 09 09:34:18 GMT+08:00 2017]; parent: Root WebApplicationContext
+ [INFO ][2017/10/09 09:34:18112][org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)]
+Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/spring-mvc.xml]
+ [INFO ][2017/10/09 09:34:18216][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/api/index]}" onto public org.springframework.web.servlet.ModelAndView com.jty.controller.MainController.index() throws java.lang.Exception
+ [INFO ][2017/10/09 09:34:18217][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/api/test.json]}" onto public java.lang.String com.jty.controller.MainController.testName() throws java.lang.Exception
+ [INFO ][2017/10/09 09:34:18220][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/login]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.login(java.lang.String,java.lang.String)
+ [INFO ][2017/10/09 09:34:18221][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/deleteUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.deleteUser(java.lang.String)
+ [INFO ][2017/10/09 09:34:18221][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/findAllUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.findAllUser(java.lang.String,java.lang.String)
+ [INFO ][2017/10/09 09:34:18221][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/addUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.addUser(com.jty.manage.entity.User)
+ [INFO ][2017/10/09 09:34:18222][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/haha]}" onto public void com.jty.controller.test.client.testName(java.lang.String) throws java.lang.Exception
+ [INFO ][2017/10/09 09:34:18223][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/request]}" onto public java.lang.String com.jty.test.TestRequest.testName(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+ [INFO ][2017/10/09 09:34:18306][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:532)]
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Mon Oct 09 09:34:18 GMT+08:00 2017]; parent: Root WebApplicationContext
+ [INFO ][2017/10/09 09:34:18341][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:532)]
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Mon Oct 09 09:34:18 GMT+08:00 2017]; parent: Root WebApplicationContext
+ [INFO ][2017/10/09 09:34:18391][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:341)]
+Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+ [INFO ][2017/10/09 09:34:18411][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:341)]
+Mapped URL path [/html/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+ [INFO ][2017/10/09 09:34:18415][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:341)]
+Mapped URL path [/static/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+ [INFO ][2017/10/09 09:34:18419][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:341)]
+Mapped URL path [/easyui/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
+ [INFO ][2017/10/09 09:34:18459][org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:507)]
+FrameworkServlet 'springMvc': initialization completed in 350 ms
+ [ERROR][2017/10/09 09:34:37962][com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2103)]
+create connection error, url: jdbc:mysql://192.168.0.10:3306/test?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true, errorCode 0, state 08S01
+ com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+Last packet sent to the server was 0 ms ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1074)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2103)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:718)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:46)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:302)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:220)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1463)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1525)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2100)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at java.net.Socket.connect(Socket.java:528)
+	at java.net.Socket.<init>(Socket.java:425)
+	at java.net.Socket.<init>(Socket.java:241)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:253)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:280)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2026)
+	... 15 more
+[ERROR][2017/10/09 09:34:58972][com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2103)]
+create connection error, url: jdbc:mysql://192.168.0.10:3306/test?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true, errorCode 0, state 08S01
+ com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+Last packet sent to the server was 0 ms ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1074)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2103)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:718)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:46)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:302)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:220)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1463)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1525)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2100)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at java.net.Socket.connect(Socket.java:528)
+	at java.net.Socket.<init>(Socket.java:425)
+	at java.net.Socket.<init>(Socket.java:241)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:253)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:280)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2026)
+	... 15 more
+[ERROR][2017/10/09 09:35:19979][com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2103)]
+create connection error, url: jdbc:mysql://192.168.0.10:3306/test?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true, errorCode 0, state 08S01
+ com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+Last packet sent to the server was 0 ms ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1074)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2103)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:718)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:46)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:302)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:220)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1463)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1525)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2100)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at java.net.Socket.connect(Socket.java:528)
+	at java.net.Socket.<init>(Socket.java:425)
+	at java.net.Socket.<init>(Socket.java:241)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:253)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:280)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2026)
+	... 15 more
+[ERROR][2017/10/09 09:35:40987][com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2103)]
+create connection error, url: jdbc:mysql://192.168.0.10:3306/test?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true, errorCode 0, state 08S01
+ com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+Last packet sent to the server was 0 ms ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1074)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2103)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:718)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:46)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:302)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:220)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1463)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1525)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2100)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at java.net.Socket.connect(Socket.java:528)
+	at java.net.Socket.<init>(Socket.java:425)
+	at java.net.Socket.<init>(Socket.java:241)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:253)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:280)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2026)
+	... 15 more
+[ERROR][2017/10/09 09:36:024  ][com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2103)]
+create connection error, url: jdbc:mysql://192.168.0.10:3306/test?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true, errorCode 0, state 08S01
+ com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+Last packet sent to the server was 0 ms ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1074)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2103)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:718)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:46)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:302)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:220)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1463)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1525)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2100)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at java.net.Socket.connect(Socket.java:528)
+	at java.net.Socket.<init>(Socket.java:425)
+	at java.net.Socket.<init>(Socket.java:241)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:253)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:280)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2026)
+	... 15 more
+[ERROR][2017/10/09 09:36:2311 ][com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2103)]
+create connection error, url: jdbc:mysql://192.168.0.10:3306/test?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true, errorCode 0, state 08S01
+ com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+Last packet sent to the server was 0 ms ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1074)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2103)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:718)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:46)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:302)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:220)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1463)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1525)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2100)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at java.net.Socket.connect(Socket.java:528)
+	at java.net.Socket.<init>(Socket.java:425)
+	at java.net.Socket.<init>(Socket.java:241)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:253)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:280)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2026)
+	... 15 more
+[ERROR][2017/10/09 09:36:4413 ][com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2103)]
+create connection error, url: jdbc:mysql://192.168.0.10:3306/test?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true, errorCode 0, state 08S01
+ com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+Last packet sent to the server was 0 ms ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1074)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2103)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:718)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:46)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:302)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:220)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1463)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1525)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2100)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at java.net.Socket.connect(Socket.java:528)
+	at java.net.Socket.<init>(Socket.java:425)
+	at java.net.Socket.<init>(Socket.java:241)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:253)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:280)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2026)
+	... 15 more
+[ERROR][2017/10/09 09:37:0516 ][com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2103)]
+create connection error, url: jdbc:mysql://192.168.0.10:3306/test?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true, errorCode 0, state 08S01
+ com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+Last packet sent to the server was 0 ms ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1074)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2103)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:718)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:46)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:302)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:220)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1463)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1525)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2100)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at java.net.Socket.connect(Socket.java:528)
+	at java.net.Socket.<init>(Socket.java:425)
+	at java.net.Socket.<init>(Socket.java:241)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:253)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:280)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2026)
+	... 15 more
+[ERROR][2017/10/09 09:37:2617 ][com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2103)]
+create connection error, url: jdbc:mysql://192.168.0.10:3306/test?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true, errorCode 0, state 08S01
+ com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+Last packet sent to the server was 0 ms ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1074)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2103)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:718)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:46)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:302)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:220)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1463)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1525)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2100)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at java.net.Socket.connect(Socket.java:528)
+	at java.net.Socket.<init>(Socket.java:425)
+	at java.net.Socket.<init>(Socket.java:241)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:253)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:280)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2026)
+	... 15 more
+[ERROR][2017/10/09 09:37:4722 ][com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2103)]
+create connection error, url: jdbc:mysql://192.168.0.10:3306/test?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true, errorCode 0, state 08S01
+ com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+Last packet sent to the server was 0 ms ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1074)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2103)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:718)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:46)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:302)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:220)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1463)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1525)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2100)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at java.net.Socket.connect(Socket.java:528)
+	at java.net.Socket.<init>(Socket.java:425)
+	at java.net.Socket.<init>(Socket.java:241)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:253)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:280)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2026)
+	... 15 more
+[INFO ][2017/10/09 09:43:2937 ][org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:307)]
+Root WebApplicationContext: initialization started
+ [INFO ][2017/10/09 09:43:29149][org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:573)]
+Refreshing Root WebApplicationContext: startup date [Mon Oct 09 09:43:29 GMT+08:00 2017]; root of context hierarchy
+ [INFO ][2017/10/09 09:43:29338][org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)]
+Loading XML bean definitions from file [D:\yhcode\multi_maven_parent\multi_maven_web\target\classes\applicationContext.xml]
+ [INFO ][2017/10/09 09:43:29425][org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)]
+Loading XML bean definitions from file [D:\yhcode\multi_maven_parent\multi_maven_web\target\classes\spring-datasource.xml]
+ [INFO ][2017/10/09 09:43:29561][org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)]
+Loading XML bean definitions from file [D:\yhcode\multi_maven_parent\multi_maven_web\target\classes\spring-datasource.xml]
+ [INFO ][2017/10/09 09:43:29587][org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)]
+Loading XML bean definitions from file [D:\yhcode\multi_maven_parent\multi_maven_web\target\classes\spring-mvc.xml]
+ [WARN ][2017/10/09 09:43:3040 ][org.mybatis.spring.mapper.ClassPathMapperScanner.checkCandidate(ClassPathMapperScanner.java:223)]
+Skipping MapperFactoryBean with name 'commonDao' and 'com.jty.manage.dao.CommonDao' mapperInterface. Bean already defined with the same name!
+ [WARN ][2017/10/09 09:43:3040 ][org.mybatis.spring.mapper.ClassPathMapperScanner.checkCandidate(ClassPathMapperScanner.java:223)]
+Skipping MapperFactoryBean with name 'permissionDao' and 'com.jty.manage.dao.PermissionDao' mapperInterface. Bean already defined with the same name!
+ [WARN ][2017/10/09 09:43:3041 ][org.mybatis.spring.mapper.ClassPathMapperScanner.checkCandidate(ClassPathMapperScanner.java:223)]
+Skipping MapperFactoryBean with name 'userDao' and 'com.jty.manage.dao.UserDao' mapperInterface. Bean already defined with the same name!
+ [WARN ][2017/10/09 09:43:3041 ][org.mybatis.spring.mapper.ClassPathMapperScanner.doScan(ClassPathMapperScanner.java:155)]
+No MyBatis mapper was found in '[com.jty.manage.dao]' package. Please check your configuration.
+ [INFO ][2017/10/09 09:43:3050 ][org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)]
+Loading properties file from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/db.properties]
+ [INFO ][2017/10/09 09:43:3064 ][org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)]
+Loading properties file from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/db.properties]
+ [INFO ][2017/10/09 09:43:30654][com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:785)]
+{dataSource-1} inited
+ [INFO ][2017/10/09 09:43:3133 ][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/api/index]}" onto public org.springframework.web.servlet.ModelAndView com.jty.controller.MainController.index() throws java.lang.Exception
+ [INFO ][2017/10/09 09:43:3135 ][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/api/test.json]}" onto public java.lang.String com.jty.controller.MainController.testName() throws java.lang.Exception
+ [INFO ][2017/10/09 09:43:3142 ][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/login]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.login(java.lang.String,java.lang.String)
+ [INFO ][2017/10/09 09:43:3145 ][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/deleteUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.deleteUser(java.lang.String)
+ [INFO ][2017/10/09 09:43:3147 ][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/findAllUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.findAllUser(java.lang.String,java.lang.String)
+ [INFO ][2017/10/09 09:43:3149 ][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/addUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.addUser(com.jty.manage.entity.User)
+ [INFO ][2017/10/09 09:43:3163 ][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/haha]}" onto public void com.jty.controller.test.client.testName(java.lang.String) throws java.lang.Exception
+ [INFO ][2017/10/09 09:43:3167 ][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/request]}" onto public java.lang.String com.jty.test.TestRequest.testName(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+ [INFO ][2017/10/09 09:43:31438][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:532)]
+Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Mon Oct 09 09:43:29 GMT+08:00 2017]; root of context hierarchy
+ [INFO ][2017/10/09 09:43:31511][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:532)]
+Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Mon Oct 09 09:43:29 GMT+08:00 2017]; root of context hierarchy
+ [INFO ][2017/10/09 09:43:31579][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:341)]
+Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+ [INFO ][2017/10/09 09:43:31633][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:341)]
+Mapped URL path [/html/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+ [INFO ][2017/10/09 09:43:31636][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:341)]
+Mapped URL path [/static/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+ [INFO ][2017/10/09 09:43:31640][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:341)]
+Mapped URL path [/easyui/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
+ [INFO ][2017/10/09 09:43:31747][org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:347)]
+Root WebApplicationContext: initialization completed in 2706 ms
+ [INFO ][2017/10/09 09:43:31811][org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:488)]
+FrameworkServlet 'springMvc': initialization started
+ [INFO ][2017/10/09 09:43:31814][org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:573)]
+Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Mon Oct 09 09:43:31 GMT+08:00 2017]; parent: Root WebApplicationContext
+ [INFO ][2017/10/09 09:43:31815][org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)]
+Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/spring-mvc.xml]
+ [INFO ][2017/10/09 09:43:31933][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/api/index]}" onto public org.springframework.web.servlet.ModelAndView com.jty.controller.MainController.index() throws java.lang.Exception
+ [INFO ][2017/10/09 09:43:31934][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/api/test.json]}" onto public java.lang.String com.jty.controller.MainController.testName() throws java.lang.Exception
+ [INFO ][2017/10/09 09:43:31936][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/login]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.login(java.lang.String,java.lang.String)
+ [INFO ][2017/10/09 09:43:31937][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/deleteUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.deleteUser(java.lang.String)
+ [INFO ][2017/10/09 09:43:31937][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/findAllUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.findAllUser(java.lang.String,java.lang.String)
+ [INFO ][2017/10/09 09:43:31938][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/addUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.addUser(com.jty.manage.entity.User)
+ [INFO ][2017/10/09 09:43:31939][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/haha]}" onto public void com.jty.controller.test.client.testName(java.lang.String) throws java.lang.Exception
+ [INFO ][2017/10/09 09:43:31939][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/request]}" onto public java.lang.String com.jty.test.TestRequest.testName(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+ [INFO ][2017/10/09 09:43:3228 ][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:532)]
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Mon Oct 09 09:43:31 GMT+08:00 2017]; parent: Root WebApplicationContext
+ [INFO ][2017/10/09 09:43:3267 ][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:532)]
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Mon Oct 09 09:43:31 GMT+08:00 2017]; parent: Root WebApplicationContext
+ [INFO ][2017/10/09 09:43:32123][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:341)]
+Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+ [INFO ][2017/10/09 09:43:32146][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:341)]
+Mapped URL path [/html/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+ [INFO ][2017/10/09 09:43:32150][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:341)]
+Mapped URL path [/static/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+ [INFO ][2017/10/09 09:43:32154][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:341)]
+Mapped URL path [/easyui/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
+ [INFO ][2017/10/09 09:43:32202][org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:507)]
+FrameworkServlet 'springMvc': initialization completed in 390 ms
+ [INFO ][2017/10/09 09:45:27367][org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:307)]
+Root WebApplicationContext: initialization started
+ [INFO ][2017/10/09 09:45:27471][org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:573)]
+Refreshing Root WebApplicationContext: startup date [Mon Oct 09 09:45:27 GMT+08:00 2017]; root of context hierarchy
+ [INFO ][2017/10/09 09:45:27509][org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)]
+Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/applicationContext.xml]
+ [INFO ][2017/10/09 09:45:27586][org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)]
+Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/spring-datasource.xml]
+ [INFO ][2017/10/09 09:45:27853][org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)]
+Loading properties file from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/db.properties]
+ [INFO ][2017/10/09 09:45:28294][com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:785)]
+{dataSource-1} inited
+ [INFO ][2017/10/09 09:45:28487][org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:347)]
+Root WebApplicationContext: initialization completed in 1116 ms
+ [INFO ][2017/10/09 09:45:28545][org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:488)]
+FrameworkServlet 'springMvc': initialization started
+ [INFO ][2017/10/09 09:45:28548][org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:573)]
+Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Mon Oct 09 09:45:28 GMT+08:00 2017]; parent: Root WebApplicationContext
+ [INFO ][2017/10/09 09:45:28549][org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)]
+Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/spring-mvc.xml]
+ [INFO ][2017/10/09 09:45:2926 ][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/api/index]}" onto public org.springframework.web.servlet.ModelAndView com.jty.controller.MainController.index() throws java.lang.Exception
+ [INFO ][2017/10/09 09:45:2927 ][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/api/test.json]}" onto public java.lang.String com.jty.controller.MainController.testName() throws java.lang.Exception
+ [INFO ][2017/10/09 09:45:2932 ][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/login]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.login(java.lang.String,java.lang.String)
+ [INFO ][2017/10/09 09:45:2933 ][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/addUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.addUser(com.jty.manage.entity.User)
+ [INFO ][2017/10/09 09:45:2933 ][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/deleteUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.deleteUser(java.lang.String)
+ [INFO ][2017/10/09 09:45:2934 ][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/findAllUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.findAllUser(java.lang.String,java.lang.String)
+ [INFO ][2017/10/09 09:45:2946 ][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/haha]}" onto public void com.jty.controller.test.client.testName(java.lang.String) throws java.lang.Exception
+ [INFO ][2017/10/09 09:45:2949 ][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/request]}" onto public java.lang.String com.jty.test.TestRequest.testName(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+ [INFO ][2017/10/09 09:45:29378][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:532)]
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Mon Oct 09 09:45:28 GMT+08:00 2017]; parent: Root WebApplicationContext
+ [INFO ][2017/10/09 09:45:29444][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:532)]
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Mon Oct 09 09:45:28 GMT+08:00 2017]; parent: Root WebApplicationContext
+ [INFO ][2017/10/09 09:45:29511][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:341)]
+Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+ [INFO ][2017/10/09 09:45:29639][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:341)]
+Mapped URL path [/html/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+ [INFO ][2017/10/09 09:45:29643][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:341)]
+Mapped URL path [/static/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+ [INFO ][2017/10/09 09:45:29647][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:341)]
+Mapped URL path [/easyui/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
+ [INFO ][2017/10/09 09:45:29740][org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:507)]
+FrameworkServlet 'springMvc': initialization completed in 1194 ms
+ [INFO ][2017/10/09 10:42:11714][org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:307)]
+Root WebApplicationContext: initialization started
+ [INFO ][2017/10/09 10:42:11816][org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:573)]
+Refreshing Root WebApplicationContext: startup date [Mon Oct 09 10:42:11 GMT+08:00 2017]; root of context hierarchy
+ [INFO ][2017/10/09 10:42:11853][org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)]
+Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/applicationContext.xml]
+ [INFO ][2017/10/09 10:42:11932][org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)]
+Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/spring-datasource.xml]
+ [INFO ][2017/10/09 10:42:12215][org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)]
+Loading properties file from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/db.properties]
+ [INFO ][2017/10/09 10:42:12670][com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:785)]
+{dataSource-1} inited
+ [INFO ][2017/10/09 10:42:12851][org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:347)]
+Root WebApplicationContext: initialization completed in 1133 ms
+ [INFO ][2017/10/09 10:42:12910][org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:488)]
+FrameworkServlet 'springMvc': initialization started
+ [INFO ][2017/10/09 10:42:12913][org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:573)]
+Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Mon Oct 09 10:42:12 GMT+08:00 2017]; parent: Root WebApplicationContext
+ [INFO ][2017/10/09 10:42:12914][org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)]
+Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/spring-mvc.xml]
+ [INFO ][2017/10/09 10:42:13390][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/api/index]}" onto public org.springframework.web.servlet.ModelAndView com.jty.controller.MainController.index() throws java.lang.Exception
+ [INFO ][2017/10/09 10:42:13392][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/api/test.json]}" onto public java.lang.String com.jty.controller.MainController.testName() throws java.lang.Exception
+ [INFO ][2017/10/09 10:42:13396][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/login]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.login(java.lang.String,java.lang.String)
+ [INFO ][2017/10/09 10:42:13397][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/deleteUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.deleteUser(java.lang.String)
+ [INFO ][2017/10/09 10:42:13397][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/findAllUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.findAllUser(java.lang.String,java.lang.String)
+ [INFO ][2017/10/09 10:42:13398][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/addUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.addUser(com.jty.manage.entity.User)
+ [INFO ][2017/10/09 10:42:13410][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/haha]}" onto public void com.jty.controller.test.client.testName(java.lang.String) throws java.lang.Exception
+ [INFO ][2017/10/09 10:42:13413][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/request]}" onto public java.lang.String com.jty.test.TestRequest.testName(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+ [INFO ][2017/10/09 10:42:13736][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:532)]
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Mon Oct 09 10:42:12 GMT+08:00 2017]; parent: Root WebApplicationContext
+ [INFO ][2017/10/09 10:42:13802][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:532)]
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Mon Oct 09 10:42:12 GMT+08:00 2017]; parent: Root WebApplicationContext
+ [INFO ][2017/10/09 10:42:13867][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:341)]
+Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+ [INFO ][2017/10/09 10:42:13991][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:341)]
+Mapped URL path [/html/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+ [INFO ][2017/10/09 10:42:13995][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:341)]
+Mapped URL path [/static/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+ [INFO ][2017/10/09 10:42:13999][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:341)]
+Mapped URL path [/easyui/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
+ [INFO ][2017/10/09 10:42:14104][org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:507)]
+FrameworkServlet 'springMvc': initialization completed in 1193 ms
+ [INFO ][2017/10/09 11:24:56776][org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:307)]
+Root WebApplicationContext: initialization started
+ [INFO ][2017/10/09 11:24:56884][org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:573)]
+Refreshing Root WebApplicationContext: startup date [Mon Oct 09 11:24:56 GMT+08:00 2017]; root of context hierarchy
+ [INFO ][2017/10/09 11:24:56922][org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)]
+Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/applicationContext.xml]
+ [INFO ][2017/10/09 11:24:573  ][org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)]
+Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/spring-datasource.xml]
+ [INFO ][2017/10/09 11:24:57267][org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)]
+Loading properties file from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/db.properties]
+ [INFO ][2017/10/09 11:24:57741][com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:785)]
+{dataSource-1} inited
+ [INFO ][2017/10/09 11:24:57924][org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:347)]
+Root WebApplicationContext: initialization completed in 1144 ms
+ [INFO ][2017/10/09 11:24:57986][org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:488)]
+FrameworkServlet 'springMvc': initialization started
+ [INFO ][2017/10/09 11:24:57989][org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:573)]
+Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Mon Oct 09 11:24:57 GMT+08:00 2017]; parent: Root WebApplicationContext
+ [INFO ][2017/10/09 11:24:57990][org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)]
+Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/spring-mvc.xml]
+ [INFO ][2017/10/09 11:24:58480][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/api/index]}" onto public org.springframework.web.servlet.ModelAndView com.jty.controller.MainController.index() throws java.lang.Exception
+ [INFO ][2017/10/09 11:24:58482][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/api/test.json]}" onto public java.lang.String com.jty.controller.MainController.testName() throws java.lang.Exception
+ [INFO ][2017/10/09 11:24:58486][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/login]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.login(java.lang.String,java.lang.String)
+ [INFO ][2017/10/09 11:24:58486][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/deleteUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.deleteUser(java.lang.String)
+ [INFO ][2017/10/09 11:24:58487][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/findAllUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.findAllUser(java.lang.String,java.lang.String)
+ [INFO ][2017/10/09 11:24:58487][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/addUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.addUser(com.jty.manage.entity.User)
+ [INFO ][2017/10/09 11:24:58499][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/haha]}" onto public void com.jty.controller.test.client.testName(java.lang.String) throws java.lang.Exception
+ [INFO ][2017/10/09 11:24:58502][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/request]}" onto public java.lang.String com.jty.test.TestRequest.testName(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+ [INFO ][2017/10/09 11:24:58840][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:532)]
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Mon Oct 09 11:24:57 GMT+08:00 2017]; parent: Root WebApplicationContext
+ [INFO ][2017/10/09 11:24:58909][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:532)]
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Mon Oct 09 11:24:57 GMT+08:00 2017]; parent: Root WebApplicationContext
+ [INFO ][2017/10/09 11:24:58977][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:341)]
+Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+ [INFO ][2017/10/09 11:24:59105][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:341)]
+Mapped URL path [/html/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+ [INFO ][2017/10/09 11:24:59109][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:341)]
+Mapped URL path [/static/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+ [INFO ][2017/10/09 11:24:59113][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:341)]
+Mapped URL path [/easyui/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
+ [INFO ][2017/10/09 11:24:59214][org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:507)]
+FrameworkServlet 'springMvc': initialization completed in 1228 ms
+ [WARN ][2017/10/09 11:26:05957][org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver.handleHttpRequestMethodNotSupported(DefaultHandlerExceptionResolver.java:208)]
+Request method 'POST' not supported
+ [WARN ][2017/10/09 11:26:05958][org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.logException(AbstractHandlerExceptionResolver.java:186)]
+Handler execution resulted in exception: Request method 'POST' not supported
+ [INFO ][2017/10/09 17:05:46613][org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:307)]
+Root WebApplicationContext: initialization started
+ [INFO ][2017/10/09 17:05:46722][org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:573)]
+Refreshing Root WebApplicationContext: startup date [Mon Oct 09 17:05:46 GMT+08:00 2017]; root of context hierarchy
+ [INFO ][2017/10/09 17:05:46760][org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)]
+Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/applicationContext.xml]
+ [INFO ][2017/10/09 17:05:46842][org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)]
+Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/spring-datasource.xml]
+ [INFO ][2017/10/09 17:05:47121][org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)]
+Loading properties file from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/db.properties]
+ [INFO ][2017/10/09 17:05:47578][com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:785)]
+{dataSource-1} inited
+ [INFO ][2017/10/09 17:05:47776][org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:347)]
+Root WebApplicationContext: initialization completed in 1159 ms
+ [INFO ][2017/10/09 17:05:47838][org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:488)]
+FrameworkServlet 'springMvc': initialization started
+ [INFO ][2017/10/09 17:05:47841][org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:573)]
+Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Mon Oct 09 17:05:47 GMT+08:00 2017]; parent: Root WebApplicationContext
+ [INFO ][2017/10/09 17:05:47842][org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)]
+Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/spring-mvc.xml]
+ [INFO ][2017/10/09 17:05:48342][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/api/index]}" onto public org.springframework.web.servlet.ModelAndView com.jty.controller.MainController.index() throws java.lang.Exception
+ [INFO ][2017/10/09 17:05:48344][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/api/test.json]}" onto public java.lang.String com.jty.controller.MainController.testName() throws java.lang.Exception
+ [INFO ][2017/10/09 17:05:48351][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/login]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.login(java.lang.String,java.lang.String)
+ [INFO ][2017/10/09 17:05:48352][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/deleteUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.deleteUser(java.lang.String)
+ [INFO ][2017/10/09 17:05:48352][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/findAllUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.findAllUser(java.lang.String,java.lang.String)
+ [INFO ][2017/10/09 17:05:48353][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/addUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.addUser(com.jty.manage.entity.User)
+ [INFO ][2017/10/09 17:05:48354][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/generatePrivilege]}" onto public void com.jty.controller.manage.PermissionController.generatePrivilege()
+ [INFO ][2017/10/09 17:05:48365][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/haha]}" onto public void com.jty.controller.test.client.testName(java.lang.String) throws java.lang.Exception
+ [INFO ][2017/10/09 17:05:48371][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/request]}" onto public java.lang.String com.jty.test.TestRequest.testName(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+ [INFO ][2017/10/09 17:05:48740][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:532)]
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Mon Oct 09 17:05:47 GMT+08:00 2017]; parent: Root WebApplicationContext
+ [INFO ][2017/10/09 17:05:48809][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:532)]
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Mon Oct 09 17:05:47 GMT+08:00 2017]; parent: Root WebApplicationContext
+ [INFO ][2017/10/09 17:05:48878][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:341)]
+Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+ [INFO ][2017/10/09 17:05:4912 ][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:341)]
+Mapped URL path [/html/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+ [INFO ][2017/10/09 17:05:4916 ][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:341)]
+Mapped URL path [/static/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+ [INFO ][2017/10/09 17:05:4920 ][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:341)]
+Mapped URL path [/easyui/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
+ [INFO ][2017/10/09 17:05:49127][org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:507)]
+FrameworkServlet 'springMvc': initialization completed in 1288 ms
+ [INFO ][2017/10/09 17:10:10837][org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:307)]
+Root WebApplicationContext: initialization started
+ [INFO ][2017/10/09 17:10:10945][org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:573)]
+Refreshing Root WebApplicationContext: startup date [Mon Oct 09 17:10:10 GMT+08:00 2017]; root of context hierarchy
+ [INFO ][2017/10/09 17:10:10984][org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)]
+Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/applicationContext.xml]
+ [INFO ][2017/10/09 17:10:1168 ][org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)]
+Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/spring-datasource.xml]
+ [INFO ][2017/10/09 17:10:11345][org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)]
+Loading properties file from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/db.properties]
+ [INFO ][2017/10/09 17:10:11801][com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:785)]
+{dataSource-1} inited
+ [INFO ][2017/10/09 17:10:11999][org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:347)]
+Root WebApplicationContext: initialization completed in 1158 ms
+ [INFO ][2017/10/09 17:10:1262 ][org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:488)]
+FrameworkServlet 'springMvc': initialization started
+ [INFO ][2017/10/09 17:10:1265 ][org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:573)]
+Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Mon Oct 09 17:10:12 GMT+08:00 2017]; parent: Root WebApplicationContext
+ [INFO ][2017/10/09 17:10:1267 ][org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)]
+Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/spring-mvc.xml]
+ [INFO ][2017/10/09 17:10:12581][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/api/index]}" onto public org.springframework.web.servlet.ModelAndView com.jty.controller.MainController.index() throws java.lang.Exception
+ [INFO ][2017/10/09 17:10:12583][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/api/test.json]}" onto public java.lang.String com.jty.controller.MainController.testName() throws java.lang.Exception
+ [INFO ][2017/10/09 17:10:12599][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/login]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.login(java.lang.String,java.lang.String)
+ [INFO ][2017/10/09 17:10:12600][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/deleteUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.deleteUser(java.lang.String)
+ [INFO ][2017/10/09 17:10:12601][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/findAllUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.findAllUser(java.lang.String,java.lang.String)
+ [INFO ][2017/10/09 17:10:12602][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/generatePrivilege]}" onto public void com.jty.controller.manage.PermissionController.generatePrivilege()
+ [INFO ][2017/10/09 17:10:12603][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/addUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.addUser(com.jty.manage.entity.User)
+ [INFO ][2017/10/09 17:10:12615][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/haha]}" onto public void com.jty.controller.test.client.testName(java.lang.String) throws java.lang.Exception
+ [INFO ][2017/10/09 17:10:12620][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/request]}" onto public java.lang.String com.jty.test.TestRequest.testName(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+ [INFO ][2017/10/09 17:10:12986][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:532)]
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Mon Oct 09 17:10:12 GMT+08:00 2017]; parent: Root WebApplicationContext
+ [INFO ][2017/10/09 17:10:1355 ][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:532)]
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Mon Oct 09 17:10:12 GMT+08:00 2017]; parent: Root WebApplicationContext
+ [INFO ][2017/10/09 17:10:13122][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:341)]
+Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+ [INFO ][2017/10/09 17:10:13249][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:341)]
+Mapped URL path [/html/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+ [INFO ][2017/10/09 17:10:13253][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:341)]
+Mapped URL path [/static/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+ [INFO ][2017/10/09 17:10:13257][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:341)]
+Mapped URL path [/easyui/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
+ [INFO ][2017/10/09 17:10:13355][org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:507)]
+FrameworkServlet 'springMvc': initialization completed in 1292 ms
+ [INFO ][2017/10/09 17:10:31836][org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)]
+Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+ [INFO ][2017/10/09 17:10:31980][org.springframework.jdbc.support.SQLErrorCodesFactory.<init>(SQLErrorCodesFactory.java:126)]
+SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+ [INFO ][2017/10/09 17:11:56527][org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:307)]
+Root WebApplicationContext: initialization started
+ [INFO ][2017/10/09 17:11:56635][org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:573)]
+Refreshing Root WebApplicationContext: startup date [Mon Oct 09 17:11:56 GMT+08:00 2017]; root of context hierarchy
+ [INFO ][2017/10/09 17:11:56674][org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)]
+Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/applicationContext.xml]
+ [INFO ][2017/10/09 17:11:56755][org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)]
+Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/spring-datasource.xml]
+ [INFO ][2017/10/09 17:11:5730 ][org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)]
+Loading properties file from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/db.properties]
+ [INFO ][2017/10/09 17:11:57488][com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:785)]
+{dataSource-1} inited
+ [INFO ][2017/10/09 17:11:57680][org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:347)]
+Root WebApplicationContext: initialization completed in 1149 ms
+ [INFO ][2017/10/09 17:11:57746][org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:488)]
+FrameworkServlet 'springMvc': initialization started
+ [INFO ][2017/10/09 17:11:57749][org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:573)]
+Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Mon Oct 09 17:11:57 GMT+08:00 2017]; parent: Root WebApplicationContext
+ [INFO ][2017/10/09 17:11:57750][org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)]
+Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/spring-mvc.xml]
+ [INFO ][2017/10/09 17:11:58274][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/api/index]}" onto public org.springframework.web.servlet.ModelAndView com.jty.controller.MainController.index() throws java.lang.Exception
+ [INFO ][2017/10/09 17:11:58275][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/api/test.json]}" onto public java.lang.String com.jty.controller.MainController.testName() throws java.lang.Exception
+ [INFO ][2017/10/09 17:11:58293][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/login]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.login(java.lang.String,java.lang.String)
+ [INFO ][2017/10/09 17:11:58294][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/deleteUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.deleteUser(java.lang.String)
+ [INFO ][2017/10/09 17:11:58295][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/findAllUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.findAllUser(java.lang.String,java.lang.String)
+ [INFO ][2017/10/09 17:11:58296][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/generatePrivilege]}" onto public void com.jty.controller.manage.PermissionController.generatePrivilege()
+ [INFO ][2017/10/09 17:11:58298][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/addUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.addUser(com.jty.manage.entity.User)
+ [INFO ][2017/10/09 17:11:58319][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/haha]}" onto public void com.jty.controller.test.client.testName(java.lang.String) throws java.lang.Exception
+ [INFO ][2017/10/09 17:11:58323][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/request]}" onto public java.lang.String com.jty.test.TestRequest.testName(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+ [INFO ][2017/10/09 17:11:58694][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:532)]
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Mon Oct 09 17:11:57 GMT+08:00 2017]; parent: Root WebApplicationContext
+ [INFO ][2017/10/09 17:11:58765][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:532)]
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Mon Oct 09 17:11:57 GMT+08:00 2017]; parent: Root WebApplicationContext
+ [INFO ][2017/10/09 17:11:58834][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:341)]
+Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+ [INFO ][2017/10/09 17:11:58965][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:341)]
+Mapped URL path [/html/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+ [INFO ][2017/10/09 17:11:58969][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:341)]
+Mapped URL path [/static/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+ [INFO ][2017/10/09 17:11:58974][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:341)]
+Mapped URL path [/easyui/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
+ [INFO ][2017/10/09 17:11:5977 ][org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:507)]
+FrameworkServlet 'springMvc': initialization completed in 1331 ms
+ [INFO ][2017/10/09 17:12:14455][org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)]
+Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+ [INFO ][2017/10/09 17:12:14480][org.springframework.jdbc.support.SQLErrorCodesFactory.<init>(SQLErrorCodesFactory.java:126)]
+SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+ [INFO ][2017/10/09 17:15:15817][org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:307)]
+Root WebApplicationContext: initialization started
+ [INFO ][2017/10/09 17:15:15926][org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:573)]
+Refreshing Root WebApplicationContext: startup date [Mon Oct 09 17:15:15 GMT+08:00 2017]; root of context hierarchy
+ [INFO ][2017/10/09 17:15:15963][org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)]
+Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/applicationContext.xml]
+ [INFO ][2017/10/09 17:15:1643 ][org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)]
+Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/spring-datasource.xml]
+ [INFO ][2017/10/09 17:15:16326][org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)]
+Loading properties file from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/db.properties]
+ [INFO ][2017/10/09 17:15:16787][com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:785)]
+{dataSource-1} inited
+ [INFO ][2017/10/09 17:15:16981][org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:347)]
+Root WebApplicationContext: initialization completed in 1160 ms
+ [INFO ][2017/10/09 17:15:1743 ][org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:488)]
+FrameworkServlet 'springMvc': initialization started
+ [INFO ][2017/10/09 17:15:1746 ][org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:573)]
+Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Mon Oct 09 17:15:17 GMT+08:00 2017]; parent: Root WebApplicationContext
+ [INFO ][2017/10/09 17:15:1748 ][org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)]
+Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/spring-mvc.xml]
+ [INFO ][2017/10/09 17:15:17558][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/api/index]}" onto public org.springframework.web.servlet.ModelAndView com.jty.controller.MainController.index() throws java.lang.Exception
+ [INFO ][2017/10/09 17:15:17559][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/api/test.json]}" onto public java.lang.String com.jty.controller.MainController.testName() throws java.lang.Exception
+ [INFO ][2017/10/09 17:15:17575][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/login]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.login(java.lang.String,java.lang.String)
+ [INFO ][2017/10/09 17:15:17576][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/generatePrivilege]}" onto public void com.jty.controller.manage.PermissionController.generatePrivilege()
+ [INFO ][2017/10/09 17:15:17577][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/deleteUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.deleteUser(java.lang.String)
+ [INFO ][2017/10/09 17:15:17578][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/findAllUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.findAllUser(java.lang.String,java.lang.String)
+ [INFO ][2017/10/09 17:15:17580][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/addUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.addUser(com.jty.manage.entity.User)
+ [INFO ][2017/10/09 17:15:17591][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/haha]}" onto public void com.jty.controller.test.client.testName(java.lang.String) throws java.lang.Exception
+ [INFO ][2017/10/09 17:15:17596][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/request]}" onto public java.lang.String com.jty.test.TestRequest.testName(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+ [INFO ][2017/10/09 17:15:17957][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:532)]
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Mon Oct 09 17:15:17 GMT+08:00 2017]; parent: Root WebApplicationContext
+ [INFO ][2017/10/09 17:15:1830 ][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:532)]
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Mon Oct 09 17:15:17 GMT+08:00 2017]; parent: Root WebApplicationContext
+ [INFO ][2017/10/09 17:15:1898 ][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:341)]
+Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+ [INFO ][2017/10/09 17:15:18225][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:341)]
+Mapped URL path [/html/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+ [INFO ][2017/10/09 17:15:18229][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:341)]
+Mapped URL path [/static/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+ [INFO ][2017/10/09 17:15:18233][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:341)]
+Mapped URL path [/easyui/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
+ [INFO ][2017/10/09 17:15:18336][org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:507)]
+FrameworkServlet 'springMvc': initialization completed in 1292 ms
+ [INFO ][2017/10/09 17:17:22792][org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:307)]
+Root WebApplicationContext: initialization started
+ [INFO ][2017/10/09 17:17:22900][org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:573)]
+Refreshing Root WebApplicationContext: startup date [Mon Oct 09 17:17:22 GMT+08:00 2017]; root of context hierarchy
+ [INFO ][2017/10/09 17:17:22938][org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)]
+Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/applicationContext.xml]
+ [INFO ][2017/10/09 17:17:2321 ][org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)]
+Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/spring-datasource.xml]
+ [INFO ][2017/10/09 17:17:23292][org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)]
+Loading properties file from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/db.properties]
+ [INFO ][2017/10/09 17:17:23751][com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:785)]
+{dataSource-1} inited
+ [INFO ][2017/10/09 17:17:23941][org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:347)]
+Root WebApplicationContext: initialization completed in 1145 ms
+ [INFO ][2017/10/09 17:17:242  ][org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:488)]
+FrameworkServlet 'springMvc': initialization started
+ [INFO ][2017/10/09 17:17:245  ][org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:573)]
+Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Mon Oct 09 17:17:24 GMT+08:00 2017]; parent: Root WebApplicationContext
+ [INFO ][2017/10/09 17:17:246  ][org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)]
+Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/spring-mvc.xml]
+ [INFO ][2017/10/09 17:17:24495][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/api/index]}" onto public org.springframework.web.servlet.ModelAndView com.jty.controller.MainController.index() throws java.lang.Exception
+ [INFO ][2017/10/09 17:17:24496][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/api/test.json]}" onto public java.lang.String com.jty.controller.MainController.testName() throws java.lang.Exception
+ [INFO ][2017/10/09 17:17:24511][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/login]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.login(java.lang.String,java.lang.String)
+ [INFO ][2017/10/09 17:17:24512][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/deleteUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.deleteUser(java.lang.String)
+ [INFO ][2017/10/09 17:17:24513][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/findAllUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.findAllUser(java.lang.String,java.lang.String)
+ [INFO ][2017/10/09 17:17:24513][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/addUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.addUser(com.jty.manage.entity.User)
+ [INFO ][2017/10/09 17:17:24515][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/generatePrivilege]}" onto public java.lang.String com.jty.controller.manage.PermissionController.generatePrivilege()
+ [INFO ][2017/10/09 17:17:24526][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/haha]}" onto public void com.jty.controller.test.client.testName(java.lang.String) throws java.lang.Exception
+ [INFO ][2017/10/09 17:17:24532][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/request]}" onto public java.lang.String com.jty.test.TestRequest.testName(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+ [INFO ][2017/10/09 17:17:24893][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:532)]
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Mon Oct 09 17:17:24 GMT+08:00 2017]; parent: Root WebApplicationContext
+ [INFO ][2017/10/09 17:17:24962][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:532)]
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Mon Oct 09 17:17:24 GMT+08:00 2017]; parent: Root WebApplicationContext
+ [INFO ][2017/10/09 17:17:2528 ][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:341)]
+Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+ [INFO ][2017/10/09 17:17:25156][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:341)]
+Mapped URL path [/html/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+ [INFO ][2017/10/09 17:17:25160][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:341)]
+Mapped URL path [/static/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+ [INFO ][2017/10/09 17:17:25164][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:341)]
+Mapped URL path [/easyui/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
+ [INFO ][2017/10/09 17:17:25262][org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:507)]
+FrameworkServlet 'springMvc': initialization completed in 1260 ms
+ [INFO ][2017/10/09 17:17:53381][org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:307)]
+Root WebApplicationContext: initialization started
+ [INFO ][2017/10/09 17:17:53488][org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:573)]
+Refreshing Root WebApplicationContext: startup date [Mon Oct 09 17:17:53 GMT+08:00 2017]; root of context hierarchy
+ [INFO ][2017/10/09 17:17:53526][org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)]
+Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/applicationContext.xml]
+ [INFO ][2017/10/09 17:17:53607][org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)]
+Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/spring-datasource.xml]
+ [INFO ][2017/10/09 17:17:53883][org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)]
+Loading properties file from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/db.properties]
+ [INFO ][2017/10/09 17:17:54334][com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:785)]
+{dataSource-1} inited
+ [INFO ][2017/10/09 17:17:54524][org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:347)]
+Root WebApplicationContext: initialization completed in 1140 ms
+ [INFO ][2017/10/09 17:17:54584][org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:488)]
+FrameworkServlet 'springMvc': initialization started
+ [INFO ][2017/10/09 17:17:54586][org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:573)]
+Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Mon Oct 09 17:17:54 GMT+08:00 2017]; parent: Root WebApplicationContext
+ [INFO ][2017/10/09 17:17:54588][org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)]
+Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/spring-mvc.xml]
+ [INFO ][2017/10/09 17:17:5576 ][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/api/index]}" onto public org.springframework.web.servlet.ModelAndView com.jty.controller.MainController.index() throws java.lang.Exception
+ [INFO ][2017/10/09 17:17:5577 ][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/api/test.json]}" onto public java.lang.String com.jty.controller.MainController.testName() throws java.lang.Exception
+ [INFO ][2017/10/09 17:17:5591 ][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/login]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.login(java.lang.String,java.lang.String)
+ [INFO ][2017/10/09 17:17:5593 ][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/generatePrivilege]}" onto public java.lang.String com.jty.controller.manage.PermissionController.generatePrivilege()
+ [INFO ][2017/10/09 17:17:5594 ][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/deleteUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.deleteUser(java.lang.String)
+ [INFO ][2017/10/09 17:17:5594 ][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/findAllUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.findAllUser(java.lang.String,java.lang.String)
+ [INFO ][2017/10/09 17:17:5596 ][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/addUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.addUser(com.jty.manage.entity.User)
+ [INFO ][2017/10/09 17:17:55107][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/haha]}" onto public void com.jty.controller.test.client.testName(java.lang.String) throws java.lang.Exception
+ [INFO ][2017/10/09 17:17:55112][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/request]}" onto public java.lang.String com.jty.test.TestRequest.testName(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+ [INFO ][2017/10/09 17:17:55469][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:532)]
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Mon Oct 09 17:17:54 GMT+08:00 2017]; parent: Root WebApplicationContext
+ [INFO ][2017/10/09 17:17:55533][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:532)]
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Mon Oct 09 17:17:54 GMT+08:00 2017]; parent: Root WebApplicationContext
+ [INFO ][2017/10/09 17:17:55598][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:341)]
+Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+ [INFO ][2017/10/09 17:17:55728][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:341)]
+Mapped URL path [/html/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+ [INFO ][2017/10/09 17:17:55733][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:341)]
+Mapped URL path [/static/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+ [INFO ][2017/10/09 17:17:55737][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:341)]
+Mapped URL path [/easyui/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
+ [INFO ][2017/10/09 17:17:55828][org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:507)]
+FrameworkServlet 'springMvc': initialization completed in 1244 ms
  

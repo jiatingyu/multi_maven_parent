@@ -38,6 +38,12 @@
 	    <groupId>aspectj</groupId>
 	    <artifactId>aspectjweaver</artifactId>
 	</dependency>
+	
+	<!-- mybatis -->
+	<dependency>
+	    <groupId>org.mybatis</groupId>
+	    <artifactId>mybatis</artifactId>
+	</dependency>
   </dependencies>
   
 </project>

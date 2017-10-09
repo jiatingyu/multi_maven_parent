@@ -12,13 +12,13 @@ public class LogUtils {
 	private  static Logger controller=Logger.getLogger("Controller");
 	private  static Logger logger1=Logger.getLogger(LogUtils.class);
 	
-	public static void testName(String str)  {
+	public static void controller_info(String str)  {
 		controller.info(str);
 		System.out.println(format.format(new Date())+str);
 	}
 	
 	public static void main(String[] args) {
 //		logger1.info("我自己的测试122");
-		testName("hhahahha");
+		controller_info("hhahahha");
 	}
 }
