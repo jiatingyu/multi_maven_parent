@@ -1,0 +1,702 @@
+[YH_sys] 2017-09-29 15:36:14  INFO ContextLoader:307 : Root WebApplicationContext: initialization started
+[YH_sys] 2017-09-29 15:36:14  INFO XmlWebApplicationContext:573 : Refreshing Root WebApplicationContext: startup date [Fri Sep 29 15:36:14 GMT+08:00 2017]; root of context hierarchy
+[YH_sys] 2017-09-29 15:36:14  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from file [D:\yhcode\multi_maven_parent\multi_maven_web\target\classes\applicationContext.xml]
+[YH_sys] 2017-09-29 15:36:14  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from file [D:\yhcode\multi_maven_parent\multi_maven_web\target\classes\spring-datasource.xml]
+[YH_sys] 2017-09-29 15:36:14  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from file [D:\yhcode\multi_maven_parent\multi_maven_web\target\classes\spring-mvc.xml]
+[YH_sys] 2017-09-29 15:36:14  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from file [D:\yhcode\multi_maven_parent\multi_maven_web\target\classes\spring-datasource.xml]
+[YH_sys] 2017-09-29 15:36:15  WARN ClassPathMapperScanner:223 : Skipping MapperFactoryBean with name 'commonDao' and 'com.jty.manage.dao.CommonDao' mapperInterface. Bean already defined with the same name!
+[YH_sys] 2017-09-29 15:36:15  WARN ClassPathMapperScanner:223 : Skipping MapperFactoryBean with name 'permissionDao' and 'com.jty.manage.dao.PermissionDao' mapperInterface. Bean already defined with the same name!
+[YH_sys] 2017-09-29 15:36:15  WARN ClassPathMapperScanner:223 : Skipping MapperFactoryBean with name 'userDao' and 'com.jty.manage.dao.UserDao' mapperInterface. Bean already defined with the same name!
+[YH_sys] 2017-09-29 15:36:15  WARN ClassPathMapperScanner:155 : No MyBatis mapper was found in '[com.jty.manage.dao]' package. Please check your configuration.
+[YH_sys] 2017-09-29 15:36:15  INFO PropertySourcesPlaceholderConfigurer:172 : Loading properties file from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/db.properties]
+[YH_sys] 2017-09-29 15:36:15  INFO PropertySourcesPlaceholderConfigurer:172 : Loading properties file from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/db.properties]
+[YH_sys] 2017-09-29 15:36:15  INFO DruidDataSource:785 : {dataSource-1} inited
+[YH_sys] 2017-09-29 15:36:16  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/index]}" onto public org.springframework.web.servlet.ModelAndView com.jty.controller.MainController.index() throws java.lang.Exception
+[YH_sys] 2017-09-29 15:36:16  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/test.json]}" onto public java.lang.String com.jty.controller.MainController.testName() throws java.lang.Exception
+[YH_sys] 2017-09-29 15:36:16  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/login]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.login(java.lang.String,java.lang.String)
+[YH_sys] 2017-09-29 15:36:16  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/addUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.addUser(com.jty.manage.entity.User)
+[YH_sys] 2017-09-29 15:36:16  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/findAllUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.findAllUser(java.lang.String,java.lang.String)
+[YH_sys] 2017-09-29 15:36:16  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/deleteUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.deleteUser(java.lang.String)
+[YH_sys] 2017-09-29 15:36:16  INFO RequestMappingHandlerMapping:532 : Mapped "{[/haha]}" onto public void com.jty.controller.test.client.testName(java.lang.String) throws java.lang.Exception
+[YH_sys] 2017-09-29 15:36:16  INFO RequestMappingHandlerMapping:532 : Mapped "{[/request]}" onto public java.lang.String com.jty.test.TestRequest.testName(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[YH_sys] 2017-09-29 15:36:16  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Fri Sep 29 15:36:14 GMT+08:00 2017]; root of context hierarchy
+[YH_sys] 2017-09-29 15:36:16  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Fri Sep 29 15:36:14 GMT+08:00 2017]; root of context hierarchy
+[YH_sys] 2017-09-29 15:36:16  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+[YH_sys] 2017-09-29 15:36:16  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/html/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+[YH_sys] 2017-09-29 15:36:16  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/static/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+[YH_sys] 2017-09-29 15:36:16  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/easyui/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
+[YH_sys] 2017-09-29 15:36:17  INFO ContextLoader:347 : Root WebApplicationContext: initialization completed in 2970 ms
+[YH_sys] 2017-09-29 15:36:17  INFO DispatcherServlet:488 : FrameworkServlet 'springMvc': initialization started
+[YH_sys] 2017-09-29 15:36:17  INFO XmlWebApplicationContext:573 : Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Fri Sep 29 15:36:17 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-09-29 15:36:17  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/spring-mvc.xml]
+[YH_sys] 2017-09-29 15:36:17  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/spring-datasource.xml]
+[YH_sys] 2017-09-29 15:36:17  INFO PropertySourcesPlaceholderConfigurer:172 : Loading properties file from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/db.properties]
+[YH_sys] 2017-09-29 15:36:17  INFO DruidDataSource:785 : {dataSource-2} inited
+[YH_sys] 2017-09-29 15:36:17  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/index]}" onto public org.springframework.web.servlet.ModelAndView com.jty.controller.MainController.index() throws java.lang.Exception
+[YH_sys] 2017-09-29 15:36:17  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/test.json]}" onto public java.lang.String com.jty.controller.MainController.testName() throws java.lang.Exception
+[YH_sys] 2017-09-29 15:36:17  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/login]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.login(java.lang.String,java.lang.String)
+[YH_sys] 2017-09-29 15:36:17  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/addUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.addUser(com.jty.manage.entity.User)
+[YH_sys] 2017-09-29 15:36:17  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/findAllUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.findAllUser(java.lang.String,java.lang.String)
+[YH_sys] 2017-09-29 15:36:17  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/deleteUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.deleteUser(java.lang.String)
+[YH_sys] 2017-09-29 15:36:17  INFO RequestMappingHandlerMapping:532 : Mapped "{[/haha]}" onto public void com.jty.controller.test.client.testName(java.lang.String) throws java.lang.Exception
+[YH_sys] 2017-09-29 15:36:17  INFO RequestMappingHandlerMapping:532 : Mapped "{[/request]}" onto public java.lang.String com.jty.test.TestRequest.testName(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[YH_sys] 2017-09-29 15:36:17  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Fri Sep 29 15:36:17 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-09-29 15:36:17  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Fri Sep 29 15:36:17 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-09-29 15:36:17  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+[YH_sys] 2017-09-29 15:36:17  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/html/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+[YH_sys] 2017-09-29 15:36:17  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/static/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+[YH_sys] 2017-09-29 15:36:17  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/easyui/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
+[YH_sys] 2017-09-29 15:36:17  INFO DispatcherServlet:507 : FrameworkServlet 'springMvc': initialization completed in 572 ms
+[YH_sys] 2017-09-29 15:38:22  INFO ContextLoader:307 : Root WebApplicationContext: initialization started
+[YH_sys] 2017-09-29 15:38:22  INFO XmlWebApplicationContext:573 : Refreshing Root WebApplicationContext: startup date [Fri Sep 29 15:38:22 GMT+08:00 2017]; root of context hierarchy
+[YH_sys] 2017-09-29 15:38:22  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from file [D:\yhcode\multi_maven_parent\multi_maven_web\target\classes\applicationContext.xml]
+[YH_sys] 2017-09-29 15:38:22  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from file [D:\yhcode\multi_maven_parent\multi_maven_web\target\classes\spring-datasource.xml]
+[YH_sys] 2017-09-29 15:38:22  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from file [D:\yhcode\multi_maven_parent\multi_maven_web\target\classes\spring-mvc.xml]
+[YH_sys] 2017-09-29 15:38:22  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from file [D:\yhcode\multi_maven_parent\multi_maven_web\target\classes\spring-datasource.xml]
+[YH_sys] 2017-09-29 15:38:23  WARN ClassPathMapperScanner:223 : Skipping MapperFactoryBean with name 'commonDao' and 'com.jty.manage.dao.CommonDao' mapperInterface. Bean already defined with the same name!
+[YH_sys] 2017-09-29 15:38:23  WARN ClassPathMapperScanner:223 : Skipping MapperFactoryBean with name 'permissionDao' and 'com.jty.manage.dao.PermissionDao' mapperInterface. Bean already defined with the same name!
+[YH_sys] 2017-09-29 15:38:23  WARN ClassPathMapperScanner:223 : Skipping MapperFactoryBean with name 'userDao' and 'com.jty.manage.dao.UserDao' mapperInterface. Bean already defined with the same name!
+[YH_sys] 2017-09-29 15:38:23  WARN ClassPathMapperScanner:155 : No MyBatis mapper was found in '[com.jty.manage.dao]' package. Please check your configuration.
+[YH_sys] 2017-09-29 15:38:23  INFO PropertySourcesPlaceholderConfigurer:172 : Loading properties file from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/db.properties]
+[YH_sys] 2017-09-29 15:38:23  INFO PropertySourcesPlaceholderConfigurer:172 : Loading properties file from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/db.properties]
+[YH_sys] 2017-09-29 15:38:23  INFO DruidDataSource:785 : {dataSource-1} inited
+[YH_sys] 2017-09-29 15:38:24  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/index]}" onto public org.springframework.web.servlet.ModelAndView com.jty.controller.MainController.index() throws java.lang.Exception
+[YH_sys] 2017-09-29 15:38:24  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/test.json]}" onto public java.lang.String com.jty.controller.MainController.testName() throws java.lang.Exception
+[YH_sys] 2017-09-29 15:38:24  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/login]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.login(java.lang.String,java.lang.String)
+[YH_sys] 2017-09-29 15:38:24  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/findAllUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.findAllUser(java.lang.String,java.lang.String)
+[YH_sys] 2017-09-29 15:38:24  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/deleteUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.deleteUser(java.lang.String)
+[YH_sys] 2017-09-29 15:38:24  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/addUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.addUser(com.jty.manage.entity.User)
+[YH_sys] 2017-09-29 15:38:24  INFO RequestMappingHandlerMapping:532 : Mapped "{[/haha]}" onto public void com.jty.controller.test.client.testName(java.lang.String) throws java.lang.Exception
+[YH_sys] 2017-09-29 15:38:24  INFO RequestMappingHandlerMapping:532 : Mapped "{[/request]}" onto public java.lang.String com.jty.test.TestRequest.testName(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[YH_sys] 2017-09-29 15:38:24  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Fri Sep 29 15:38:22 GMT+08:00 2017]; root of context hierarchy
+[YH_sys] 2017-09-29 15:38:24  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Fri Sep 29 15:38:22 GMT+08:00 2017]; root of context hierarchy
+[YH_sys] 2017-09-29 15:38:24  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+[YH_sys] 2017-09-29 15:38:24  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/html/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+[YH_sys] 2017-09-29 15:38:24  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/static/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+[YH_sys] 2017-09-29 15:38:24  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/easyui/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
+[YH_sys] 2017-09-29 15:38:24  INFO ContextLoader:347 : Root WebApplicationContext: initialization completed in 2724 ms
+[YH_sys] 2017-09-29 15:38:24  INFO DispatcherServlet:488 : FrameworkServlet 'springMvc': initialization started
+[YH_sys] 2017-09-29 15:38:24  INFO XmlWebApplicationContext:573 : Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Fri Sep 29 15:38:24 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-09-29 15:38:24  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/spring-mvc.xml]
+[YH_sys] 2017-09-29 15:38:24  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/spring-datasource.xml]
+[YH_sys] 2017-09-29 15:38:25  INFO PropertySourcesPlaceholderConfigurer:172 : Loading properties file from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/db.properties]
+[YH_sys] 2017-09-29 15:38:25  INFO DruidDataSource:785 : {dataSource-2} inited
+[YH_sys] 2017-09-29 15:38:25  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/index]}" onto public org.springframework.web.servlet.ModelAndView com.jty.controller.MainController.index() throws java.lang.Exception
+[YH_sys] 2017-09-29 15:38:25  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/test.json]}" onto public java.lang.String com.jty.controller.MainController.testName() throws java.lang.Exception
+[YH_sys] 2017-09-29 15:38:25  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/login]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.login(java.lang.String,java.lang.String)
+[YH_sys] 2017-09-29 15:38:25  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/findAllUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.findAllUser(java.lang.String,java.lang.String)
+[YH_sys] 2017-09-29 15:38:25  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/deleteUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.deleteUser(java.lang.String)
+[YH_sys] 2017-09-29 15:38:25  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/addUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.addUser(com.jty.manage.entity.User)
+[YH_sys] 2017-09-29 15:38:25  INFO RequestMappingHandlerMapping:532 : Mapped "{[/haha]}" onto public void com.jty.controller.test.client.testName(java.lang.String) throws java.lang.Exception
+[YH_sys] 2017-09-29 15:38:25  INFO RequestMappingHandlerMapping:532 : Mapped "{[/request]}" onto public java.lang.String com.jty.test.TestRequest.testName(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[YH_sys] 2017-09-29 15:38:25  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Fri Sep 29 15:38:24 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-09-29 15:38:25  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Fri Sep 29 15:38:24 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-09-29 15:38:25  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+[YH_sys] 2017-09-29 15:38:25  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/html/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+[YH_sys] 2017-09-29 15:38:25  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/static/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+[YH_sys] 2017-09-29 15:38:25  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/easyui/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
+[YH_sys] 2017-09-29 15:38:25  INFO DispatcherServlet:507 : FrameworkServlet 'springMvc': initialization completed in 511 ms
+[YH_sys] 2017-09-29 15:42:57  INFO ContextLoader:307 : Root WebApplicationContext: initialization started
+[YH_sys] 2017-09-29 15:42:57  INFO XmlWebApplicationContext:573 : Refreshing Root WebApplicationContext: startup date [Fri Sep 29 15:42:57 GMT+08:00 2017]; root of context hierarchy
+[YH_sys] 2017-09-29 15:42:57  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from file [D:\yhcode\multi_maven_parent\multi_maven_web\target\classes\applicationContext.xml]
+[YH_sys] 2017-09-29 15:42:57  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from file [D:\yhcode\multi_maven_parent\multi_maven_web\target\classes\spring-datasource.xml]
+[YH_sys] 2017-09-29 15:42:57  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from file [D:\yhcode\multi_maven_parent\multi_maven_web\target\classes\spring-mvc.xml]
+[YH_sys] 2017-09-29 15:42:57  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from file [D:\yhcode\multi_maven_parent\multi_maven_web\target\classes\spring-datasource.xml]
+[YH_sys] 2017-09-29 15:42:58  WARN ClassPathMapperScanner:223 : Skipping MapperFactoryBean with name 'commonDao' and 'com.jty.manage.dao.CommonDao' mapperInterface. Bean already defined with the same name!
+[YH_sys] 2017-09-29 15:42:58  WARN ClassPathMapperScanner:223 : Skipping MapperFactoryBean with name 'permissionDao' and 'com.jty.manage.dao.PermissionDao' mapperInterface. Bean already defined with the same name!
+[YH_sys] 2017-09-29 15:42:58  WARN ClassPathMapperScanner:223 : Skipping MapperFactoryBean with name 'userDao' and 'com.jty.manage.dao.UserDao' mapperInterface. Bean already defined with the same name!
+[YH_sys] 2017-09-29 15:42:58  WARN ClassPathMapperScanner:155 : No MyBatis mapper was found in '[com.jty.manage.dao]' package. Please check your configuration.
+[YH_sys] 2017-09-29 15:42:58  INFO PropertySourcesPlaceholderConfigurer:172 : Loading properties file from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/db.properties]
+[YH_sys] 2017-09-29 15:42:58  INFO PropertySourcesPlaceholderConfigurer:172 : Loading properties file from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/db.properties]
+[YH_sys] 2017-09-29 15:42:58  INFO DruidDataSource:785 : {dataSource-1} inited
+[YH_sys] 2017-09-29 15:42:59  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/index]}" onto public org.springframework.web.servlet.ModelAndView com.jty.controller.MainController.index() throws java.lang.Exception
+[YH_sys] 2017-09-29 15:42:59  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/test.json]}" onto public java.lang.String com.jty.controller.MainController.testName() throws java.lang.Exception
+[YH_sys] 2017-09-29 15:42:59  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/login]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.login(java.lang.String,java.lang.String)
+[YH_sys] 2017-09-29 15:42:59  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/findAllUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.findAllUser(java.lang.String,java.lang.String)
+[YH_sys] 2017-09-29 15:42:59  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/deleteUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.deleteUser(java.lang.String)
+[YH_sys] 2017-09-29 15:42:59  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/addUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.addUser(com.jty.manage.entity.User)
+[YH_sys] 2017-09-29 15:42:59  INFO RequestMappingHandlerMapping:532 : Mapped "{[/haha]}" onto public void com.jty.controller.test.client.testName(java.lang.String) throws java.lang.Exception
+[YH_sys] 2017-09-29 15:42:59  INFO RequestMappingHandlerMapping:532 : Mapped "{[/request]}" onto public java.lang.String com.jty.test.TestRequest.testName(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[YH_sys] 2017-09-29 15:42:59  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Fri Sep 29 15:42:57 GMT+08:00 2017]; root of context hierarchy
+[YH_sys] 2017-09-29 15:42:59  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Fri Sep 29 15:42:57 GMT+08:00 2017]; root of context hierarchy
+[YH_sys] 2017-09-29 15:42:59  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+[YH_sys] 2017-09-29 15:42:59  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/html/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+[YH_sys] 2017-09-29 15:42:59  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/static/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+[YH_sys] 2017-09-29 15:42:59  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/easyui/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
+[YH_sys] 2017-09-29 15:42:59  INFO ContextLoader:347 : Root WebApplicationContext: initialization completed in 2768 ms
+[YH_sys] 2017-09-29 15:43:00  INFO DispatcherServlet:488 : FrameworkServlet 'springMvc': initialization started
+[YH_sys] 2017-09-29 15:43:00  INFO XmlWebApplicationContext:573 : Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Fri Sep 29 15:43:00 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-09-29 15:43:00  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/spring-mvc.xml]
+[YH_sys] 2017-09-29 15:43:00  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/spring-datasource.xml]
+[YH_sys] 2017-09-29 15:43:00  INFO PropertySourcesPlaceholderConfigurer:172 : Loading properties file from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/db.properties]
+[YH_sys] 2017-09-29 15:43:00  INFO DruidDataSource:785 : {dataSource-2} inited
+[YH_sys] 2017-09-29 15:43:00  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/index]}" onto public org.springframework.web.servlet.ModelAndView com.jty.controller.MainController.index() throws java.lang.Exception
+[YH_sys] 2017-09-29 15:43:00  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/test.json]}" onto public java.lang.String com.jty.controller.MainController.testName() throws java.lang.Exception
+[YH_sys] 2017-09-29 15:43:00  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/login]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.login(java.lang.String,java.lang.String)
+[YH_sys] 2017-09-29 15:43:00  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/findAllUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.findAllUser(java.lang.String,java.lang.String)
+[YH_sys] 2017-09-29 15:43:00  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/deleteUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.deleteUser(java.lang.String)
+[YH_sys] 2017-09-29 15:43:00  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/addUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.addUser(com.jty.manage.entity.User)
+[YH_sys] 2017-09-29 15:43:00  INFO RequestMappingHandlerMapping:532 : Mapped "{[/haha]}" onto public void com.jty.controller.test.client.testName(java.lang.String) throws java.lang.Exception
+[YH_sys] 2017-09-29 15:43:00  INFO RequestMappingHandlerMapping:532 : Mapped "{[/request]}" onto public java.lang.String com.jty.test.TestRequest.testName(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[YH_sys] 2017-09-29 15:43:00  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Fri Sep 29 15:43:00 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-09-29 15:43:00  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Fri Sep 29 15:43:00 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-09-29 15:43:00  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+[YH_sys] 2017-09-29 15:43:00  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/html/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+[YH_sys] 2017-09-29 15:43:00  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/static/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+[YH_sys] 2017-09-29 15:43:00  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/easyui/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
+[YH_sys] 2017-09-29 15:43:00  INFO DispatcherServlet:507 : FrameworkServlet 'springMvc': initialization completed in 525 ms
+[YH_sys] 2017-09-29 16:00:28  INFO ContextLoader:307 : Root WebApplicationContext: initialization started
+[YH_sys] 2017-09-29 16:00:28  INFO XmlWebApplicationContext:573 : Refreshing Root WebApplicationContext: startup date [Fri Sep 29 16:00:28 GMT+08:00 2017]; root of context hierarchy
+[YH_sys] 2017-09-29 16:00:28  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from file [D:\yhcode\multi_maven_parent\multi_maven_web\target\classes\applicationContext.xml]
+[YH_sys] 2017-09-29 16:00:28  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from file [D:\yhcode\multi_maven_parent\multi_maven_web\target\classes\spring-datasource.xml]
+[YH_sys] 2017-09-29 16:00:28  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from file [D:\yhcode\multi_maven_parent\multi_maven_web\target\classes\spring-mvc.xml]
+[YH_sys] 2017-09-29 16:00:28  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from file [D:\yhcode\multi_maven_parent\multi_maven_web\target\classes\spring-datasource.xml]
+[YH_sys] 2017-09-29 16:00:29  WARN ClassPathMapperScanner:223 : Skipping MapperFactoryBean with name 'commonDao' and 'com.jty.manage.dao.CommonDao' mapperInterface. Bean already defined with the same name!
+[YH_sys] 2017-09-29 16:00:29  WARN ClassPathMapperScanner:223 : Skipping MapperFactoryBean with name 'permissionDao' and 'com.jty.manage.dao.PermissionDao' mapperInterface. Bean already defined with the same name!
+[YH_sys] 2017-09-29 16:00:29  WARN ClassPathMapperScanner:223 : Skipping MapperFactoryBean with name 'userDao' and 'com.jty.manage.dao.UserDao' mapperInterface. Bean already defined with the same name!
+[YH_sys] 2017-09-29 16:00:29  WARN ClassPathMapperScanner:155 : No MyBatis mapper was found in '[com.jty.manage.dao]' package. Please check your configuration.
+[YH_sys] 2017-09-29 16:00:29  INFO PropertySourcesPlaceholderConfigurer:172 : Loading properties file from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/db.properties]
+[YH_sys] 2017-09-29 16:00:29  INFO PropertySourcesPlaceholderConfigurer:172 : Loading properties file from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/db.properties]
+[YH_sys] 2017-09-29 16:00:29  INFO DruidDataSource:785 : {dataSource-1} inited
+[YH_sys] 2017-09-29 16:00:30  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/index]}" onto public org.springframework.web.servlet.ModelAndView com.jty.controller.MainController.index() throws java.lang.Exception
+[YH_sys] 2017-09-29 16:00:30  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/test.json]}" onto public java.lang.String com.jty.controller.MainController.testName() throws java.lang.Exception
+[YH_sys] 2017-09-29 16:00:30  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/login]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.login(java.lang.String,java.lang.String)
+[YH_sys] 2017-09-29 16:00:30  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/findAllUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.findAllUser(java.lang.String,java.lang.String)
+[YH_sys] 2017-09-29 16:00:30  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/deleteUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.deleteUser(java.lang.String)
+[YH_sys] 2017-09-29 16:00:30  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/addUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.addUser(com.jty.manage.entity.User)
+[YH_sys] 2017-09-29 16:00:30  INFO RequestMappingHandlerMapping:532 : Mapped "{[/haha]}" onto public void com.jty.controller.test.client.testName(java.lang.String) throws java.lang.Exception
+[YH_sys] 2017-09-29 16:00:30  INFO RequestMappingHandlerMapping:532 : Mapped "{[/request]}" onto public java.lang.String com.jty.test.TestRequest.testName(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[YH_sys] 2017-09-29 16:00:30  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Fri Sep 29 16:00:28 GMT+08:00 2017]; root of context hierarchy
+[YH_sys] 2017-09-29 16:00:30  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Fri Sep 29 16:00:28 GMT+08:00 2017]; root of context hierarchy
+[YH_sys] 2017-09-29 16:00:30  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+[YH_sys] 2017-09-29 16:00:30  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/html/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+[YH_sys] 2017-09-29 16:00:30  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/static/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+[YH_sys] 2017-09-29 16:00:30  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/easyui/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
+[YH_sys] 2017-09-29 16:00:30  INFO ContextLoader:347 : Root WebApplicationContext: initialization completed in 2758 ms
+[YH_sys] 2017-09-29 16:00:30  INFO DispatcherServlet:488 : FrameworkServlet 'springMvc': initialization started
+[YH_sys] 2017-09-29 16:00:30  INFO XmlWebApplicationContext:573 : Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Fri Sep 29 16:00:30 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-09-29 16:00:30  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/spring-mvc.xml]
+[YH_sys] 2017-09-29 16:00:30  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/spring-datasource.xml]
+[YH_sys] 2017-09-29 16:00:31  INFO PropertySourcesPlaceholderConfigurer:172 : Loading properties file from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/db.properties]
+[YH_sys] 2017-09-29 16:00:31  INFO DruidDataSource:785 : {dataSource-2} inited
+[YH_sys] 2017-09-29 16:00:31  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/index]}" onto public org.springframework.web.servlet.ModelAndView com.jty.controller.MainController.index() throws java.lang.Exception
+[YH_sys] 2017-09-29 16:00:31  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/test.json]}" onto public java.lang.String com.jty.controller.MainController.testName() throws java.lang.Exception
+[YH_sys] 2017-09-29 16:00:31  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/login]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.login(java.lang.String,java.lang.String)
+[YH_sys] 2017-09-29 16:00:31  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/findAllUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.findAllUser(java.lang.String,java.lang.String)
+[YH_sys] 2017-09-29 16:00:31  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/deleteUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.deleteUser(java.lang.String)
+[YH_sys] 2017-09-29 16:00:31  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/addUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.addUser(com.jty.manage.entity.User)
+[YH_sys] 2017-09-29 16:00:31  INFO RequestMappingHandlerMapping:532 : Mapped "{[/haha]}" onto public void com.jty.controller.test.client.testName(java.lang.String) throws java.lang.Exception
+[YH_sys] 2017-09-29 16:00:31  INFO RequestMappingHandlerMapping:532 : Mapped "{[/request]}" onto public java.lang.String com.jty.test.TestRequest.testName(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[YH_sys] 2017-09-29 16:00:31  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Fri Sep 29 16:00:30 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-09-29 16:00:31  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Fri Sep 29 16:00:30 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-09-29 16:00:31  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+[YH_sys] 2017-09-29 16:00:31  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/html/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+[YH_sys] 2017-09-29 16:00:31  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/static/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+[YH_sys] 2017-09-29 16:00:31  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/easyui/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
+[YH_sys] 2017-09-29 16:00:31  INFO DispatcherServlet:507 : FrameworkServlet 'springMvc': initialization completed in 490 ms
+[YH_sys] 2017-09-29 16:06:49  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+[YH_sys] 2017-09-29 16:06:49  INFO SQLErrorCodesFactory:126 : SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+[YH_sys] 2017-09-29 16:09:15  INFO ContextLoader:307 : Root WebApplicationContext: initialization started
+[YH_sys] 2017-09-29 16:09:16  INFO XmlWebApplicationContext:573 : Refreshing Root WebApplicationContext: startup date [Fri Sep 29 16:09:16 GMT+08:00 2017]; root of context hierarchy
+[YH_sys] 2017-09-29 16:09:16  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from file [D:\yhcode\multi_maven_parent\multi_maven_web\target\classes\applicationContext.xml]
+[YH_sys] 2017-09-29 16:09:16  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from file [D:\yhcode\multi_maven_parent\multi_maven_web\target\classes\spring-datasource.xml]
+[YH_sys] 2017-09-29 16:09:16  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from file [D:\yhcode\multi_maven_parent\multi_maven_web\target\classes\spring-mvc.xml]
+[YH_sys] 2017-09-29 16:09:16  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from file [D:\yhcode\multi_maven_parent\multi_maven_web\target\classes\spring-datasource.xml]
+[YH_sys] 2017-09-29 16:09:16  WARN ClassPathMapperScanner:223 : Skipping MapperFactoryBean with name 'commonDao' and 'com.jty.manage.dao.CommonDao' mapperInterface. Bean already defined with the same name!
+[YH_sys] 2017-09-29 16:09:16  WARN ClassPathMapperScanner:223 : Skipping MapperFactoryBean with name 'permissionDao' and 'com.jty.manage.dao.PermissionDao' mapperInterface. Bean already defined with the same name!
+[YH_sys] 2017-09-29 16:09:16  WARN ClassPathMapperScanner:223 : Skipping MapperFactoryBean with name 'userDao' and 'com.jty.manage.dao.UserDao' mapperInterface. Bean already defined with the same name!
+[YH_sys] 2017-09-29 16:09:16  WARN ClassPathMapperScanner:155 : No MyBatis mapper was found in '[com.jty.manage.dao]' package. Please check your configuration.
+[YH_sys] 2017-09-29 16:09:16  INFO PropertySourcesPlaceholderConfigurer:172 : Loading properties file from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/db.properties]
+[YH_sys] 2017-09-29 16:09:16  INFO PropertySourcesPlaceholderConfigurer:172 : Loading properties file from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/db.properties]
+[YH_sys] 2017-09-29 16:09:17  INFO DruidDataSource:785 : {dataSource-1} inited
+[YH_sys] 2017-09-29 16:09:18  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/index]}" onto public org.springframework.web.servlet.ModelAndView com.jty.controller.MainController.index() throws java.lang.Exception
+[YH_sys] 2017-09-29 16:09:18  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/test.json]}" onto public java.lang.String com.jty.controller.MainController.testName() throws java.lang.Exception
+[YH_sys] 2017-09-29 16:09:18  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/login]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.login(java.lang.String,java.lang.String)
+[YH_sys] 2017-09-29 16:09:18  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/findAllUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.findAllUser(java.lang.String,java.lang.String)
+[YH_sys] 2017-09-29 16:09:18  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/deleteUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.deleteUser(java.lang.String)
+[YH_sys] 2017-09-29 16:09:18  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/addUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.addUser(com.jty.manage.entity.User)
+[YH_sys] 2017-09-29 16:09:18  INFO RequestMappingHandlerMapping:532 : Mapped "{[/haha]}" onto public void com.jty.controller.test.client.testName(java.lang.String) throws java.lang.Exception
+[YH_sys] 2017-09-29 16:09:18  INFO RequestMappingHandlerMapping:532 : Mapped "{[/request]}" onto public java.lang.String com.jty.test.TestRequest.testName(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[YH_sys] 2017-09-29 16:09:18  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Fri Sep 29 16:09:16 GMT+08:00 2017]; root of context hierarchy
+[YH_sys] 2017-09-29 16:09:18  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Fri Sep 29 16:09:16 GMT+08:00 2017]; root of context hierarchy
+[YH_sys] 2017-09-29 16:09:18  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+[YH_sys] 2017-09-29 16:09:18  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/html/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+[YH_sys] 2017-09-29 16:09:18  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/static/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+[YH_sys] 2017-09-29 16:09:18  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/easyui/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
+[YH_sys] 2017-09-29 16:09:18  INFO ContextLoader:347 : Root WebApplicationContext: initialization completed in 2756 ms
+[YH_sys] 2017-09-29 16:09:18  INFO DispatcherServlet:488 : FrameworkServlet 'springMvc': initialization started
+[YH_sys] 2017-09-29 16:09:18  INFO XmlWebApplicationContext:573 : Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Fri Sep 29 16:09:18 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-09-29 16:09:18  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/spring-mvc.xml]
+[YH_sys] 2017-09-29 16:09:18  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/spring-datasource.xml]
+[YH_sys] 2017-09-29 16:09:18  INFO PropertySourcesPlaceholderConfigurer:172 : Loading properties file from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/db.properties]
+[YH_sys] 2017-09-29 16:09:18  INFO DruidDataSource:785 : {dataSource-2} inited
+[YH_sys] 2017-09-29 16:09:19  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/index]}" onto public org.springframework.web.servlet.ModelAndView com.jty.controller.MainController.index() throws java.lang.Exception
+[YH_sys] 2017-09-29 16:09:19  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/test.json]}" onto public java.lang.String com.jty.controller.MainController.testName() throws java.lang.Exception
+[YH_sys] 2017-09-29 16:09:19  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/login]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.login(java.lang.String,java.lang.String)
+[YH_sys] 2017-09-29 16:09:19  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/findAllUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.findAllUser(java.lang.String,java.lang.String)
+[YH_sys] 2017-09-29 16:09:19  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/deleteUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.deleteUser(java.lang.String)
+[YH_sys] 2017-09-29 16:09:19  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/addUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.addUser(com.jty.manage.entity.User)
+[YH_sys] 2017-09-29 16:09:19  INFO RequestMappingHandlerMapping:532 : Mapped "{[/haha]}" onto public void com.jty.controller.test.client.testName(java.lang.String) throws java.lang.Exception
+[YH_sys] 2017-09-29 16:09:19  INFO RequestMappingHandlerMapping:532 : Mapped "{[/request]}" onto public java.lang.String com.jty.test.TestRequest.testName(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[YH_sys] 2017-09-29 16:09:19  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Fri Sep 29 16:09:18 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-09-29 16:09:19  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Fri Sep 29 16:09:18 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-09-29 16:09:19  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+[YH_sys] 2017-09-29 16:09:19  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/html/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+[YH_sys] 2017-09-29 16:09:19  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/static/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+[YH_sys] 2017-09-29 16:09:19  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/easyui/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
+[YH_sys] 2017-09-29 16:09:19  INFO DispatcherServlet:507 : FrameworkServlet 'springMvc': initialization completed in 546 ms
+[YH_sys] 2017-09-29 16:09:34  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+[YH_sys] 2017-09-29 16:09:34  INFO SQLErrorCodesFactory:126 : SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+[YH_sys] 2017-09-29 16:13:34  INFO ContextLoader:307 : Root WebApplicationContext: initialization started
+[YH_sys] 2017-09-29 16:13:34  INFO XmlWebApplicationContext:573 : Refreshing Root WebApplicationContext: startup date [Fri Sep 29 16:13:34 GMT+08:00 2017]; root of context hierarchy
+[YH_sys] 2017-09-29 16:13:34  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from file [D:\yhcode\multi_maven_parent\multi_maven_web\target\classes\applicationContext.xml]
+[YH_sys] 2017-09-29 16:13:34  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from file [D:\yhcode\multi_maven_parent\multi_maven_web\target\classes\spring-datasource.xml]
+[YH_sys] 2017-09-29 16:13:34  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from file [D:\yhcode\multi_maven_parent\multi_maven_web\target\classes\spring-mvc.xml]
+[YH_sys] 2017-09-29 16:13:34  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from file [D:\yhcode\multi_maven_parent\multi_maven_web\target\classes\spring-datasource.xml]
+[YH_sys] 2017-09-29 16:13:35  WARN ClassPathMapperScanner:223 : Skipping MapperFactoryBean with name 'commonDao' and 'com.jty.manage.dao.CommonDao' mapperInterface. Bean already defined with the same name!
+[YH_sys] 2017-09-29 16:13:35  WARN ClassPathMapperScanner:223 : Skipping MapperFactoryBean with name 'permissionDao' and 'com.jty.manage.dao.PermissionDao' mapperInterface. Bean already defined with the same name!
+[YH_sys] 2017-09-29 16:13:35  WARN ClassPathMapperScanner:223 : Skipping MapperFactoryBean with name 'userDao' and 'com.jty.manage.dao.UserDao' mapperInterface. Bean already defined with the same name!
+[YH_sys] 2017-09-29 16:13:35  WARN ClassPathMapperScanner:155 : No MyBatis mapper was found in '[com.jty.manage.dao]' package. Please check your configuration.
+[YH_sys] 2017-09-29 16:13:35  INFO PropertySourcesPlaceholderConfigurer:172 : Loading properties file from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/db.properties]
+[YH_sys] 2017-09-29 16:13:35  INFO PropertySourcesPlaceholderConfigurer:172 : Loading properties file from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/db.properties]
+[YH_sys] 2017-09-29 16:13:36  INFO DruidDataSource:785 : {dataSource-1} inited
+[YH_sys] 2017-09-29 16:13:36  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/index]}" onto public org.springframework.web.servlet.ModelAndView com.jty.controller.MainController.index() throws java.lang.Exception
+[YH_sys] 2017-09-29 16:13:36  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/test.json]}" onto public java.lang.String com.jty.controller.MainController.testName() throws java.lang.Exception
+[YH_sys] 2017-09-29 16:13:36  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/login]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.login(java.lang.String,java.lang.String)
+[YH_sys] 2017-09-29 16:13:36  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/findAllUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.findAllUser(java.lang.String,java.lang.String)
+[YH_sys] 2017-09-29 16:13:36  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/deleteUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.deleteUser(java.lang.String)
+[YH_sys] 2017-09-29 16:13:36  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/addUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.addUser(com.jty.manage.entity.User)
+[YH_sys] 2017-09-29 16:13:36  INFO RequestMappingHandlerMapping:532 : Mapped "{[/haha]}" onto public void com.jty.controller.test.client.testName(java.lang.String) throws java.lang.Exception
+[YH_sys] 2017-09-29 16:13:36  INFO RequestMappingHandlerMapping:532 : Mapped "{[/request]}" onto public java.lang.String com.jty.test.TestRequest.testName(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[YH_sys] 2017-09-29 16:13:36  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Fri Sep 29 16:13:34 GMT+08:00 2017]; root of context hierarchy
+[YH_sys] 2017-09-29 16:13:36  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Fri Sep 29 16:13:34 GMT+08:00 2017]; root of context hierarchy
+[YH_sys] 2017-09-29 16:13:37  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+[YH_sys] 2017-09-29 16:13:37  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/html/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+[YH_sys] 2017-09-29 16:13:37  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/static/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+[YH_sys] 2017-09-29 16:13:37  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/easyui/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
+[YH_sys] 2017-09-29 16:13:37  INFO ContextLoader:347 : Root WebApplicationContext: initialization completed in 2771 ms
+[YH_sys] 2017-09-29 16:13:37  INFO DispatcherServlet:488 : FrameworkServlet 'springMvc': initialization started
+[YH_sys] 2017-09-29 16:13:37  INFO XmlWebApplicationContext:573 : Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Fri Sep 29 16:13:37 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-09-29 16:13:37  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/spring-mvc.xml]
+[YH_sys] 2017-09-29 16:13:37  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/spring-datasource.xml]
+[YH_sys] 2017-09-29 16:13:37  INFO PropertySourcesPlaceholderConfigurer:172 : Loading properties file from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/db.properties]
+[YH_sys] 2017-09-29 16:13:37  INFO DruidDataSource:785 : {dataSource-2} inited
+[YH_sys] 2017-09-29 16:13:37  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/index]}" onto public org.springframework.web.servlet.ModelAndView com.jty.controller.MainController.index() throws java.lang.Exception
+[YH_sys] 2017-09-29 16:13:37  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/test.json]}" onto public java.lang.String com.jty.controller.MainController.testName() throws java.lang.Exception
+[YH_sys] 2017-09-29 16:13:37  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/login]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.login(java.lang.String,java.lang.String)
+[YH_sys] 2017-09-29 16:13:37  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/findAllUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.findAllUser(java.lang.String,java.lang.String)
+[YH_sys] 2017-09-29 16:13:37  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/deleteUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.deleteUser(java.lang.String)
+[YH_sys] 2017-09-29 16:13:37  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/addUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.addUser(com.jty.manage.entity.User)
+[YH_sys] 2017-09-29 16:13:37  INFO RequestMappingHandlerMapping:532 : Mapped "{[/haha]}" onto public void com.jty.controller.test.client.testName(java.lang.String) throws java.lang.Exception
+[YH_sys] 2017-09-29 16:13:37  INFO RequestMappingHandlerMapping:532 : Mapped "{[/request]}" onto public java.lang.String com.jty.test.TestRequest.testName(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[YH_sys] 2017-09-29 16:13:37  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Fri Sep 29 16:13:37 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-09-29 16:13:37  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Fri Sep 29 16:13:37 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-09-29 16:13:37  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+[YH_sys] 2017-09-29 16:13:37  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/html/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+[YH_sys] 2017-09-29 16:13:37  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/static/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+[YH_sys] 2017-09-29 16:13:37  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/easyui/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
+[YH_sys] 2017-09-29 16:13:37  INFO DispatcherServlet:507 : FrameworkServlet 'springMvc': initialization completed in 523 ms
+[YH_sys] 2017-09-29 16:14:44  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+[YH_sys] 2017-09-29 16:14:44  INFO SQLErrorCodesFactory:126 : SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+[YH_sys] 2017-09-29 16:19:12  INFO ContextLoader:307 : Root WebApplicationContext: initialization started
+[YH_sys] 2017-09-29 16:19:12  INFO XmlWebApplicationContext:573 : Refreshing Root WebApplicationContext: startup date [Fri Sep 29 16:19:12 GMT+08:00 2017]; root of context hierarchy
+[YH_sys] 2017-09-29 16:19:13  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from file [D:\yhcode\multi_maven_parent\multi_maven_web\target\classes\applicationContext.xml]
+[YH_sys] 2017-09-29 16:19:13  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from file [D:\yhcode\multi_maven_parent\multi_maven_web\target\classes\spring-datasource.xml]
+[YH_sys] 2017-09-29 16:19:13  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from file [D:\yhcode\multi_maven_parent\multi_maven_web\target\classes\spring-mvc.xml]
+[YH_sys] 2017-09-29 16:19:13  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from file [D:\yhcode\multi_maven_parent\multi_maven_web\target\classes\spring-datasource.xml]
+[YH_sys] 2017-09-29 16:19:13  WARN ClassPathMapperScanner:223 : Skipping MapperFactoryBean with name 'commonDao' and 'com.jty.manage.dao.CommonDao' mapperInterface. Bean already defined with the same name!
+[YH_sys] 2017-09-29 16:19:13  WARN ClassPathMapperScanner:223 : Skipping MapperFactoryBean with name 'permissionDao' and 'com.jty.manage.dao.PermissionDao' mapperInterface. Bean already defined with the same name!
+[YH_sys] 2017-09-29 16:19:13  WARN ClassPathMapperScanner:223 : Skipping MapperFactoryBean with name 'userDao' and 'com.jty.manage.dao.UserDao' mapperInterface. Bean already defined with the same name!
+[YH_sys] 2017-09-29 16:19:13  WARN ClassPathMapperScanner:155 : No MyBatis mapper was found in '[com.jty.manage.dao]' package. Please check your configuration.
+[YH_sys] 2017-09-29 16:19:13  INFO PropertySourcesPlaceholderConfigurer:172 : Loading properties file from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/db.properties]
+[YH_sys] 2017-09-29 16:19:13  INFO PropertySourcesPlaceholderConfigurer:172 : Loading properties file from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/db.properties]
+[YH_sys] 2017-09-29 16:19:13  WARN XmlWebApplicationContext:544 : Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.context.event.internalEventListenerProcessor': BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0': Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.aop.aspectj.AspectJPointcutAdvisor]: Constructor threw exception; nested exception is java.lang.IllegalArgumentException: ProceedingJoinPoint is only supported for around advice
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:478)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:305)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:301)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:834)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:537)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:446)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:328)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:107)
+	at org.eclipse.jetty.server.handler.ContextHandler.callContextInitialized(ContextHandler.java:800)
+	at org.eclipse.jetty.servlet.ServletContextHandler.callContextInitialized(ServletContextHandler.java:444)
+	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:791)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:294)
+	at org.eclipse.jetty.webapp.WebAppContext.startWebapp(WebAppContext.java:1349)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1342)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:741)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:505)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.server.Server.start(Server.java:387)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:354)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at MavenJettyService.start(MavenJettyService.java:69)
+	at MavenJettyService.main(MavenJettyService.java:78)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0': Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.aop.aspectj.AspectJPointcutAdvisor]: Constructor threw exception; nested exception is java.lang.IllegalArgumentException: ProceedingJoinPoint is only supported for around advice
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:275)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1143)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1046)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:510)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:305)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:301)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201)
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:92)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:101)
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:103)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:243)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:988)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:959)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:472)
+	... 31 more
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.aop.aspectj.AspectJPointcutAdvisor]: Constructor threw exception; nested exception is java.lang.IllegalArgumentException: ProceedingJoinPoint is only supported for around advice
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:163)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:122)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:267)
+	... 46 more
+Caused by: java.lang.IllegalArgumentException: ProceedingJoinPoint is only supported for around advice
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.maybeBindProceedingJoinPoint(AbstractAspectJAdvice.java:396)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.calculateArgumentBindings(AbstractAspectJAdvice.java:368)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.getPointcut(AbstractAspectJAdvice.java:175)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.buildSafePointcut(AbstractAspectJAdvice.java:185)
+	at org.springframework.aop.aspectj.AspectJPointcutAdvisor.<init>(AspectJPointcutAdvisor.java:51)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:147)
+	... 48 more
+[YH_sys] 2017-09-29 16:19:13 ERROR ContextLoader:353 : Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.context.event.internalEventListenerProcessor': BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0': Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.aop.aspectj.AspectJPointcutAdvisor]: Constructor threw exception; nested exception is java.lang.IllegalArgumentException: ProceedingJoinPoint is only supported for around advice
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:478)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:305)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:301)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:834)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:537)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:446)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:328)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:107)
+	at org.eclipse.jetty.server.handler.ContextHandler.callContextInitialized(ContextHandler.java:800)
+	at org.eclipse.jetty.servlet.ServletContextHandler.callContextInitialized(ServletContextHandler.java:444)
+	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:791)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:294)
+	at org.eclipse.jetty.webapp.WebAppContext.startWebapp(WebAppContext.java:1349)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1342)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:741)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:505)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.server.Server.start(Server.java:387)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:354)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at MavenJettyService.start(MavenJettyService.java:69)
+	at MavenJettyService.main(MavenJettyService.java:78)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0': Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.aop.aspectj.AspectJPointcutAdvisor]: Constructor threw exception; nested exception is java.lang.IllegalArgumentException: ProceedingJoinPoint is only supported for around advice
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:275)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1143)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1046)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:510)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:305)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:301)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201)
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:92)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:101)
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:103)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:243)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:988)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:959)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:472)
+	... 31 more
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.aop.aspectj.AspectJPointcutAdvisor]: Constructor threw exception; nested exception is java.lang.IllegalArgumentException: ProceedingJoinPoint is only supported for around advice
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:163)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:122)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:267)
+	... 46 more
+Caused by: java.lang.IllegalArgumentException: ProceedingJoinPoint is only supported for around advice
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.maybeBindProceedingJoinPoint(AbstractAspectJAdvice.java:396)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.calculateArgumentBindings(AbstractAspectJAdvice.java:368)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.getPointcut(AbstractAspectJAdvice.java:175)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.buildSafePointcut(AbstractAspectJAdvice.java:185)
+	at org.springframework.aop.aspectj.AspectJPointcutAdvisor.<init>(AspectJPointcutAdvisor.java:51)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:147)
+	... 48 more
+[YH_sys] 2017-09-29 16:20:15  INFO ContextLoader:307 : Root WebApplicationContext: initialization started
+[YH_sys] 2017-09-29 16:20:15  INFO XmlWebApplicationContext:573 : Refreshing Root WebApplicationContext: startup date [Fri Sep 29 16:20:15 GMT+08:00 2017]; root of context hierarchy
+[YH_sys] 2017-09-29 16:20:15  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from file [D:\yhcode\multi_maven_parent\multi_maven_web\target\classes\applicationContext.xml]
+[YH_sys] 2017-09-29 16:20:15  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from file [D:\yhcode\multi_maven_parent\multi_maven_web\target\classes\spring-datasource.xml]
+[YH_sys] 2017-09-29 16:20:15  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from file [D:\yhcode\multi_maven_parent\multi_maven_web\target\classes\spring-mvc.xml]
+[YH_sys] 2017-09-29 16:20:15  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from file [D:\yhcode\multi_maven_parent\multi_maven_web\target\classes\spring-datasource.xml]
+[YH_sys] 2017-09-29 16:20:16  WARN ClassPathMapperScanner:223 : Skipping MapperFactoryBean with name 'commonDao' and 'com.jty.manage.dao.CommonDao' mapperInterface. Bean already defined with the same name!
+[YH_sys] 2017-09-29 16:20:16  WARN ClassPathMapperScanner:223 : Skipping MapperFactoryBean with name 'permissionDao' and 'com.jty.manage.dao.PermissionDao' mapperInterface. Bean already defined with the same name!
+[YH_sys] 2017-09-29 16:20:16  WARN ClassPathMapperScanner:223 : Skipping MapperFactoryBean with name 'userDao' and 'com.jty.manage.dao.UserDao' mapperInterface. Bean already defined with the same name!
+[YH_sys] 2017-09-29 16:20:16  WARN ClassPathMapperScanner:155 : No MyBatis mapper was found in '[com.jty.manage.dao]' package. Please check your configuration.
+[YH_sys] 2017-09-29 16:20:16  INFO PropertySourcesPlaceholderConfigurer:172 : Loading properties file from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/db.properties]
+[YH_sys] 2017-09-29 16:20:16  INFO PropertySourcesPlaceholderConfigurer:172 : Loading properties file from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/db.properties]
+[YH_sys] 2017-09-29 16:20:16  WARN XmlWebApplicationContext:544 : Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.context.event.internalEventListenerProcessor': BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0': Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.aop.aspectj.AspectJPointcutAdvisor]: Constructor threw exception; nested exception is java.lang.IllegalArgumentException: ProceedingJoinPoint is only supported for around advice
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:478)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:305)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:301)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:834)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:537)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:446)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:328)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:107)
+	at org.eclipse.jetty.server.handler.ContextHandler.callContextInitialized(ContextHandler.java:800)
+	at org.eclipse.jetty.servlet.ServletContextHandler.callContextInitialized(ServletContextHandler.java:444)
+	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:791)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:294)
+	at org.eclipse.jetty.webapp.WebAppContext.startWebapp(WebAppContext.java:1349)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1342)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:741)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:505)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.server.Server.start(Server.java:387)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:354)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at MavenJettyService.start(MavenJettyService.java:69)
+	at MavenJettyService.main(MavenJettyService.java:78)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0': Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.aop.aspectj.AspectJPointcutAdvisor]: Constructor threw exception; nested exception is java.lang.IllegalArgumentException: ProceedingJoinPoint is only supported for around advice
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:275)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1143)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1046)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:510)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:305)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:301)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201)
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:92)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:101)
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:103)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:243)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:988)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:959)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:472)
+	... 31 more
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.aop.aspectj.AspectJPointcutAdvisor]: Constructor threw exception; nested exception is java.lang.IllegalArgumentException: ProceedingJoinPoint is only supported for around advice
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:163)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:122)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:267)
+	... 46 more
+Caused by: java.lang.IllegalArgumentException: ProceedingJoinPoint is only supported for around advice
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.maybeBindProceedingJoinPoint(AbstractAspectJAdvice.java:396)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.calculateArgumentBindings(AbstractAspectJAdvice.java:368)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.getPointcut(AbstractAspectJAdvice.java:175)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.buildSafePointcut(AbstractAspectJAdvice.java:185)
+	at org.springframework.aop.aspectj.AspectJPointcutAdvisor.<init>(AspectJPointcutAdvisor.java:51)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:147)
+	... 48 more
+[YH_sys] 2017-09-29 16:20:16 ERROR ContextLoader:353 : Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.context.event.internalEventListenerProcessor': BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0': Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.aop.aspectj.AspectJPointcutAdvisor]: Constructor threw exception; nested exception is java.lang.IllegalArgumentException: ProceedingJoinPoint is only supported for around advice
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:478)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:305)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:301)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:834)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:537)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:446)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:328)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:107)
+	at org.eclipse.jetty.server.handler.ContextHandler.callContextInitialized(ContextHandler.java:800)
+	at org.eclipse.jetty.servlet.ServletContextHandler.callContextInitialized(ServletContextHandler.java:444)
+	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:791)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:294)
+	at org.eclipse.jetty.webapp.WebAppContext.startWebapp(WebAppContext.java:1349)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1342)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:741)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:505)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.server.Server.start(Server.java:387)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:354)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at MavenJettyService.start(MavenJettyService.java:69)
+	at MavenJettyService.main(MavenJettyService.java:78)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0': Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.aop.aspectj.AspectJPointcutAdvisor]: Constructor threw exception; nested exception is java.lang.IllegalArgumentException: ProceedingJoinPoint is only supported for around advice
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:275)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1143)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1046)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:510)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:305)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:301)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201)
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:92)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:101)
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:103)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:243)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:988)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:959)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:472)
+	... 31 more
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.aop.aspectj.AspectJPointcutAdvisor]: Constructor threw exception; nested exception is java.lang.IllegalArgumentException: ProceedingJoinPoint is only supported for around advice
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:163)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:122)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:267)
+	... 46 more
+Caused by: java.lang.IllegalArgumentException: ProceedingJoinPoint is only supported for around advice
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.maybeBindProceedingJoinPoint(AbstractAspectJAdvice.java:396)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.calculateArgumentBindings(AbstractAspectJAdvice.java:368)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.getPointcut(AbstractAspectJAdvice.java:175)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.buildSafePointcut(AbstractAspectJAdvice.java:185)
+	at org.springframework.aop.aspectj.AspectJPointcutAdvisor.<init>(AspectJPointcutAdvisor.java:51)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:147)
+	... 48 more
+[YH_sys] 2017-09-29 16:20:29  INFO ContextLoader:307 : Root WebApplicationContext: initialization started
+[YH_sys] 2017-09-29 16:20:29  INFO XmlWebApplicationContext:573 : Refreshing Root WebApplicationContext: startup date [Fri Sep 29 16:20:29 GMT+08:00 2017]; root of context hierarchy
+[YH_sys] 2017-09-29 16:20:29  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from file [D:\yhcode\multi_maven_parent\multi_maven_web\target\classes\applicationContext.xml]
+[YH_sys] 2017-09-29 16:20:29  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from file [D:\yhcode\multi_maven_parent\multi_maven_web\target\classes\spring-datasource.xml]
+[YH_sys] 2017-09-29 16:20:29  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from file [D:\yhcode\multi_maven_parent\multi_maven_web\target\classes\spring-mvc.xml]
+[YH_sys] 2017-09-29 16:20:29  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from file [D:\yhcode\multi_maven_parent\multi_maven_web\target\classes\spring-datasource.xml]
+[YH_sys] 2017-09-29 16:20:30  WARN ClassPathMapperScanner:223 : Skipping MapperFactoryBean with name 'commonDao' and 'com.jty.manage.dao.CommonDao' mapperInterface. Bean already defined with the same name!
+[YH_sys] 2017-09-29 16:20:30  WARN ClassPathMapperScanner:223 : Skipping MapperFactoryBean with name 'permissionDao' and 'com.jty.manage.dao.PermissionDao' mapperInterface. Bean already defined with the same name!
+[YH_sys] 2017-09-29 16:20:30  WARN ClassPathMapperScanner:223 : Skipping MapperFactoryBean with name 'userDao' and 'com.jty.manage.dao.UserDao' mapperInterface. Bean already defined with the same name!
+[YH_sys] 2017-09-29 16:20:30  WARN ClassPathMapperScanner:155 : No MyBatis mapper was found in '[com.jty.manage.dao]' package. Please check your configuration.
+[YH_sys] 2017-09-29 16:20:30  INFO PropertySourcesPlaceholderConfigurer:172 : Loading properties file from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/db.properties]
+[YH_sys] 2017-09-29 16:20:30  INFO PropertySourcesPlaceholderConfigurer:172 : Loading properties file from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/db.properties]
+[YH_sys] 2017-09-29 16:20:30  INFO DruidDataSource:785 : {dataSource-1} inited
+[YH_sys] 2017-09-29 16:20:31  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/index]}" onto public org.springframework.web.servlet.ModelAndView com.jty.controller.MainController.index() throws java.lang.Exception
+[YH_sys] 2017-09-29 16:20:31  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/test.json]}" onto public java.lang.String com.jty.controller.MainController.testName() throws java.lang.Exception
+[YH_sys] 2017-09-29 16:20:31  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/login]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.login(java.lang.String,java.lang.String)
+[YH_sys] 2017-09-29 16:20:31  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/addUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.addUser(com.jty.manage.entity.User)
+[YH_sys] 2017-09-29 16:20:31  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/findAllUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.findAllUser(java.lang.String,java.lang.String)
+[YH_sys] 2017-09-29 16:20:31  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/deleteUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.deleteUser(java.lang.String)
+[YH_sys] 2017-09-29 16:20:31  INFO RequestMappingHandlerMapping:532 : Mapped "{[/haha]}" onto public void com.jty.controller.test.client.testName(java.lang.String) throws java.lang.Exception
+[YH_sys] 2017-09-29 16:20:31  INFO RequestMappingHandlerMapping:532 : Mapped "{[/request]}" onto public java.lang.String com.jty.test.TestRequest.testName(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[YH_sys] 2017-09-29 16:20:31  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Fri Sep 29 16:20:29 GMT+08:00 2017]; root of context hierarchy
+[YH_sys] 2017-09-29 16:20:31  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Fri Sep 29 16:20:29 GMT+08:00 2017]; root of context hierarchy
+[YH_sys] 2017-09-29 16:20:31  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+[YH_sys] 2017-09-29 16:20:31  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/html/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+[YH_sys] 2017-09-29 16:20:31  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/static/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+[YH_sys] 2017-09-29 16:20:31  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/easyui/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
+[YH_sys] 2017-09-29 16:20:31  INFO ContextLoader:347 : Root WebApplicationContext: initialization completed in 2756 ms
+[YH_sys] 2017-09-29 16:20:31  INFO DispatcherServlet:488 : FrameworkServlet 'springMvc': initialization started
+[YH_sys] 2017-09-29 16:20:31  INFO XmlWebApplicationContext:573 : Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Fri Sep 29 16:20:31 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-09-29 16:20:31  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/spring-mvc.xml]
+[YH_sys] 2017-09-29 16:20:31  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/spring-datasource.xml]
+[YH_sys] 2017-09-29 16:20:31  INFO PropertySourcesPlaceholderConfigurer:172 : Loading properties file from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/db.properties]
+[YH_sys] 2017-09-29 16:20:32  INFO DruidDataSource:785 : {dataSource-2} inited
+[YH_sys] 2017-09-29 16:20:32  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/index]}" onto public org.springframework.web.servlet.ModelAndView com.jty.controller.MainController.index() throws java.lang.Exception
+[YH_sys] 2017-09-29 16:20:32  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/test.json]}" onto public java.lang.String com.jty.controller.MainController.testName() throws java.lang.Exception
+[YH_sys] 2017-09-29 16:20:32  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/login]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.login(java.lang.String,java.lang.String)
+[YH_sys] 2017-09-29 16:20:32  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/addUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.addUser(com.jty.manage.entity.User)
+[YH_sys] 2017-09-29 16:20:32  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/findAllUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.findAllUser(java.lang.String,java.lang.String)
+[YH_sys] 2017-09-29 16:20:32  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/deleteUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.deleteUser(java.lang.String)
+[YH_sys] 2017-09-29 16:20:32  INFO RequestMappingHandlerMapping:532 : Mapped "{[/haha]}" onto public void com.jty.controller.test.client.testName(java.lang.String) throws java.lang.Exception
+[YH_sys] 2017-09-29 16:20:32  INFO RequestMappingHandlerMapping:532 : Mapped "{[/request]}" onto public java.lang.String com.jty.test.TestRequest.testName(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[YH_sys] 2017-09-29 16:20:32  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Fri Sep 29 16:20:31 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-09-29 16:20:32  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Fri Sep 29 16:20:31 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-09-29 16:20:32  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+[YH_sys] 2017-09-29 16:20:32  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/html/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+[YH_sys] 2017-09-29 16:20:32  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/static/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+[YH_sys] 2017-09-29 16:20:32  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/easyui/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
+[YH_sys] 2017-09-29 16:20:32  INFO DispatcherServlet:507 : FrameworkServlet 'springMvc': initialization completed in 513 ms
+[YH_sys] 2017-09-29 16:20:48  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+[YH_sys] 2017-09-29 16:20:48  INFO SQLErrorCodesFactory:126 : SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+[YH_sys] 2017-09-29 16:21:42  INFO ContextLoader:307 : Root WebApplicationContext: initialization started
+[YH_sys] 2017-09-29 16:21:43  INFO XmlWebApplicationContext:573 : Refreshing Root WebApplicationContext: startup date [Fri Sep 29 16:21:43 GMT+08:00 2017]; root of context hierarchy
+[YH_sys] 2017-09-29 16:21:43  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from file [D:\yhcode\multi_maven_parent\multi_maven_web\target\classes\applicationContext.xml]
+[YH_sys] 2017-09-29 16:21:43  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from file [D:\yhcode\multi_maven_parent\multi_maven_web\target\classes\spring-datasource.xml]
+[YH_sys] 2017-09-29 16:21:43  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from file [D:\yhcode\multi_maven_parent\multi_maven_web\target\classes\spring-mvc.xml]
+[YH_sys] 2017-09-29 16:21:43  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from file [D:\yhcode\multi_maven_parent\multi_maven_web\target\classes\spring-datasource.xml]
+[YH_sys] 2017-09-29 16:21:43  WARN ClassPathMapperScanner:223 : Skipping MapperFactoryBean with name 'commonDao' and 'com.jty.manage.dao.CommonDao' mapperInterface. Bean already defined with the same name!
+[YH_sys] 2017-09-29 16:21:43  WARN ClassPathMapperScanner:223 : Skipping MapperFactoryBean with name 'permissionDao' and 'com.jty.manage.dao.PermissionDao' mapperInterface. Bean already defined with the same name!
+[YH_sys] 2017-09-29 16:21:43  WARN ClassPathMapperScanner:223 : Skipping MapperFactoryBean with name 'userDao' and 'com.jty.manage.dao.UserDao' mapperInterface. Bean already defined with the same name!
+[YH_sys] 2017-09-29 16:21:43  WARN ClassPathMapperScanner:155 : No MyBatis mapper was found in '[com.jty.manage.dao]' package. Please check your configuration.
+[YH_sys] 2017-09-29 16:21:43  INFO PropertySourcesPlaceholderConfigurer:172 : Loading properties file from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/db.properties]
+[YH_sys] 2017-09-29 16:21:43  INFO PropertySourcesPlaceholderConfigurer:172 : Loading properties file from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/db.properties]
+[YH_sys] 2017-09-29 16:21:44  INFO DruidDataSource:785 : {dataSource-1} inited
+[YH_sys] 2017-09-29 16:21:45  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/index]}" onto public org.springframework.web.servlet.ModelAndView com.jty.controller.MainController.index() throws java.lang.Exception
+[YH_sys] 2017-09-29 16:21:45  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/test.json]}" onto public java.lang.String com.jty.controller.MainController.testName() throws java.lang.Exception
+[YH_sys] 2017-09-29 16:21:45  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/login]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.login(java.lang.String,java.lang.String)
+[YH_sys] 2017-09-29 16:21:45  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/findAllUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.findAllUser(java.lang.String,java.lang.String)
+[YH_sys] 2017-09-29 16:21:45  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/deleteUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.deleteUser(java.lang.String)
+[YH_sys] 2017-09-29 16:21:45  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/addUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.addUser(com.jty.manage.entity.User)
+[YH_sys] 2017-09-29 16:21:45  INFO RequestMappingHandlerMapping:532 : Mapped "{[/haha]}" onto public void com.jty.controller.test.client.testName(java.lang.String) throws java.lang.Exception
+[YH_sys] 2017-09-29 16:21:45  INFO RequestMappingHandlerMapping:532 : Mapped "{[/request]}" onto public java.lang.String com.jty.test.TestRequest.testName(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[YH_sys] 2017-09-29 16:21:45  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Fri Sep 29 16:21:43 GMT+08:00 2017]; root of context hierarchy
+[YH_sys] 2017-09-29 16:21:45  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Fri Sep 29 16:21:43 GMT+08:00 2017]; root of context hierarchy
+[YH_sys] 2017-09-29 16:21:45  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+[YH_sys] 2017-09-29 16:21:45  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/html/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+[YH_sys] 2017-09-29 16:21:45  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/static/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+[YH_sys] 2017-09-29 16:21:45  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/easyui/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
+[YH_sys] 2017-09-29 16:21:45  INFO ContextLoader:347 : Root WebApplicationContext: initialization completed in 2840 ms
+[YH_sys] 2017-09-29 16:21:45  INFO DispatcherServlet:488 : FrameworkServlet 'springMvc': initialization started
+[YH_sys] 2017-09-29 16:21:45  INFO XmlWebApplicationContext:573 : Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Fri Sep 29 16:21:45 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-09-29 16:21:45  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/spring-mvc.xml]
+[YH_sys] 2017-09-29 16:21:45  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/spring-datasource.xml]
+[YH_sys] 2017-09-29 16:21:45  INFO PropertySourcesPlaceholderConfigurer:172 : Loading properties file from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/db.properties]
+[YH_sys] 2017-09-29 16:21:46  INFO DruidDataSource:785 : {dataSource-2} inited
+[YH_sys] 2017-09-29 16:21:46  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/index]}" onto public org.springframework.web.servlet.ModelAndView com.jty.controller.MainController.index() throws java.lang.Exception
+[YH_sys] 2017-09-29 16:21:46  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/test.json]}" onto public java.lang.String com.jty.controller.MainController.testName() throws java.lang.Exception
+[YH_sys] 2017-09-29 16:21:46  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/login]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.login(java.lang.String,java.lang.String)
+[YH_sys] 2017-09-29 16:21:46  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/findAllUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.findAllUser(java.lang.String,java.lang.String)
+[YH_sys] 2017-09-29 16:21:46  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/deleteUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.deleteUser(java.lang.String)
+[YH_sys] 2017-09-29 16:21:46  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/addUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.addUser(com.jty.manage.entity.User)
+[YH_sys] 2017-09-29 16:21:46  INFO RequestMappingHandlerMapping:532 : Mapped "{[/haha]}" onto public void com.jty.controller.test.client.testName(java.lang.String) throws java.lang.Exception
+[YH_sys] 2017-09-29 16:21:46  INFO RequestMappingHandlerMapping:532 : Mapped "{[/request]}" onto public java.lang.String com.jty.test.TestRequest.testName(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[YH_sys] 2017-09-29 16:21:46  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Fri Sep 29 16:21:45 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-09-29 16:21:46  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Fri Sep 29 16:21:45 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-09-29 16:21:46  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+[YH_sys] 2017-09-29 16:21:46  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/html/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+[YH_sys] 2017-09-29 16:21:46  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/static/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+[YH_sys] 2017-09-29 16:21:46  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/easyui/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
+[YH_sys] 2017-09-29 16:21:46  INFO DispatcherServlet:507 : FrameworkServlet 'springMvc': initialization completed in 572 ms
+[YH_sys] 2017-09-29 16:22:02  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+[YH_sys] 2017-09-29 16:22:02  INFO SQLErrorCodesFactory:126 : SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]

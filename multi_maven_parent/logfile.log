@@ -1,0 +1,12 @@
+[YH_sys] 2017-09-06 21:08:06  INFO ContextLoader:307 : Root WebApplicationContext: initialization started
+[YH_sys] 2017-09-06 21:08:06  INFO XmlWebApplicationContext:573 : Refreshing Root WebApplicationContext: startup date [Wed Sep 06 21:08:06 GMT+08:00 2017]; root of context hierarchy
+[YH_sys] 2017-09-06 21:08:06  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from file [D:\yhcode\multi_maven_parent\multi_maven_web\target\classes\applicationContext.xml]
+[YH_sys] 2017-09-06 21:08:06  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from file [D:\yhcode\multi_maven_parent\multi_maven_web\target\classes\spring-datasource.xml]
+[YH_sys] 2017-09-06 21:08:07  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from file [D:\yhcode\multi_maven_parent\multi_maven_web\target\classes\spring-mvc.xml]
+[YH_sys] 2017-09-06 21:08:07  INFO PropertySourcesPlaceholderConfigurer:172 : Loading properties file from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/db.properties]
+[YH_sys] 2017-09-06 21:08:08  INFO DruidDataSource:785 : {dataSource-1} inited
+[YH_sys] 2017-09-06 21:08:08  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/test.json]}" onto public void com.jty.controller.MainController.testName() throws java.lang.Exception
+[YH_sys] 2017-09-06 21:08:08  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Wed Sep 06 21:08:06 GMT+08:00 2017]; root of context hierarchy
+[YH_sys] 2017-09-06 21:08:08  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Wed Sep 06 21:08:06 GMT+08:00 2017]; root of context hierarchy
+[YH_sys] 2017-09-06 21:08:08  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+[YH_sys] 2017-09-06 21:08:08  INFO ContextLoader:347 : Root WebApplicationContext: initialization completed in 2292 ms
