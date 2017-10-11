@@ -1,0 +1,67 @@
+[YH_sys] 2017-09-13 14:38:00  INFO DispatcherServlet:488 : FrameworkServlet 'springMvc': initialization started
+[YH_sys] 2017-09-13 14:38:00  INFO XmlWebApplicationContext:573 : Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Wed Sep 13 14:38:00 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-09-13 14:38:00  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/spring-mvc.xml]
+[YH_sys] 2017-09-13 14:38:00  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/test.json]}" onto public void com.jty.controller.MainController.testName() throws java.lang.Exception
+[YH_sys] 2017-09-13 14:38:00  INFO RequestMappingHandlerMapping:532 : Mapped "{[/request]}" onto public void com.jty.test.TestRequest.testName(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[YH_sys] 2017-09-13 14:38:00  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Wed Sep 13 14:38:00 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-09-13 14:38:00  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Wed Sep 13 14:38:00 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-09-13 14:38:00  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+[YH_sys] 2017-09-13 14:38:00  INFO DispatcherServlet:507 : FrameworkServlet 'springMvc': initialization completed in 229 ms
+[YH_sys] 2017-09-13 16:27:56  INFO DispatcherServlet:488 : FrameworkServlet 'springMvc': initialization started
+[YH_sys] 2017-09-13 16:27:56  INFO XmlWebApplicationContext:573 : Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Wed Sep 13 16:27:56 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-09-13 16:27:56  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/spring-mvc.xml]
+[YH_sys] 2017-09-13 16:27:56  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/test.json]}" onto public void com.jty.controller.MainController.testName() throws java.lang.Exception
+[YH_sys] 2017-09-13 16:27:56  INFO RequestMappingHandlerMapping:532 : Mapped "{[/request]}" onto public void com.jty.test.TestRequest.testName(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[YH_sys] 2017-09-13 16:27:57  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Wed Sep 13 16:27:56 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-09-13 16:27:57  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Wed Sep 13 16:27:56 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-09-13 16:27:57  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+[YH_sys] 2017-09-13 16:27:57  INFO DispatcherServlet:507 : FrameworkServlet 'springMvc': initialization completed in 215 ms
+[YH_sys] 2017-09-13 16:35:08  INFO DispatcherServlet:488 : FrameworkServlet 'springMvc': initialization started
+[YH_sys] 2017-09-13 16:35:08  INFO XmlWebApplicationContext:573 : Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Wed Sep 13 16:35:08 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-09-13 16:35:08  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/spring-mvc.xml]
+[YH_sys] 2017-09-13 16:35:08  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/test.json]}" onto public java.lang.String com.jty.controller.MainController.testName() throws java.lang.Exception
+[YH_sys] 2017-09-13 16:35:08  INFO RequestMappingHandlerMapping:532 : Mapped "{[/request]}" onto public void com.jty.test.TestRequest.testName(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[YH_sys] 2017-09-13 16:35:08  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Wed Sep 13 16:35:08 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-09-13 16:35:08  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Wed Sep 13 16:35:08 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-09-13 16:35:08  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+[YH_sys] 2017-09-13 16:35:08  INFO DispatcherServlet:507 : FrameworkServlet 'springMvc': initialization completed in 218 ms
+[YH_sys] 2017-09-13 16:40:06  INFO DispatcherServlet:488 : FrameworkServlet 'springMvc': initialization started
+[YH_sys] 2017-09-13 16:40:06  INFO XmlWebApplicationContext:573 : Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Wed Sep 13 16:40:06 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-09-13 16:40:06  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/spring-mvc.xml]
+[YH_sys] 2017-09-13 16:40:06  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/index]}" onto public java.lang.String com.jty.controller.MainController.index() throws java.lang.Exception
+[YH_sys] 2017-09-13 16:40:06  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/test.json]}" onto public java.lang.String com.jty.controller.MainController.testName() throws java.lang.Exception
+[YH_sys] 2017-09-13 16:40:06  INFO RequestMappingHandlerMapping:532 : Mapped "{[/request]}" onto public void com.jty.test.TestRequest.testName(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[YH_sys] 2017-09-13 16:40:06  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Wed Sep 13 16:40:06 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-09-13 16:40:06  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Wed Sep 13 16:40:06 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-09-13 16:40:06  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+[YH_sys] 2017-09-13 16:40:06  INFO DispatcherServlet:507 : FrameworkServlet 'springMvc': initialization completed in 203 ms
+[YH_sys] 2017-09-13 16:40:59  INFO DispatcherServlet:488 : FrameworkServlet 'springMvc': initialization started
+[YH_sys] 2017-09-13 16:40:59  INFO XmlWebApplicationContext:573 : Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Wed Sep 13 16:40:59 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-09-13 16:40:59  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/spring-mvc.xml]
+[YH_sys] 2017-09-13 16:40:59  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/index]}" onto public java.lang.String com.jty.controller.MainController.index() throws java.lang.Exception
+[YH_sys] 2017-09-13 16:40:59  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/test.json]}" onto public java.lang.String com.jty.controller.MainController.testName() throws java.lang.Exception
+[YH_sys] 2017-09-13 16:40:59  INFO RequestMappingHandlerMapping:532 : Mapped "{[/request]}" onto public void com.jty.test.TestRequest.testName(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[YH_sys] 2017-09-13 16:40:59  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Wed Sep 13 16:40:59 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-09-13 16:40:59  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Wed Sep 13 16:40:59 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-09-13 16:40:59  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+[YH_sys] 2017-09-13 16:40:59  INFO DispatcherServlet:507 : FrameworkServlet 'springMvc': initialization completed in 216 ms
+[YH_sys] 2017-09-13 16:42:08  INFO DispatcherServlet:488 : FrameworkServlet 'springMvc': initialization started
+[YH_sys] 2017-09-13 16:42:08  INFO XmlWebApplicationContext:573 : Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Wed Sep 13 16:42:08 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-09-13 16:42:08  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/spring-mvc.xml]
+[YH_sys] 2017-09-13 16:42:08  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/index]}" onto public org.springframework.web.servlet.ModelAndView com.jty.controller.MainController.index() throws java.lang.Exception
+[YH_sys] 2017-09-13 16:42:08  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/test.json]}" onto public java.lang.String com.jty.controller.MainController.testName() throws java.lang.Exception
+[YH_sys] 2017-09-13 16:42:08  INFO RequestMappingHandlerMapping:532 : Mapped "{[/request]}" onto public void com.jty.test.TestRequest.testName(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[YH_sys] 2017-09-13 16:42:08  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Wed Sep 13 16:42:08 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-09-13 16:42:08  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Wed Sep 13 16:42:08 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-09-13 16:42:08  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+[YH_sys] 2017-09-13 16:42:09  INFO DispatcherServlet:507 : FrameworkServlet 'springMvc': initialization completed in 197 ms
+[YH_sys] 2017-09-13 16:47:28  INFO DispatcherServlet:488 : FrameworkServlet 'springMvc': initialization started
+[YH_sys] 2017-09-13 16:47:28  INFO XmlWebApplicationContext:573 : Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Wed Sep 13 16:47:28 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-09-13 16:47:28  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/spring-mvc.xml]
+[YH_sys] 2017-09-13 16:47:28  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/index]}" onto public org.springframework.web.servlet.ModelAndView com.jty.controller.MainController.index() throws java.lang.Exception
+[YH_sys] 2017-09-13 16:47:28  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/test.json]}" onto public java.lang.String com.jty.controller.MainController.testName() throws java.lang.Exception
+[YH_sys] 2017-09-13 16:47:28  INFO RequestMappingHandlerMapping:532 : Mapped "{[/request]}" onto public void com.jty.test.TestRequest.testName(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[YH_sys] 2017-09-13 16:47:28  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Wed Sep 13 16:47:28 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-09-13 16:47:28  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Wed Sep 13 16:47:28 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-09-13 16:47:28  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+[YH_sys] 2017-09-13 16:47:28  INFO DispatcherServlet:507 : FrameworkServlet 'springMvc': initialization completed in 204 ms

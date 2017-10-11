@@ -49,7 +49,7 @@
                                 <li><a class="J_menuItem" href="mailbox.html">信箱</a>
                                 </li>
                                 <li class="divider"></li>
-                                <li><a href="login.html">安全退出</a>
+                                <li><a onclick="loginOut()">安全退出</a>
                                 </li>
                             </ul>
                         </div>
@@ -71,6 +71,21 @@
                             </li>
                             <li>
                                 <a class="J_menuItem" href="roleManage.html" data-index="0">角色管理</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="../test" data-index="0">测试权限</a>
+                            </li>
+                        </ul>
+                    </li>
+                     <li>
+                        <a href="#">
+                            <i class="fa fa-home"></i>
+                            <span class="nav-label">菜单设置</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a class="J_menuItem" href="menuManage.html" data-index="0">菜单管理</a>
                             </li>
                         </ul>
                     </li>
@@ -941,6 +956,15 @@
     <script src="../static/../static/js/hplus.min.js?v=4.1.0"></script>
     <script type="text/javascript" src="../static/../static/js/contabs.min.js"></script>
     <script src="../static/../static/js/plugins/pace/pace.min.js"></script>
+    
+    <script type="text/javascript">
+    function loginOut(){
+    	$.ajax({
+    		url:'../permission/loginOut',
+    	})
+    	location.href="./login.html";
+    }
+    </script>
 </body>
 
 </html>

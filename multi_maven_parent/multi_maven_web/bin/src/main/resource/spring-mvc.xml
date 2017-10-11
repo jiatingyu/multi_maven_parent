@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+		http://www.springframework.org/schema/aop 
+		http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+	<!-- 处理请求返回json字符串的中文乱码问题 -->
+    <mvc:annotation-driven>
+        <mvc:message-converters>
+            <bean class="org.springframework.http.converter.StringHttpMessageConverter">
+                <property name="supportedMediaTypes">
+                    <list>
+                        <value>application/json;charset=UTF-8</value>
+                    </list>
+                </property>
+            </bean>
+        </mvc:message-converters>
+        
+    </mvc:annotation-driven>
+	<mvc:default-servlet-handler/>
+	
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/**"/>
+			<mvc:exclude-mapping path="/html/login.html"/>
+			<mvc:exclude-mapping path="/static/**"/>
+			<bean class="com.jty.interceptor.MyFirstInterceptor"></bean>		
+		</mvc:interceptor>
+	</mvc:interceptors>
+	
+	
+	 <context:component-scan base-package="com.jty" >
+	 	 <context:include-filter type="aspectj" expression="com.jty.controller..*Controller"/>
+	 </context:component-scan>
+	 <mvc:resources location="/WEB-INF/html/" mapping="/html/**"/>
+	 <mvc:resources location="/WEB-INF/static/" mapping="/static/**"/>
+	 <mvc:resources location="/WEB-INF/easyui/" mapping="/easyui/**"/>
+	 
+	 
+   <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+	  <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"></property>
+<<<<<<< HEAD
+      <property name="prefix" value="/WEB-INF/jsp/" />
+=======
+      <property name="prefix" value="/WEB-INF/html/" />
+>>>>>>> 4ec6b43dbb3a13846a5c44213fbced748f091f81
+      <property name="suffix" value=".jsp" />
+   </bean>
+
+	<!-- aop  日志配置 -->
+	<bean id="syslogUtils" class="com.jty.util.SyslogUtils">
+		<property name="commonService" ref="commonService"></property>
+	</bean>
+	
+	<aop:config proxy-target-class="false">
+		<aop:pointcut expression="execution(* com.jty.service..*.*(..))" id="syslogpoint"  />
+		<aop:aspect ref="syslogUtils" id="testAspect"  >
+			<aop:after method="insertDb" pointcut-ref="syslogpoint"  />
+		</aop:aspect>
+	</aop:config>
+</beans>

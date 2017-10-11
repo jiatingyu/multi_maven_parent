@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.jty.manage.dao.PermissionDao" >
+	<select id="findAllUser" resultType="com.jty.manage.entity.User" >
+		select * from user 
+	</select>
+	<insert id="insertUser" parameterType="com.jty.manage.entity.User">
+		insert into user (username,password) values (#{username},#{password})
+	</insert>
+	<delete id="deleteUser" parameterType="String">
+		delete from user where id=#{id}
+	</delete>
+	
+	<insert id="generatePrivilege" parameterType="map" >
+		insert into privilege 	(privilegename,privilegeurl) values 
+		<foreach collection="priviMap" index="key" separator="," item="value">
+			(#{value},#{key})
+		</foreach>
+	</insert>
+	
+<<<<<<< HEAD
+=======
+	<select id="findAllPrivilege" resultType="Privilege">
+		select * from privilege
+	</select>
+	
+>>>>>>> 4ec6b43dbb3a13846a5c44213fbced748f091f81
+</mapper>

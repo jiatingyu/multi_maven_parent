@@ -1,0 +1,292 @@
+[YH_sys] 2017-09-14 09:40:10  INFO ContextLoader:307 : Root WebApplicationContext: initialization started
+[YH_sys] 2017-09-14 09:40:10  INFO XmlWebApplicationContext:573 : Refreshing Root WebApplicationContext: startup date [Thu Sep 14 09:40:10 GMT+08:00 2017]; root of context hierarchy
+[YH_sys] 2017-09-14 09:40:10  INFO ContextLoader:347 : Root WebApplicationContext: initialization completed in 294 ms
+[YH_sys] 2017-09-14 09:40:10  INFO DispatcherServlet:488 : FrameworkServlet 'springMvc': initialization started
+[YH_sys] 2017-09-14 09:40:10  INFO XmlWebApplicationContext:573 : Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Thu Sep 14 09:40:10 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-09-14 09:40:11  INFO DispatcherServlet:507 : FrameworkServlet 'springMvc': initialization completed in 146 ms
+[YH_sys] 2017-09-14 09:40:44  WARN PageNotFound:1136 : No mapping found for HTTP request with URI [/maven/] in DispatcherServlet with name 'springMvc'
+[YH_sys] 2017-09-14 09:41:21  WARN PageNotFound:1136 : No mapping found for HTTP request with URI [/maven/api/test.json] in DispatcherServlet with name 'springMvc'
+[YH_sys] 2017-09-14 09:42:26  WARN PageNotFound:1136 : No mapping found for HTTP request with URI [/maven/] in DispatcherServlet with name 'springMvc'
+[YH_sys] 2017-09-14 09:42:41  WARN PageNotFound:1136 : No mapping found for HTTP request with URI [/maven/] in DispatcherServlet with name 'springMvc'
+[YH_sys] 2017-09-14 09:45:49  INFO ContextLoader:307 : Root WebApplicationContext: initialization started
+[YH_sys] 2017-09-14 09:45:49  INFO XmlWebApplicationContext:573 : Refreshing Root WebApplicationContext: startup date [Thu Sep 14 09:45:49 GMT+08:00 2017]; root of context hierarchy
+[YH_sys] 2017-09-14 09:45:50  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from file [D:\yhcode\multi_maven_parent\multi_maven_web\target\classes\spring-mvc.xml]
+[YH_sys] 2017-09-14 09:45:50  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/index]}" onto public org.springframework.web.servlet.ModelAndView com.jty.controller.MainController.index() throws java.lang.Exception
+[YH_sys] 2017-09-14 09:45:50  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/test.json]}" onto public java.lang.String com.jty.controller.MainController.testName() throws java.lang.Exception
+[YH_sys] 2017-09-14 09:45:50  INFO RequestMappingHandlerMapping:532 : Mapped "{[/request]}" onto public void com.jty.test.TestRequest.testName(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[YH_sys] 2017-09-14 09:45:50  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Thu Sep 14 09:45:49 GMT+08:00 2017]; root of context hierarchy
+[YH_sys] 2017-09-14 09:45:50  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Thu Sep 14 09:45:49 GMT+08:00 2017]; root of context hierarchy
+[YH_sys] 2017-09-14 09:45:50  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+[YH_sys] 2017-09-14 09:45:50  WARN XmlWebApplicationContext:544 : Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userService': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.jty.dao.UserDao com.jty.service.UserService.dao; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.jty.dao.UserDao] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:305)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:301)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:834)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:537)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:446)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:328)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:107)
+	at org.eclipse.jetty.server.handler.ContextHandler.callContextInitialized(ContextHandler.java:800)
+	at org.eclipse.jetty.servlet.ServletContextHandler.callContextInitialized(ServletContextHandler.java:444)
+	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:791)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:294)
+	at org.eclipse.jetty.webapp.WebAppContext.startWebapp(WebAppContext.java:1349)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1342)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:741)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:505)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.server.Server.start(Server.java:387)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:354)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at MavenJettyService.start(MavenJettyService.java:69)
+	at MavenJettyService.main(MavenJettyService.java:78)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.jty.dao.UserDao com.jty.service.UserService.dao; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.jty.dao.UserDao] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:571)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:331)
+	... 34 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.jty.dao.UserDao] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1326)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1072)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:967)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:543)
+	... 36 more
+[YH_sys] 2017-09-14 09:45:50 ERROR ContextLoader:353 : Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userService': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.jty.dao.UserDao com.jty.service.UserService.dao; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.jty.dao.UserDao] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:305)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:301)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:834)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:537)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:446)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:328)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:107)
+	at org.eclipse.jetty.server.handler.ContextHandler.callContextInitialized(ContextHandler.java:800)
+	at org.eclipse.jetty.servlet.ServletContextHandler.callContextInitialized(ServletContextHandler.java:444)
+	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:791)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:294)
+	at org.eclipse.jetty.webapp.WebAppContext.startWebapp(WebAppContext.java:1349)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1342)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:741)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:505)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.server.Server.start(Server.java:387)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:354)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at MavenJettyService.start(MavenJettyService.java:69)
+	at MavenJettyService.main(MavenJettyService.java:78)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.jty.dao.UserDao com.jty.service.UserService.dao; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.jty.dao.UserDao] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:571)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:331)
+	... 34 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.jty.dao.UserDao] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1326)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1072)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:967)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:543)
+	... 36 more
+[YH_sys] 2017-09-14 09:46:28  INFO ContextLoader:307 : Root WebApplicationContext: initialization started
+[YH_sys] 2017-09-14 09:46:28  INFO XmlWebApplicationContext:573 : Refreshing Root WebApplicationContext: startup date [Thu Sep 14 09:46:28 GMT+08:00 2017]; root of context hierarchy
+[YH_sys] 2017-09-14 09:46:28  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from file [D:\yhcode\multi_maven_parent\multi_maven_web\target\classes\spring-mvc.xml]
+[YH_sys] 2017-09-14 09:46:29  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/index]}" onto public org.springframework.web.servlet.ModelAndView com.jty.controller.MainController.index() throws java.lang.Exception
+[YH_sys] 2017-09-14 09:46:29  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/test.json]}" onto public java.lang.String com.jty.controller.MainController.testName() throws java.lang.Exception
+[YH_sys] 2017-09-14 09:46:29  INFO RequestMappingHandlerMapping:532 : Mapped "{[/request]}" onto public void com.jty.test.TestRequest.testName(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[YH_sys] 2017-09-14 09:46:29  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Thu Sep 14 09:46:28 GMT+08:00 2017]; root of context hierarchy
+[YH_sys] 2017-09-14 09:46:29  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Thu Sep 14 09:46:28 GMT+08:00 2017]; root of context hierarchy
+[YH_sys] 2017-09-14 09:46:29  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+[YH_sys] 2017-09-14 09:46:29  WARN XmlWebApplicationContext:544 : Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userService': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.jty.dao.UserDao com.jty.service.UserService.dao; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.jty.dao.UserDao] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:305)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:301)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:834)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:537)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:446)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:328)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:107)
+	at org.eclipse.jetty.server.handler.ContextHandler.callContextInitialized(ContextHandler.java:800)
+	at org.eclipse.jetty.servlet.ServletContextHandler.callContextInitialized(ServletContextHandler.java:444)
+	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:791)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:294)
+	at org.eclipse.jetty.webapp.WebAppContext.startWebapp(WebAppContext.java:1349)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1342)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:741)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:505)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.server.Server.start(Server.java:387)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:354)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at MavenJettyService.start(MavenJettyService.java:69)
+	at MavenJettyService.main(MavenJettyService.java:78)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.jty.dao.UserDao com.jty.service.UserService.dao; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.jty.dao.UserDao] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:571)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:331)
+	... 34 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.jty.dao.UserDao] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1326)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1072)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:967)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:543)
+	... 36 more
+[YH_sys] 2017-09-14 09:46:29 ERROR ContextLoader:353 : Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userService': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.jty.dao.UserDao com.jty.service.UserService.dao; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.jty.dao.UserDao] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:305)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:301)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:834)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:537)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:446)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:328)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:107)
+	at org.eclipse.jetty.server.handler.ContextHandler.callContextInitialized(ContextHandler.java:800)
+	at org.eclipse.jetty.servlet.ServletContextHandler.callContextInitialized(ServletContextHandler.java:444)
+	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:791)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:294)
+	at org.eclipse.jetty.webapp.WebAppContext.startWebapp(WebAppContext.java:1349)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1342)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:741)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:505)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.server.Server.start(Server.java:387)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:354)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at MavenJettyService.start(MavenJettyService.java:69)
+	at MavenJettyService.main(MavenJettyService.java:78)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.jty.dao.UserDao com.jty.service.UserService.dao; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.jty.dao.UserDao] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:571)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:331)
+	... 34 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.jty.dao.UserDao] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1326)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1072)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:967)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:543)
+	... 36 more
+[YH_sys] 2017-09-14 09:51:51  INFO ContextLoader:307 : Root WebApplicationContext: initialization started
+[YH_sys] 2017-09-14 09:51:51  INFO XmlWebApplicationContext:573 : Refreshing Root WebApplicationContext: startup date [Thu Sep 14 09:51:51 GMT+08:00 2017]; root of context hierarchy
+[YH_sys] 2017-09-14 09:51:51  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from file [D:\yhcode\multi_maven_parent\multi_maven_web\target\classes\applicationContext.xml]
+[YH_sys] 2017-09-14 09:51:52  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from file [D:\yhcode\multi_maven_parent\multi_maven_web\target\classes\spring-datasource.xml]
+[YH_sys] 2017-09-14 09:51:52  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from file [D:\yhcode\multi_maven_parent\multi_maven_web\target\classes\spring-mvc.xml]
+[YH_sys] 2017-09-14 09:51:52  INFO PropertySourcesPlaceholderConfigurer:172 : Loading properties file from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/db.properties]
+[YH_sys] 2017-09-14 09:51:53  INFO DruidDataSource:785 : {dataSource-1} inited
+[YH_sys] 2017-09-14 09:51:53  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/index]}" onto public org.springframework.web.servlet.ModelAndView com.jty.controller.MainController.index() throws java.lang.Exception
+[YH_sys] 2017-09-14 09:51:53  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/test.json]}" onto public java.lang.String com.jty.controller.MainController.testName() throws java.lang.Exception
+[YH_sys] 2017-09-14 09:51:53  INFO RequestMappingHandlerMapping:532 : Mapped "{[/request]}" onto public void com.jty.test.TestRequest.testName(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[YH_sys] 2017-09-14 09:51:53  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Thu Sep 14 09:51:51 GMT+08:00 2017]; root of context hierarchy
+[YH_sys] 2017-09-14 09:51:53  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Thu Sep 14 09:51:51 GMT+08:00 2017]; root of context hierarchy
+[YH_sys] 2017-09-14 09:51:53  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+[YH_sys] 2017-09-14 09:51:53  INFO ContextLoader:347 : Root WebApplicationContext: initialization completed in 2075 ms
+[YH_sys] 2017-09-14 09:51:53  INFO DispatcherServlet:488 : FrameworkServlet 'springMvc': initialization started
+[YH_sys] 2017-09-14 09:51:53  INFO XmlWebApplicationContext:573 : Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Thu Sep 14 09:51:53 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-09-14 09:51:53  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/spring-mvc.xml]
+[YH_sys] 2017-09-14 09:51:53  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/index]}" onto public org.springframework.web.servlet.ModelAndView com.jty.controller.MainController.index() throws java.lang.Exception
+[YH_sys] 2017-09-14 09:51:53  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/test.json]}" onto public java.lang.String com.jty.controller.MainController.testName() throws java.lang.Exception
+[YH_sys] 2017-09-14 09:51:53  INFO RequestMappingHandlerMapping:532 : Mapped "{[/request]}" onto public void com.jty.test.TestRequest.testName(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[YH_sys] 2017-09-14 09:51:53  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Thu Sep 14 09:51:53 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-09-14 09:51:53  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Thu Sep 14 09:51:53 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-09-14 09:51:53  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+[YH_sys] 2017-09-14 09:51:53  INFO DispatcherServlet:507 : FrameworkServlet 'springMvc': initialization completed in 221 ms
+[YH_sys] 2017-09-14 09:52:28  INFO ContextLoader:307 : Root WebApplicationContext: initialization started
+[YH_sys] 2017-09-14 09:52:28  INFO XmlWebApplicationContext:573 : Refreshing Root WebApplicationContext: startup date [Thu Sep 14 09:52:28 GMT+08:00 2017]; root of context hierarchy
+[YH_sys] 2017-09-14 09:52:28  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from file [D:\yhcode\multi_maven_parent\multi_maven_web\target\classes\applicationContext.xml]
+[YH_sys] 2017-09-14 09:52:29  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from file [D:\yhcode\multi_maven_parent\multi_maven_web\target\classes\spring-datasource.xml]
+[YH_sys] 2017-09-14 09:52:29  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from file [D:\yhcode\multi_maven_parent\multi_maven_web\target\classes\spring-mvc.xml]
+[YH_sys] 2017-09-14 09:52:29  INFO PropertySourcesPlaceholderConfigurer:172 : Loading properties file from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/db.properties]
+[YH_sys] 2017-09-14 09:52:30  INFO DruidDataSource:785 : {dataSource-1} inited
+[YH_sys] 2017-09-14 09:52:30  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/index]}" onto public org.springframework.web.servlet.ModelAndView com.jty.controller.MainController.index() throws java.lang.Exception
+[YH_sys] 2017-09-14 09:52:30  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/test.json]}" onto public java.lang.String com.jty.controller.MainController.testName() throws java.lang.Exception
+[YH_sys] 2017-09-14 09:52:30  INFO RequestMappingHandlerMapping:532 : Mapped "{[/request]}" onto public void com.jty.test.TestRequest.testName(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[YH_sys] 2017-09-14 09:52:30  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Thu Sep 14 09:52:28 GMT+08:00 2017]; root of context hierarchy
+[YH_sys] 2017-09-14 09:52:30  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Thu Sep 14 09:52:28 GMT+08:00 2017]; root of context hierarchy
+[YH_sys] 2017-09-14 09:52:30  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+[YH_sys] 2017-09-14 09:52:30  INFO ContextLoader:347 : Root WebApplicationContext: initialization completed in 2308 ms
+[YH_sys] 2017-09-14 09:52:30  INFO DispatcherServlet:488 : FrameworkServlet 'springMvc': initialization started
+[YH_sys] 2017-09-14 09:52:30  INFO XmlWebApplicationContext:573 : Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Thu Sep 14 09:52:30 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-09-14 09:52:30  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/spring-mvc.xml]
+[YH_sys] 2017-09-14 09:52:31  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/index]}" onto public org.springframework.web.servlet.ModelAndView com.jty.controller.MainController.index() throws java.lang.Exception
+[YH_sys] 2017-09-14 09:52:31  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/test.json]}" onto public java.lang.String com.jty.controller.MainController.testName() throws java.lang.Exception
+[YH_sys] 2017-09-14 09:52:31  INFO RequestMappingHandlerMapping:532 : Mapped "{[/request]}" onto public void com.jty.test.TestRequest.testName(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[YH_sys] 2017-09-14 09:52:31  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Thu Sep 14 09:52:30 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-09-14 09:52:31  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Thu Sep 14 09:52:30 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-09-14 09:52:31  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+[YH_sys] 2017-09-14 09:52:31  INFO DispatcherServlet:507 : FrameworkServlet 'springMvc': initialization completed in 211 ms
+[YH_sys] 2017-09-14 09:55:59  INFO ContextLoader:307 : Root WebApplicationContext: initialization started
+[YH_sys] 2017-09-14 09:55:59  INFO XmlWebApplicationContext:573 : Refreshing Root WebApplicationContext: startup date [Thu Sep 14 09:55:59 GMT+08:00 2017]; root of context hierarchy
+[YH_sys] 2017-09-14 09:55:59  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from file [D:\yhcode\multi_maven_parent\multi_maven_web\target\classes\applicationContext.xml]
+[YH_sys] 2017-09-14 09:56:00  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from file [D:\yhcode\multi_maven_parent\multi_maven_web\target\classes\spring-datasource.xml]
+[YH_sys] 2017-09-14 09:56:00  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from file [D:\yhcode\multi_maven_parent\multi_maven_web\target\classes\spring-mvc.xml]
+[YH_sys] 2017-09-14 09:56:00  INFO PropertySourcesPlaceholderConfigurer:172 : Loading properties file from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/db.properties]
+[YH_sys] 2017-09-14 09:56:01  INFO DruidDataSource:785 : {dataSource-1} inited
+[YH_sys] 2017-09-14 09:56:01  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/index]}" onto public org.springframework.web.servlet.ModelAndView com.jty.controller.MainController.index() throws java.lang.Exception
+[YH_sys] 2017-09-14 09:56:01  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/test.json]}" onto public java.lang.String com.jty.controller.MainController.testName() throws java.lang.Exception
+[YH_sys] 2017-09-14 09:56:01  INFO RequestMappingHandlerMapping:532 : Mapped "{[/request]}" onto public void com.jty.test.TestRequest.testName(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[YH_sys] 2017-09-14 09:56:01  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Thu Sep 14 09:55:59 GMT+08:00 2017]; root of context hierarchy
+[YH_sys] 2017-09-14 09:56:01  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Thu Sep 14 09:55:59 GMT+08:00 2017]; root of context hierarchy
+[YH_sys] 2017-09-14 09:56:01  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+[YH_sys] 2017-09-14 09:56:01  INFO ContextLoader:347 : Root WebApplicationContext: initialization completed in 2270 ms
+[YH_sys] 2017-09-14 09:56:01  INFO DispatcherServlet:488 : FrameworkServlet 'springMvc': initialization started
+[YH_sys] 2017-09-14 09:56:01  INFO XmlWebApplicationContext:573 : Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Thu Sep 14 09:56:01 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-09-14 09:56:01  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/spring-mvc.xml]
+[YH_sys] 2017-09-14 09:56:01  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/index]}" onto public org.springframework.web.servlet.ModelAndView com.jty.controller.MainController.index() throws java.lang.Exception
+[YH_sys] 2017-09-14 09:56:01  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/test.json]}" onto public java.lang.String com.jty.controller.MainController.testName() throws java.lang.Exception
+[YH_sys] 2017-09-14 09:56:01  INFO RequestMappingHandlerMapping:532 : Mapped "{[/request]}" onto public void com.jty.test.TestRequest.testName(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[YH_sys] 2017-09-14 09:56:01  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Thu Sep 14 09:56:01 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-09-14 09:56:01  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Thu Sep 14 09:56:01 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-09-14 09:56:02  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+[YH_sys] 2017-09-14 09:56:02  INFO DispatcherServlet:507 : FrameworkServlet 'springMvc': initialization completed in 201 ms

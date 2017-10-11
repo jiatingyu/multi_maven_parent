@@ -8,33 +8,35 @@ public class Role {
 	        super();  
 	        this.permissions = new HashSet<Permission>();  
 	    }  
-	    private String id;  
-	    private String name;  
+	    private String role_id;  
+	    private String rolename;  
 	    private String description;  
 	    private Set<Permission> permissions;  
 	  
-	    public String getId() {  
-	        return id;  
-	    }  
 	  
-	    public void setId(String id) {  
-	        this.id = id;  
-	    }  
 	  
-	    public String getName() {  
-	        return name;  
-	    }  
-	  
-	    public void setName(String name) {  
-	        this.name = name;  
-	    }  
-	  
-	    public String getDescription() {  
+	    public String getRole_id() {
+			return role_id;
+		}
+
+		public void setRole_id(String role_id) {
+			this.role_id = role_id;
+		}
+
+		public String getRolename() {
+			return rolename;
+		}
+
+		public void setRolename(String rolename) {
+			this.rolename = rolename;
+		}
+
+		public String getDescription() {  
 	        return description;  
 	    }  
 	  
-	    public void setDescription(String description) {  
-	        this.description = description;  
+	    public void setDescription(String desc) {  
+	        this.description = desc;  
 	    }  
 	  
 	    public Set<Permission> getPermissions() {  
@@ -43,5 +45,12 @@ public class Role {
 	  
 	    public void setPermissions(Set<Permission> permissions) {  
 	        this.permissions = permissions;  
-	    }  
+	    }
+
+		@Override
+		public String toString() {
+			return "Role [role_id=" + role_id + ", rolename=" + rolename + ", description=" + description + ", permissions="
+					+ permissions + "]";
+		}  
+	    
 }

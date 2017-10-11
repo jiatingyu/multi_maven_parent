@@ -173,6 +173,19 @@
 			<version>2.6.12</version>
 		</dependency>
       
+      <!-- jsp所需的两个额包 jstl standard -->
+		<dependency>
+		    <groupId>jstl</groupId>
+		    <artifactId>jstl</artifactId>
+		    <version>1.2</version>
+		</dependency>
+		      <!-- https://mvnrepository.com/artifact/taglibs/standard -->
+		<dependency>
+		    <groupId>taglibs</groupId>
+		    <artifactId>standard</artifactId>
+		    <version>1.1.2</version>
+		</dependency>
+      
       <!-- https://mvnrepository.com/artifact/javax.websocket/javax.websocket-api -->
 <!-- <dependency>
     <groupId>javax.websocket</groupId>
@@ -260,7 +273,6 @@
 		                </webResources>
 		            </configuration>
 		        </plugin>
-			
 		</plugins>
   </build>
 </project>

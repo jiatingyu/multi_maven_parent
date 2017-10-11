@@ -5,6 +5,9 @@ import java.util.Map;
 
 import org.springframework.stereotype.Service;
 
+import com.jty.manage.entity.Menu;
+import com.jty.manage.entity.Privilege;
+import com.jty.manage.entity.Role;
 import com.jty.manage.entity.User;
 
 public interface PermissionService {
@@ -16,4 +19,20 @@ public interface PermissionService {
 	void deleteUser(String id);
 
 	void generatePrivilege(Map<String, String> map);
+
+	List<Privilege> findAllPrivilege();
+
+	List<Role> findAllRole();
+
+	void addRole(Role role);
+
+	User findUserByUsernameAndPwd(String username,String pwd);
+
+	List<Privilege> findUserAllPrivilege(String id);
+
+	List<Role> findUserAllRole(String id);
+
+	List<Menu> findAllMenu();
+
+	int addMenu(Menu menu);
 }

@@ -53,14 +53,15 @@
     <script src="../static/../static/js/bootstrap.min.js?v=3.3.6"></script>
     <script type="text/javascript">
     	function login(){
-    		debugger;
     		$.ajax({
     			url:"../permission/login",
     			data:$("#fm").serialize(),
     			dataType:"json",
     			success:function(data){
     				if(data.data==1)
-					location.href="./index.html"
+						location.href="./index.html"
+					else
+						alert(data.message);
     			}
     		});
     	}

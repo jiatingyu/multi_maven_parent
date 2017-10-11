@@ -1,12 +1,12 @@
 package com.jty.util;
 
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
-import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
+
+import com.jty.manage.entity.User;
 
 public class RequestUtils {
 	
@@ -28,4 +28,13 @@ public class RequestUtils {
 	public static HttpSession getSession(){
 		return getRequest().getSession();
 	}
+	
+	public static void setUser(User user){
+		getRequest().getSession().setAttribute("user",user);
+	}
+	
+	public static User getUser(){
+		return (User) getSession().getAttribute("user");
+	}
+	
 }
