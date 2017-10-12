@@ -35,4 +35,10 @@ public interface PermissionService {
 	List<Menu> findAllMenu();
 
 	int addMenu(Menu menu);
+
+	int deleteMenu(String menu_id);
+	/**
+	 * 查询系统当前用户的全部菜单
+	 * 	 */
+	List<Menu> findUserAllMenu(String user_id);
 }

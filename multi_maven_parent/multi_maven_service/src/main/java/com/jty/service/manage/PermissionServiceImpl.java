@@ -67,6 +67,15 @@ public class PermissionServiceImpl implements PermissionService {
 		// TODO Auto-generated method stub
 		return dao.addMenu(menu);
 	}
+	public int deleteMenu(String menu_id) {
+		// TODO Auto-generated method stub
+		return dao.deleteMenu(menu_id);
+	}
+	public List<Menu> findUserAllMenu(String user_id) {
+		// TODO Auto-generated method stub
+		return dao.findUserAllMenu( user_id);
+	}
+	
 	
 	
 }

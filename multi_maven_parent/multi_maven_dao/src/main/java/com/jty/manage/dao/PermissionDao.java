@@ -124,4 +124,13 @@ public interface PermissionDao {
 	@Insert("insert into tb_menu (name,parentId,type,resUrl, icon,sort,isValid,description,createTime,updateTime) values ("
 			+ "					#{name},#{parentId},#{type},#{resUrl},#{icon},#{sort},#{isValid},#{description},NOW(),NOW())")
 	int addMenu(Menu menu);
+	@Delete("delete from tb_menu where menu_id =#{menu_id}")
+	int deleteMenu(String menu_id);
+	@Select("SELECT e.* from user a "
+		+ "LEFT JOIN user_role b on 	a.id=b.userid "
+		+ "LEFT JOIN role c on b.roleid=c.role_id "
+		+ "LEFT JOIN role_menu d on c.role_id =d.role_id "
+		+ "LEFT JOIN tb_menu e on d.menu_id=e.menu_id "
+		+ "where a.id=#{user_id} and e.isValid =1  ORDER BY e.parentId")
+	List<Menu> findUserAllMenu(String user_id);
 }

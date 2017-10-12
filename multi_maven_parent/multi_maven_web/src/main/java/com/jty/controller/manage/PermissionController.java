@@ -4,6 +4,7 @@ package com.jty.controller.manage;
 import static org.junit.Assert.*;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -34,6 +35,8 @@ import com.jty.test.activemq.recevier;
 import com.jty.util.AjaxRes;
 import com.jty.util.ClassScaner;
 import com.jty.util.RequestUtils;
+
+import net.sf.json.JSONObject;
 
 @Controller
 @RequestMapping("/permission")
@@ -161,6 +164,47 @@ public class PermissionController {
 		ajaxRes.setRes(i);
 		return ajaxRes;
 	}
+	/**
+	 * 软删除菜单
+	 * @param menu
+	 * @return
+	 */
+	@ResponseBody
+	@RequestMapping("/deleteMenu")
+	@Resource(ResourceName="删除菜单")
+	public AjaxRes deleteMenu(String menu_id) {
+		System.err.println("----------.>findAllMenu");
+		AjaxRes ajaxRes=new AjaxRes();
+		int i=permissionService.deleteMenu(menu_id);
+		ajaxRes.setRes(i);
+		return ajaxRes;
+	}
+	
+	@ResponseBody
+	@RequestMapping("/findUserAllMenu")
+	public AjaxRes findUserAllMenu(String menu_id) {
+		System.err.println("----------.>findUserAllMenu");
+		AjaxRes ajaxRes=new AjaxRes();
+		List<Menu> list = permissionService.findUserAllMenu("1");
+		Map<Object,Object> map=new HashMap<Object,Object>();
+		for (Menu menu : list) {
+			if(menu.getParentId().equals("0")){
+				List<Menu> menuList=new ArrayList<Menu>();
+				menuList.add(menu);
+				map.put(menu.getMenu_id(), menuList);
+			}else{
+				System.err.println(map);
+				System.err.println(map.get("2"));
+				List<Menu> parentList=(List<Menu>) map.get(Integer.parseInt(menu.getParentId()));
+				parentList.add(menu); 
+			}
+			
+		}
+		System.err.println(map.toString());
+		ajaxRes.setObj(map);
+		return ajaxRes;
+	}
+	
 	
 	
 }

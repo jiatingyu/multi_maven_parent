@@ -3,7 +3,7 @@ package com.jty.manage.entity;
 import java.util.Date;
 
 public class Menu {
-	private Integer id;
+	private Integer menu_id;
 	private String name;
 	private String parentId;
 	private String layer;
@@ -18,11 +18,11 @@ public class Menu {
 	private Date createTime;
 	private Date updateTime;
 	
-	public Integer getId() {
-		return id;
+	public Integer getMenu_id() {
+		return menu_id;
 	}
-	public void setId(Integer id) {
-		this.id = id;
+	public void setMenu_id(Integer menu_id) {
+		this.menu_id = menu_id;
 	}
 	public String getName() {
 		return name;
@@ -104,7 +104,7 @@ public class Menu {
 	}
 	@Override
 	public String toString() {
-		return "Menu [id=" + id + ", name=" + name + ", parentId=" + parentId + ", layer=" + layer + ", type=" + type
+		return "Menu [menu_id=" + menu_id + ", name=" + name + ", parentId=" + parentId + ", layer=" + layer + ", type=" + type
 				+ ", resUrl=" + resUrl + ", btnId=" + btnId + ", btnFun=" + btnFun + ", icon=" + icon + ", sort=" + sort
 				+ ", isValid=" + isValid + ", description=" + description + ", createTime=" + createTime
 				+ ", updateTime=" + updateTime + "]";

@@ -9,6 +9,12 @@
 <link rel="stylesheet" type="text/css" href="../easyui/demo/demo.css">
 <script type="text/javascript" src="../easyui/jquery.min.js"></script>
 <script type="text/javascript" src="../easyui/jquery.easyui.min.js"></script>
+<style type="text/css">
+label{
+	width: 53px;
+    display: inline-block;
+    padding-bottom: 10px;}
+</style>
 </head>
 <body>
 	<h2>菜单管理</h2>
@@ -19,19 +25,19 @@
 		data-options="rownumbers:true,singleSelect:true,pagination:true,method:'get'">
 		<thead>
 			<tr>
-				<th data-options="field:'id',width:100">Item ID</th>
-				<th data-options="field:'name',width:fixWidth(0.2)">Name</th>
-				<th data-options="field:'parentId',width:fixWidth(0.2),align:'right'">Pwd</th>
-				<th data-options="field:'type',width:fixWidth(0.2),align:'right'">Pwd</th>
-				<th data-options="field:'resUrl',width:fixWidth(0.2),align:'right'">Pwd</th>
-				<th data-options="field:'sort',width:fixWidth(0.2),align:'right'">Pwd</th>
-				<th data-options="field:'isValid',width:fixWidth(0.2),align:'right'">Pwd</th>
-				<th data-options="field:'description',width:fixWidth(0.2),align:'right'">Pwd</th>
+				<th data-options="field:'menu_id',width:100">Item ID</th>
+				<th data-options="field:'name',width:fixWidth(0.1)">Name</th>
+				<th data-options="field:'parentId',width:fixWidth(0.1),align:'right'">父级ID</th>
+				<th data-options="field:'type',width:fixWidth(0.1),align:'right'">类型</th>
+				<th data-options="field:'resUrl',width:fixWidth(0.1),align:'right'">链接</th>
+				<th data-options="field:'sort',width:fixWidth(0.1),align:'right'">排序</th>
+				<th data-options="field:'isValid',width:fixWidth(0.1),align:'right'">是否有效</th>
+				<th data-options="field:'description',width:fixWidth(0.1),align:'right'">描述</th>
 			</tr>
 		</thead>
 	</table>
 	<div id="dlg" class="easyui-dialog"
-		style="width: 400px; height: 280px; padding: 10px 20px" closed="true"
+		style="width: 400px; height: 350px; padding: 10px 20px" closed="true"
 		buttons="#dlg-buttons">
 		<div class="ftitle">User Information</div>
 
@@ -49,8 +55,7 @@
 					required="true">
 			</div>
 			<div class="fitem">
-				<label>链接:</label> <input name="resUrl" class="easyui-validatebox"
-					required="true">
+				<label>链接:</label> <input name="resUrl" class="easyui-validatebox">
 			</div>
 			<div class="fitem">
 				<label>图标:</label> <input name="icon" class="easyui-validatebox"
@@ -83,12 +88,48 @@
 			class="easyui-linkbutton" iconCls="icon-save" plain="true"
 			onclick="javascript:alert('Save')">Save</a>
 	</div>
+	<div id="dd" > </div>
 
 	<script type="text/javascript">
 		$(function() {
 			$('#dg').datagrid({
 				onSelect : function(index, row) {
-					alert(row.id)
+					//alert(row.menu_id);
+					$("#dd").dialog({
+						title: "title",
+		                width: 300,
+		                height: 200,
+		                closed: false,
+		                cache: true,
+		                collapsible:true,
+		                queryParams: { checksysno: row.menu_id },
+		                content:"you want to delete data where "+row.menu_id,
+		                modal: true,
+		                buttons: [{
+							text:'Ok',
+							iconCls:'icon-ok',
+							handler:function(){
+								//alert('ok'+row.menu_id);
+								 $.ajax({
+									url : "../permission/deleteMenu",
+									data : {
+										"menu_id" : row.menu_id
+									},
+									dataType : "json",
+									success : function(data) {
+										$('#dg').datagrid('reload');
+									}
+								}) 
+								$("#dd").dialog("close")
+							}
+						},{
+							text:'Cancel',
+							handler:function(){
+								//alert('cancel');
+								$("#dd").dialog("close")
+							}
+						}]
+					});
 					/*  $("#dd").append("你确定要删除"+row.username);
 					 $('#dd').dialog({    
 					    title: 'My Dialog',    
@@ -97,16 +138,7 @@
 					    //modal: true,
 					    buttons:$("#dd")
 					});  */
-					/* $.ajax({
-						url : "../permission/deleteUser",
-						data : {
-							"id" : row.id
-						},
-						dataType : "json",
-						success : function(data) {
-							$('#dg').datagrid('reload');
-						}
-					}) */
+					
 				}
 			});
 			var pager = $('#dg').datagrid({
