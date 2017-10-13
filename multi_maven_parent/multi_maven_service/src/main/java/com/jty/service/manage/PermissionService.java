@@ -14,7 +14,7 @@ public interface PermissionService {
 
 	List<User> getAllUser();
 
-	void insertUser(User user);
+	String insertUser(User user);
 
 	void deleteUser(String id);
 

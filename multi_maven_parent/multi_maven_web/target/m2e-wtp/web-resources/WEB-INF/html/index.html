@@ -794,62 +794,17 @@
 			</a>
 		</div>
 	</div>
-	<script src="../static/../static/js/jquery.min.js?v=2.1.4"></script>
-	<script src="../static/../static/js/bootstrap.min.js?v=3.3.6"></script>
+	<script src="../static/js/jquery.min.js?v=2.1.4"></script>
+	<script src="../static/js/index.js"></script>
+ 	<script src="../static/js/bootstrap.min.js?v=3.3.6"></script>
 	<script
-		src="../static/../static/js/plugins/metisMenu/jquery.metisMenu.js"></script>
-	<script
-		src="../static/../static/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
-	<script src="../static/../static/js/plugins/layer/layer.min.js"></script>
-	<script src="../static/../static/js/hplus.min.js?v=4.1.0"></script>
+		src="../static/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+	<script src="../static/js/plugins/layer/layer.min.js"></script>
+	<script src="../static/js/hplus.min.js?v=4.1.0"></script>
 	<script type="text/javascript"
-		src="../static/../static/js/contabs.min.js"></script>
-	<script src="../static/../static/js/plugins/pace/pace.min.js"></script>
-
-	<script type="text/javascript">
-		function loginOut() {
-			$.ajax({
-				url : '../permission/loginOut'
-			})
-			location.href = "./login.html";
-		}
-		$(function() {
-			$
-					.ajax({
-						url : '../permission/findUserAllMenu',
-						success : function(data) {
-							debugger;
-							var html="";
-							for ( var item in data.obj) {
-								//alert(data.obj[item].length)
-								for (var i = 0; i < data.obj[item].length; i++) {
-									//alert(data.obj[item][i].name)
-									if(i==0){
-									html += '<li>'
-											+ '         <a href="#">                                                                     '
-											+ '             <i class="fa fa-home"></i>                                                   '
-											+ '             <span class="nav-label">'+data.obj[item][i].name+'</span>                                          '
-											+ '             <span class="fa arrow"></span>                                               '
-											+ '         </a> ';                                                                            
-									}else{
-										
-											html+='         <ul class="nav nav-second-level">                                                '
-											+ '             <li>                                                                         '
-											+ '                 <a class="J_menuItem" href="index_v1.html" data-index="0">'+data.obj[item][i].name+'</a> '
-											+ '             </li>                                                                        '
-											+ '         </ul>   ';                                                                         
-									}
-										
-											
-								}
-								html+"</li>";
-							}
-							$("#side-menu").append(html);
-						}
-					})
-
-		})
-	</script>
+		src="../static/js/contabs.min.js"></script>
+	<script src="../static/js/plugins/pace/pace.min.js"></script>
+	<script
+		src="../static/js/plugins/metisMenu/jquery.metisMenu.js"></script>
 </body>
-
 </html>

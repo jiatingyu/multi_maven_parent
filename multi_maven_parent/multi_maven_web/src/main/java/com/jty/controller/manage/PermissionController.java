@@ -101,7 +101,7 @@ public class PermissionController {
 	@Resource(ResourceName="增加用户")
 	public Map<String,Object> addUser(User user) {
 		Map<String,Object> map=new HashMap<String ,Object>();
-		permissionService.insertUser(user);
+		String userId=permissionService.insertUser(user);
 		map.put("data", 1);
 		return map;
 	}

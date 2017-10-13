@@ -103,7 +103,6 @@ public interface PermissionDao {
 	@Select("select * from role")
 	List<Role> findAllRole();
 
-	@Insert("insert into role (name,description) values (#{name},#{description})")
 	void addRole(Role role);
 
 	@Select("select * from user where username=#{username} and password=#{pwd}")
@@ -133,4 +132,8 @@ public interface PermissionDao {
 		+ "LEFT JOIN tb_menu e on d.menu_id=e.menu_id "
 		+ "where a.id=#{user_id} and e.isValid =1  ORDER BY e.parentId")
 	List<Menu> findUserAllMenu(String user_id);
+	@Insert("insert into user_role (userid,roleid) values (#{userId} , #{roleId})")
+	void addUserAndRoleRelation(@Param("userId")String userId, @Param("roleId")String roleId);
+
+	void addRoleAndPrivilegeRelation(@Param("role_id")String role_id, @Param("permissions")List<Privilege> permissions);
 }

@@ -1,17 +1,16 @@
 package com.jty.manage.entity;
 
-import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class Role {
 	    public Role() {  
 	        super();  
-	        this.permissions = new HashSet<Permission>();  
 	    }  
 	    private String role_id;  
 	    private String rolename;  
 	    private String description;  
-	    private Set<Permission> permissions;  
+	    private List<Privilege> permissions;  
 	  
 	  
 	  
@@ -38,14 +37,14 @@ public class Role {
 	    public void setDescription(String desc) {  
 	        this.description = desc;  
 	    }  
-	  
-	    public Set<Permission> getPermissions() {  
-	        return permissions;  
-	    }  
-	  
-	    public void setPermissions(Set<Permission> permissions) {  
-	        this.permissions = permissions;  
-	    }
+
+		public List<Privilege> getPermissions() {
+			return permissions;
+		}
+
+		public void setPermissions(List<Privilege> permissions) {
+			this.permissions = permissions;
+		}
 
 		@Override
 		public String toString() {

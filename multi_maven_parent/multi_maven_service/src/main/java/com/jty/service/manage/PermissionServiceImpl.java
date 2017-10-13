@@ -21,8 +21,12 @@ public class PermissionServiceImpl implements PermissionService {
 		List<User> findAllUser = dao.findAllUser();
 		return findAllUser;
 	}
-	public void insertUser(User user) {
-		 dao.insertUser(user);
+	public String insertUser(User user) {
+		dao.insertUser(user);
+		if(user.getRoleList()!=null && user.getRoleList().size()>0)
+			dao.addUserAndRoleRelation(user.getId(),user.getRoleList().get(0).getRole_id());
+		return null;	
+		  
 	}
 	
 	public void deleteUser(String id) {
@@ -46,6 +50,8 @@ public class PermissionServiceImpl implements PermissionService {
 	public void addRole(Role role) {
 		// TODO Auto-generated method stub
 		 dao.addRole(role);
+		 //增加角色资源权限
+		 dao.addRoleAndPrivilegeRelation(role.getRole_id(),role.getPermissions());
 	}
 	public User findUserByUsernameAndPwd(String username,String pwd) {
 		// TODO Auto-generated method stub

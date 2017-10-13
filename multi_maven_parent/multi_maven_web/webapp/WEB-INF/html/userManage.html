@@ -9,6 +9,12 @@
 <link rel="stylesheet" type="text/css" href="../easyui/demo/demo.css">
 <script type="text/javascript" src="../easyui/jquery.min.js"></script>
 <script type="text/javascript" src="../easyui/jquery.easyui.min.js"></script>
+<style type="text/css">
+label{
+	width: 53px;
+    display: inline-block;
+    padding-bottom: 10px;}
+</style>
 </head>
 <body>
 	<h2>Custom DataGrid Pager</h2>
@@ -23,6 +29,8 @@
 				<th data-options="field:'username',width:fixWidth(0.2)">Name</th>
 				<th
 					data-options="field:'password',width:fixWidth(0.2),align:'right'">Pwd</th>
+				<th
+					data-options="field:'password',width:fixWidth(0.2),align:'right'">Pwd</th>
 			</tr>
 		</thead>
 	</table>
@@ -34,12 +42,16 @@
 		<form id="fm" >
 			<div class="fitem">
 				<input name="id" value="0" type="hidden"/>
-				<label>First Name:</label> <input name="username"
+				<label>用户名:</label> <input name="username"
 					class="easyui-validatebox" required="true">
 			</div>
 			<div class="fitem">
-				<label>Last Name:</label> <input name="password"
+				<label>密   码:</label> <input name="password"
 					class="easyui-validatebox" required="true">
+			</div>
+			<div class="fitem">
+				<label>角色:</label> <input name="roleList[0].role_id" class="easyui-combobox" id="combo"
+					 data-options="valueField:'role_id',textField:'rolename' ">
 			</div>
 		</form>
 	</div>
@@ -49,36 +61,57 @@
 			iconCls="icon-cancel" onclick="javascript:$('#dlg').dialog('close')">Cancel</a>
 	</div>
 	<div id="tb">
-		<a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="javascript:alert('Add')">Add</a>
-		<a href="#" class="easyui-linkbutton" iconCls="icon-cut" plain="true" onclick="javascript:alert('Cut')">Cut</a>
-		<a href="#" class="easyui-linkbutton" iconCls="icon-save" plain="true" onclick="javascript:alert('Save')">Save</a>
+		<a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="addUser()">增加</a>
+		<a href="#" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="deleteUser()">删除</a>
+		<a href="#" class="easyui-linkbutton" iconCls="icon-reload" plain="true" onclick="reload()">刷新</a>
 	</div>
-	
+	<div id="dd" > </div>
 	<script type="text/javascript">
+	function reload(){
+		$('#dg').datagrid("reload");
+	}
+	function deleteUser(){
+		
+		var row = $('#dg').datagrid('getSelected');
+		//$.messager.alert('Info', row.id+":"+row.id+":"+row.id);
+		$("#dd").dialog({
+			title: "用户删除",
+               width: 300,
+               height: 200,
+               closed: false,
+               cache: true,
+               collapsible:true,
+               content:"you want to delete data where "+row.id,
+               modal: true,
+               buttons: [{
+				text:'Ok',
+				iconCls:'icon-ok',
+				handler:function(){
+					//alert('ok'+row.menu_id);
+					 $.ajax({
+						url : "../permission/deleteUser",
+						data : {
+							"id" : row.id
+						},
+						dataType : "json",
+						success : function(data) {
+							$('#dg').datagrid('reload');
+						}
+					}) 
+					$("#dd").dialog("close")
+				}
+			},{
+				text:'Cancel',
+				handler:function(){
+					$("#dd").dialog("close")
+				}
+			}]
+		});
+		
+	}
 		$(function() {
-			$('#dg').datagrid({
-				 onSelect:function(index,row){
-					 alert(row.id)
-					/*  $("#dd").append("你确定要删除"+row.username);
-					 $('#dd').dialog({    
-					    title: 'My Dialog',    
-					    width: 200,    
-					    height: 100,    
-					    //modal: true,
-					    buttons:$("#dd")
-					});  */
-				  $.ajax({
-						 url:"../permission/deleteUser",
-							data:{"id":row.id},
-							dataType:"json",
-							success:function(data){
-								$('#dg').datagrid('reload');
-							}
-					 }) 
-				 }
-			 });
 			var pager = $('#dg').datagrid({url:'../permission/findAllUser'}).datagrid('getPager'); // get the pager of datagrid
-			pager.pagination({
+			/* pager.pagination({
 				buttons : [
 						{
 							iconCls : 'icon-search',
@@ -99,12 +132,31 @@
 							handler : function() {
 								alert('edit');
 							}
-						} ]
-			});
-			 
+						}]
+			}); */
 		});
 		function fixWidth(percent) {
 			return document.body.clientWidth * percent;//根据自身情况更改
+		}
+		function addUser(){
+ 			$("#combo").combobox({
+ 				loader:function(param,success,error){
+ 					$.ajax({
+ 						url:'../permission/findAllRole',
+	 					success:function(data){
+	 						var items=$.map(data.rows, function(item){
+	 							console.log(item)
+		 						return {role_id:item.role_id,rolename:item.rolename};
+	 						})
+	 						success(items);
+	 					}
+ 					})
+ 				}
+			});
+ 				
+			$('#dlg').dialog('open').dialog('setTitle',
+			'New User');
+			$('#fm').form('clear');
 		}
 		function saveUser(){
 			$.ajax({
@@ -118,6 +170,9 @@
 			})
 		}
 		
+		/* var loderRole=function(param,success,error){
+			alert("xxx");
+		} */
 	</script>
 </body>
 </html>
