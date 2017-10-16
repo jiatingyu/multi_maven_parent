@@ -41,4 +41,20 @@ public interface PermissionService {
 	 * 查询系统当前用户的全部菜单
 	 * 	 */
 	List<Menu> findUserAllMenu(String user_id);
+
+	int  deleteRole(String role_id);
+/**
+ * 编辑菜单
+ * @param menu_id
+ * @return
+ */
+	Menu editMenu(String menu_id);
+/**
+ * 更新菜单
+ * @param menu
+ * @return
+ */
+int updateMenu(Menu menu);
+
+Map<String,Object> editRole(String role_id);
 }

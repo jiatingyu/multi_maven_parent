@@ -29,12 +29,10 @@ $(function() {
 								
 									html+='         <ul class="nav nav-second-level ">                                                '
 									+ '             <li>                                                                         '
-									+ '                 <a class="J_menuItem" href="'+i+'.html" data-index="0">'+data.obj[item][i].name+'</a> '
+									+ '                 <a class="J_menuItem" href="'+data.obj[item][i].resUrl+'" data-index="0">'+data.obj[item][i].name+'</a> '
 									+ '             </li>                                                                        '
 									+ '         </ul>   ';                                                                         
 							}
-								
-									
 						}
 						html+"</li>";
 					}

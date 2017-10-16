@@ -53,6 +53,11 @@ public class PermissionServiceImpl implements PermissionService {
 		 //增加角色资源权限
 		 dao.addRoleAndPrivilegeRelation(role.getRole_id(),role.getPermissions());
 	}
+	
+	public Map<String,Object> editRole(String role_id) {
+		// TODO Auto-generated method stub
+		return dao.editRole(role_id);
+	}
 	public User findUserByUsernameAndPwd(String username,String pwd) {
 		// TODO Auto-generated method stub
 		return dao.findUserByUsernameAndPwd(username,pwd);
@@ -73,6 +78,11 @@ public class PermissionServiceImpl implements PermissionService {
 		// TODO Auto-generated method stub
 		return dao.addMenu(menu);
 	}
+	
+	public int updateMenu(Menu menu) {
+		// TODO Auto-generated method stub
+		return dao.updateMenu(menu);
+	}
 	public int deleteMenu(String menu_id) {
 		// TODO Auto-generated method stub
 		return dao.deleteMenu(menu_id);
@@ -80,6 +90,18 @@ public class PermissionServiceImpl implements PermissionService {
 	public List<Menu> findUserAllMenu(String user_id) {
 		// TODO Auto-generated method stub
 		return dao.findUserAllMenu( user_id);
+	}
+	public int  deleteRole(String role_id) {
+		//删除角色 和删除角色的全部资源 和菜单
+		//删除跟角色相关的菜单
+		dao.deleteRoleRelationMenu(role_id);
+		//删除跟角色相关的资源
+		dao.deleteRoleRelationPrivilege(role_id);
+		return dao.deleteRole(role_id);
+	}
+	public Menu editMenu(String menu_id) {
+		// TODO Auto-generated method stub
+		return dao.editMenu(menu_id);
 	}
 	
 	

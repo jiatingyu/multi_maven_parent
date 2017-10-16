@@ -1,14 +1,17 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
+<%@ taglib prefix="userContxt" uri="http://jty.com.cn/core" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Custom DataGrid Pager - jQuery EasyUI Demo</title>
 <link rel="stylesheet" type="text/css"
-	href="../easyui/themes/default/easyui.css">
-<link rel="stylesheet" type="text/css" href="../easyui/themes/icon.css">
-<link rel="stylesheet" type="text/css" href="../easyui/demo/demo.css">
-<script type="text/javascript" src="../easyui/jquery.min.js"></script>
-<script type="text/javascript" src="../easyui/jquery.easyui.min.js"></script>
+	href="./easyui/themes/default/easyui.css">
+<link rel="stylesheet" type="text/css" href="./easyui/themes/icon.css">
+<link rel="stylesheet" type="text/css" href="./easyui/demo/demo.css">
+<script type="text/javascript" src="./easyui/jquery.min.js"></script>
+<script type="text/javascript" src="./easyui/jquery.easyui.min.js"></script>
 <style type="text/css">
 label{
 	width: 53px;
@@ -20,6 +23,7 @@ label{
 	<h2>Custom DataGrid Pager</h2>
 	<p>You can append some buttons to the standard datagrid pager bar.</p>
 	<div style="margin: 20px 0;"></div>
+	<userContxt:checkHasPermission privilegeName="查看用户列表">
 	<table id="dg" title="Custom DataGrid Pager" toolbar="#tb"
 		style="width: 100%; height: 250px"
 		data-options="rownumbers:true,singleSelect:true,pagination:true,method:'get'" >
@@ -34,11 +38,11 @@ label{
 			</tr>
 		</thead>
 	</table>
+	</userContxt:checkHasPermission>
 	<div id="dlg" class="easyui-dialog"
 		style="width: 400px; height: 280px; padding: 10px 20px" closed="true"
 		buttons="#dlg-buttons">
 		<div class="ftitle">User Information</div>
-		
 		<form id="fm" >
 			<div class="fitem">
 				<input name="id" value="0" type="hidden"/>
@@ -61,8 +65,12 @@ label{
 			iconCls="icon-cancel" onclick="javascript:$('#dlg').dialog('close')">Cancel</a>
 	</div>
 	<div id="tb">
+		<userContxt:checkHasPermission privilegeName="增加用户">
 		<a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="addUser()">增加</a>
+		</userContxt:checkHasPermission>
+		<userContxt:checkHasPermission privilegeName="删除用户">
 		<a href="#" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="deleteUser()">删除</a>
+		</userContxt:checkHasPermission>
 		<a href="#" class="easyui-linkbutton" iconCls="icon-reload" plain="true" onclick="reload()">刷新</a>
 	</div>
 	<div id="dd" > </div>
@@ -110,7 +118,7 @@ label{
 		
 	}
 		$(function() {
-			var pager = $('#dg').datagrid({url:'../permission/findAllUser'}).datagrid('getPager'); // get the pager of datagrid
+			var pager = $('#dg').datagrid({url:'./permission/findAllUser'}).datagrid('getPager'); // get the pager of datagrid
 			/* pager.pagination({
 				buttons : [
 						{
@@ -142,7 +150,7 @@ label{
  			$("#combo").combobox({
  				loader:function(param,success,error){
  					$.ajax({
- 						url:'../permission/findAllRole',
+ 						url:'./permission/findAllRole',
 	 					success:function(data){
 	 						var items=$.map(data.rows, function(item){
 	 							console.log(item)
@@ -160,7 +168,7 @@ label{
 		}
 		function saveUser(){
 			$.ajax({
-				url:"../permission/addUser",
+				url:"./permission/addUser",
 				data:$("#fm").serialize(),
 				dataType:"json",
 				success:function(data){

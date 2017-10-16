@@ -41,18 +41,22 @@ public class MyUserPrivilegeControTag extends ConditionalTagSupport {
     	
     	//判断是否显示为true还是false
     	System.err.println("---->进行判断的值"+privilegeName);
-    	System.err.println(RequestUtils.getUser());
+    	System.err.println("当前登录用户："+RequestUtils.getUser());
+    	//相当于超级管理员 享有最高权限
+    	if("jack".equals(RequestUtils.getUserName("username"))){
+    		return true;
+    	}
     	User user = RequestUtils.getUser();
     	//判断用户是否具有当前的访问权限
     	if(user!=null){
-	    	List<Privilege> privilegeList = user.getPrivilegeList();
-	    	if(privilegeList!=null && privilegeList.size()>0){
-		    	for (Privilege privilege : privilegeList) {
-					if(privilegeName.equals(privilege.getPrivilegename())){
-						return true;
-					}
-				}
-	    	}
+    		List<Privilege> privilegeList = user.getPrivilegeList();
+    		if(privilegeList!=null && privilegeList.size()>0){
+    			for (Privilege privilege : privilegeList) {
+    				if(privilegeName.equals(privilege.getPrivilegename())){
+    					return true;
+    				}
+    			}
+    		}
     	}
         return false;
     }

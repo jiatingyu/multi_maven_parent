@@ -42,6 +42,7 @@ label{
 		<div class="ftitle">User Information</div>
 
 		<form id="fm">
+			<input type="hidden" name="menu_id"/>		
 			<div class="fitem">
 				<input name="id" value="0" type="hidden" /> <label>名字:</label> <input
 					name="name" class="easyui-validatebox" required="true">
@@ -82,54 +83,76 @@ label{
 	</div>
 	<div id="tb">
 		<a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true"
-			onclick="javascript:alert('Add')">Add</a> <a href="#"
+			onclick="javascript:addMenu()">增加</a> <a href="#"
 			class="easyui-linkbutton" iconCls="icon-cut" plain="true"
-			onclick="javascript:alert('Cut')">Cut</a> <a href="#"
-			class="easyui-linkbutton" iconCls="icon-save" plain="true"
-			onclick="javascript:alert('Save')">Save</a>
+			onclick="javascript:editMenu()">编辑</a> <a href="#"
+			class="easyui-linkbutton" iconCls="icon-remove" plain="true"
+			onclick="javascript:deletMenu()">删除</a>
 	</div>
 	<div id="dd" > </div>
 
 	<script type="text/javascript">
+		function addMenu(){
+			$('#dlg').dialog('open').dialog('setTitle',
+			'New Menu');
+			$('#fm').form('clear');
+		}
+		function editMenu(){
+			var row=$("#dg").datagrid('getSelected');
+			$.ajax({
+				url:'../permission/editMenu',
+				data:{'menu_id':row.menu_id},
+				success:function(data){
+					$('#dlg').dialog('open');
+					$("#fm").form('clear');
+					$("#fm").form('load',data.obj)
+				}
+			})
+		}
+		function deletMenu(){
+			var row=$("#dg").datagrid('getSelected');
+			$("#dd").dialog({
+				title: "title",
+                width: 300,
+                height: 200,
+                closed: false,
+                cache: true,
+                collapsible:true,
+                queryParams: { checksysno: row.menu_id },
+                content:"you want to delete data where "+row.menu_id,
+                modal: true,
+                buttons: [{
+					text:'Ok',
+					iconCls:'icon-ok',
+					handler:function(){
+						//alert('ok'+row.menu_id);
+						 $.ajax({
+							url : "../permission/deleteMenu",
+							data : {
+								"menu_id" : row.menu_id
+							},
+							dataType : "json",
+							success : function(data) {
+								$('#dg').datagrid('reload');
+							}
+						}) 
+						$("#dd").dialog("close")
+					}
+				},{
+					text:'Cancel',
+					handler:function(){
+						//alert('cancel');
+						$("#dd").dialog("close")
+					}
+				}]
+			});
+		}
+	
 		$(function() {
 			$('#dg').datagrid({
 				onSelect : function(index, row) {
 					//alert(row.menu_id);
-					$("#dd").dialog({
-						title: "title",
-		                width: 300,
-		                height: 200,
-		                closed: false,
-		                cache: true,
-		                collapsible:true,
-		                queryParams: { checksysno: row.menu_id },
-		                content:"you want to delete data where "+row.menu_id,
-		                modal: true,
-		                buttons: [{
-							text:'Ok',
-							iconCls:'icon-ok',
-							handler:function(){
-								//alert('ok'+row.menu_id);
-								 $.ajax({
-									url : "../permission/deleteMenu",
-									data : {
-										"menu_id" : row.menu_id
-									},
-									dataType : "json",
-									success : function(data) {
-										$('#dg').datagrid('reload');
-									}
-								}) 
-								$("#dd").dialog("close")
-							}
-						},{
-							text:'Cancel',
-							handler:function(){
-								//alert('cancel');
-								$("#dd").dialog("close")
-							}
-						}]
-					});
+					
 					/*  $("#dd").append("你确定要删除"+row.username);
 					 $('#dd').dialog({    
 					    title: 'My Dialog',    
@@ -144,29 +167,6 @@ label{
 			var pager = $('#dg').datagrid({
 				url : '../permission/findAllMenu'
 			}).datagrid('getPager'); // get the pager of datagrid
-			pager.pagination({
-				buttons : [
-						{
-							iconCls : 'icon-search',
-							handler : function() {
-								alert('search');
-							}
-						},
-						{
-							iconCls : 'icon-add',
-							handler : function() {
-								$('#dlg').dialog('open').dialog('setTitle',
-										'New User');
-								$('#fm').form('clear');
-
-							}
-						}, {
-							iconCls : 'icon-edit',
-							handler : function() {
-								alert('edit');
-							}
-						} ]
-			});
 
 		});
 		function fixWidth(percent) {

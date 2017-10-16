@@ -30,8 +30,10 @@ import com.jty.manage.entity.Privilege;
 import com.jty.manage.entity.Role;
 import com.jty.manage.entity.User;
 import com.jty.manage.entity.sysLog;
+import com.jty.manage.entity.extra.SuperMenu;
 import com.jty.service.manage.PermissionService;
 import com.jty.test.activemq.recevier;
+import com.jty.test.activemq.subscribe;
 import com.jty.util.AjaxRes;
 import com.jty.util.ClassScaner;
 import com.jty.util.RequestUtils;
@@ -80,7 +82,7 @@ public class PermissionController {
 	
 	@ResponseBody
 	@RequestMapping("/findAllUser")
-	@Resource(ResourceName="查询用户")
+	@Resource(ResourceName="查看用户列表")
 	public Map<String,Object> findAllUser(String page,String rows) {
 		Map<String,Object> map=new HashMap<String ,Object>();
 		List<User> list = permissionService.getAllUser();
@@ -118,7 +120,7 @@ public class PermissionController {
 	////==========================
 	@ResponseBody
 	@RequestMapping("/findAllRole")
-	@Resource(ResourceName="查看角色")
+	@Resource(ResourceName="查看角色列表")
 	public Map<String,Object> findAllRole() {
 		Map<String,Object> map=new HashMap<String ,Object>();
 		List<Role> list = permissionService.findAllRole();
@@ -133,6 +135,26 @@ public class PermissionController {
 		Map<String,Object> map=new HashMap<String ,Object>();
 		 permissionService.addRole(role);
 		map.put("data", 1);
+		return map;
+	}
+	@ResponseBody
+	@RequestMapping("/editRole")
+	@Resource(ResourceName="编辑角色")
+	public Map<String,Object> editRole(String role_id) {
+		Map<String,Object> map=new HashMap<String ,Object>();
+		Map<String,Object> role=permissionService.editRole(role_id);
+		
+		map.put("data", role);
+		return map;
+	}
+	@ResponseBody
+	@RequestMapping("/deleteRole")
+	@Resource(ResourceName="删除角色")
+	public Map<String,Object> deleteRole(String role_id) {
+		Map<String,Object> map=new HashMap<String ,Object>();
+		//删除角色 和删除角色的全部资源 和菜单
+		int num=permissionService.deleteRole(role_id);
+		map.put("data", num);
 		return map;
 	}
 	@ResponseBody
@@ -160,8 +182,25 @@ public class PermissionController {
 	public AjaxRes addMenu(Menu menu) {
 		System.err.println("----------.>findAllMenu");
 		AjaxRes ajaxRes=new AjaxRes();
-		int i=permissionService.addMenu(menu);
+		int i=0;
+		if(menu.getMenu_id()!=null){
+			//更新菜单
+			i=permissionService.updateMenu(menu);
+		}else{
+			//增加菜单
+			i=permissionService.addMenu(menu);
+		}
 		ajaxRes.setRes(i);
+		return ajaxRes;
+	}
+	@ResponseBody
+	@RequestMapping("/editMenu")
+	@Resource(ResourceName="编辑菜单")
+	public AjaxRes editMenu(String menu_id) {
+		System.err.println("----------.>editMenu");
+		AjaxRes ajaxRes=new AjaxRes();
+		Menu menu=permissionService.editMenu(menu_id);
+		ajaxRes.setSucceed(menu, "1");
 		return ajaxRes;
 	}
 	/**
@@ -185,6 +224,7 @@ public class PermissionController {
 	public AjaxRes findUserAllMenu(String menu_id) {
 		System.err.println("----------.>findUserAllMenu");
 		AjaxRes ajaxRes=new AjaxRes();
+		//查询当前用户的全部菜单
 		List<Menu> list = permissionService.findUserAllMenu("1");
 		Map<Object,Object> map=new HashMap<Object,Object>();
 		for (Menu menu : list) {
@@ -203,6 +243,36 @@ public class PermissionController {
 		System.err.println(map.toString());
 		ajaxRes.setObj(map);
 		return ajaxRes;
+	}
+	@ResponseBody
+	@RequestMapping("/findUserAllMenu1")
+	public Object findUserAllMenu1(String menu_id) {
+		System.err.println("----------.>findUserAllMenu");
+		//查询当前用户的全部菜单
+		List<Menu> list = permissionService.findUserAllMenu("1");
+		List<SuperMenu> menus=new ArrayList<SuperMenu>();
+		for (Menu menu : list) {
+			if(menu.getParentId().equals("0")){
+				SuperMenu superMenu=new SuperMenu();
+				superMenu.setMenu_id(menu.getMenu_id());
+				superMenu.setMenu(menu);
+//				map.put(superMenu.getMenu_id(), superMenu);
+				menus.add(superMenu);
+			}else{
+				for (SuperMenu superMenu : menus) {
+					if(superMenu.getMenu_id().equals(Integer.valueOf(menu.getParentId()))){
+						superMenu.getChildren().add(menu);
+//						map.put(superMenu.getMenu_id(),superMenu);
+						break;
+					}
+				}
+//				SuperMenu superMenu = (SuperMenu) map.get(Integer.valueOf(menu.getParentId()));
+////				superMenu.setChildrenMenu(menu);
+//				superMenu.getList().add(menu);
+			}
+		}
+		System.err.println(menus.toString());
+		return menus;
 	}
 	
 	
