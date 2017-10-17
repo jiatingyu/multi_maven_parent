@@ -30,6 +30,7 @@
 						data-options="field:'description',width:fixWidth(0.2),align:'right'">描述</th>
 				</tr>
 			</thead>
+			
 		</table>
 	</userContxt:checkHasPermission>
 	<div id="tb">
@@ -74,7 +75,7 @@
 		<div class="ftitle">给角色分配菜单</div>
 		<form id="fm1">
 			<div class="fitem">
-				<input name="role_id" type="hidden" /> <label>角色名称:</label> <input
+				<input name="role_id" id="role_id" type="hidden" /> <label>角色名称:</label> <input
 					name="rolename" class="easyui-validatebox" required="true">
 				<label>角色描述:</label> <input name="description"
 					class="easyui-validatebox" required="true">
@@ -82,10 +83,7 @@
 		</form>
 		<div class="easyui-layout" style="width: 99%; height: 90%;">
 			<div id="p" data-options="region:'west'" title="West"
-				style="width: 50%; padding: 10px">
-				<span id="grid11" style="width: 100%"></span>
-			</div>
-			<div data-options="region:'center'" title="Center">
+				style="width: 100%; padding: 10px">
 				<span id="grid22" style="width: 100%"></span>
 			</div>
 		</div>
@@ -97,7 +95,7 @@
 	</div>
 	<div id="dlg-buttons1">
 		<a href="#" class="easyui-linkbutton" iconCls="icon-ok"
-			onclick="saveUser()">Save</a> <a href="#" class="easyui-linkbutton"
+			onclick="getChecked()">Save</a> <a href="#" class="easyui-linkbutton"
 			iconCls="icon-cancel" onclick="javascript:$('#dlg1').dialog('close')">Cancel</a>
 	</div>
 	<div id="dd"></div>
@@ -129,7 +127,8 @@
 		})
 		$('#grid1').datagrid('loadData', { total: 0, rows: [] });
 		$("#grid2").datagrid({
-			url:'../permission/findAllPrivilege',
+			url:'./permission/findAllPrivilege', 
+			method:'get',
 			columns:[[
 						{field:'privilege_id',title:'Item ID',width:80},
 						{field:'privilegename',title:'资源名称',width:80},
@@ -227,48 +226,73 @@
 					$('#dlg1').dialog('open');
 				}
 			});
-			/* $("#grid22").datagrid({
-				url:'./permission/findAllMenu',
-					columns:[[
-					          {field:'menu_id',title:'Code',width:100},
-					          {field:'name',title:'Name',width:100},
-					          {field:'parentId',title:'parentId',width:100,align:'right'},
-					          {field:'type',title:'type',width:100,align:'right'},
-					          {field:'resUrl',title:'resUrl',width:100,align:'right'},
-					          {field:'sort',title:'sort',width:100,align:'right'},
-					          {field:'isValid',title:'isValid',width:100,align:'right'},
-					          {field:'description',title:'description',width:100,align:'right'}
-					      ]]
-			}) */
 			
 			
 		}
 		
 		function myLoadFilter(data, parent){
-			debugger;
-			var state = $.data(this, 'tree');
+			//data='[{"id":1,"text":"Node 1","state":"closed","children":[{"id":11,"text":"Node 11"},{"id":12,"text":"Node 12"}]},{"id":2,"text":"Node 2","state":"closed"}]';
+			var arr=[];
+			for (var i = 0; i < data.length; i++) {
+				var map={};
+				map.id=data[i].menu_id;
+				map.text=data[i].menu.name;
+				var arrj=[];
+				for (var j = 0; j < data[i].children.length; j++) {
+					var map1={};
+					map1.id=data[i].children[j].menu_id;				
+					map1.text=data[i].children[j].name;				
+					arrj.push(map1)
+				}
+				map.children=arrj;
+				arr.push(map)
+			}
+			$('#grid22').tree({
+				data:arr,
+				animate:true,
+				checkbox:true,
+				lines:true
+				
+			})
+		}
+		
+		function getChecked(){
+			var nodes = $('#grid22').tree('getChecked');
+			var s = '';
+			var set = new Set();
+			for(var i=0; i<nodes.length; i++){
+				if (s != '') s += ',';
+				s += nodes[i].id+":"+nodes[i].text;
+				/* if($(this).tree("getParent",nodes[i].text)){
+					s+="parent"+nodes[i].getParent.id+":"+nodes[i].getParent.text
+				} */
+				var parent=$('#grid22').tree('getParent',nodes[i].target)
+				if(parent){
+					set.add(parent.id);
+				}
+				set.add(nodes[i].id);
+				//alert($('#grid22').tree('getParent',nodes[i].target).id + ":"+$('#grid22').tree('getParent',nodes[i].target).text);
+			}
+			var val=[];
+			set.forEach(function(item){
+				val.push(item);
+			})
+			alert(val.toString());
 			
-		    function setData(){
-		    	var serno = 1;
-		        var todo = [];
-		        for(var i=0; i<data.length; i++){
-		            todo.push(data[i]);
-		        }
-		        while(todo.length){
-		            var node = todo.shift();
-		            if (node.id == undefined){
-		            	node.id = '_node_' + (serno++);
-		            }
-		            if (node.children){
-		                node.state = 'closed';
-		                node.children1 = node.children;
-		                node.children = undefined;
-		                todo = todo.concat(node.children1);
-		            }
-		        }
-		        state.tdata = data;
+			$.ajax({
+				url:'./permission/addRoleMenuRelation',
+				data:{'role_id':$("#role_id").val(),'menus':val},
+				//dataType:'json',
+				success:function(data){
+					if(data.res>"1"){
+						$("#dlg1").dialog('close');
+					}
+				}
+			})
+			
+			
 		}
-		}
+		
 	</script>
 </body>
 </html>

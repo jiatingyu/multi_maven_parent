@@ -5,6 +5,7 @@ import static org.junit.Assert.*;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -15,6 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.eclipse.jetty.client.HttpResponse;
 import org.junit.Test;
+import org.junit.runners.Parameterized.Parameters;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -148,6 +150,17 @@ public class PermissionController {
 		return map;
 	}
 	@ResponseBody
+	@RequestMapping("/addRoleMenuRelation")
+	@Resource(ResourceName="角色菜单绑定")
+	public Map<String,Object> addRoleMenuRelation(String role_id,@RequestParam(name="menus[]")String[] menus) {
+		Map<String,Object> map=new HashMap<String ,Object>();
+		List<String> menuList = Arrays.asList(menus);
+		
+		int num=permissionService.addRoleMenuRelation(role_id,menuList);
+		map.put("res", num);
+		return map;
+	}
+	@ResponseBody
 	@RequestMapping("/deleteRole")
 	@Resource(ResourceName="删除角色")
 	public Map<String,Object> deleteRole(String role_id) {
@@ -225,7 +238,7 @@ public class PermissionController {
 		System.err.println("----------.>findUserAllMenu");
 		AjaxRes ajaxRes=new AjaxRes();
 		//查询当前用户的全部菜单
-		List<Menu> list = permissionService.findUserAllMenu("1");
+		List<Menu> list = permissionService.findUserAllMenu(RequestUtils.getUser().getId());
 		Map<Object,Object> map=new HashMap<Object,Object>();
 		for (Menu menu : list) {
 			if(menu.getParentId().equals("0")){
@@ -244,12 +257,17 @@ public class PermissionController {
 		ajaxRes.setObj(map);
 		return ajaxRes;
 	}
+	/**
+	 * 查询所有菜单列表
+	 * @param menu_id
+	 * @return
+	 */
 	@ResponseBody
 	@RequestMapping("/findUserAllMenu1")
-	public Object findUserAllMenu1(String menu_id) {
+	public Object findUserAllMenu1() {
 		System.err.println("----------.>findUserAllMenu");
 		//查询当前用户的全部菜单
-		List<Menu> list = permissionService.findUserAllMenu("1");
+		List<Menu> list = permissionService.findAllMenu();
 		List<SuperMenu> menus=new ArrayList<SuperMenu>();
 		for (Menu menu : list) {
 			if(menu.getParentId().equals("0")){
@@ -262,13 +280,9 @@ public class PermissionController {
 				for (SuperMenu superMenu : menus) {
 					if(superMenu.getMenu_id().equals(Integer.valueOf(menu.getParentId()))){
 						superMenu.getChildren().add(menu);
-//						map.put(superMenu.getMenu_id(),superMenu);
 						break;
 					}
 				}
-//				SuperMenu superMenu = (SuperMenu) map.get(Integer.valueOf(menu.getParentId()));
-////				superMenu.setChildrenMenu(menu);
-//				superMenu.getList().add(menu);
 			}
 		}
 		System.err.println(menus.toString());

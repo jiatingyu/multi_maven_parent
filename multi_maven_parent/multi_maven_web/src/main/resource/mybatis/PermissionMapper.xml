@@ -32,4 +32,12 @@
 		</foreach>
 	</insert>
 	
+	<insert id="addRoleMenuRelation" parameterType="String">
+		insert into role_menu (role_id,menu_id) values
+		<foreach collection="menuList" separator="," item="item">
+			(#{role_id},#{item})
+		</foreach>
+	</insert>
+	
+	
 </mapper>

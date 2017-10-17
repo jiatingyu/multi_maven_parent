@@ -54,6 +54,13 @@ public class PermissionServiceImpl implements PermissionService {
 		 dao.addRoleAndPrivilegeRelation(role.getRole_id(),role.getPermissions());
 	}
 	
+	
+	public int addRoleMenuRelation(String role_id, List<String> menuList) {
+		// TODO Auto-generated method stub
+		dao.deleteRoleMenuRelation(role_id);
+		return dao.addRoleMenuRelation(role_id,menuList);
+	}
+	
 	public Map<String,Object> editRole(String role_id) {
 		// TODO Auto-generated method stub
 		return dao.editRole(role_id);

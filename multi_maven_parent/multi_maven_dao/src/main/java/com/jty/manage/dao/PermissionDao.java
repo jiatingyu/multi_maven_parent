@@ -154,4 +154,9 @@ public interface PermissionDao {
 
 	@Select("select * from role where role_id=#{role_id}")
 	Map<String,Object> editRole(String role_id);
+
+	@Delete("delete from role_menu where role_id=#{role_id}")
+	void deleteRoleMenuRelation(String role_id);
+	int addRoleMenuRelation(@Param("role_id")String role_id, @Param("menuList")List<String> menuList);
+
 }

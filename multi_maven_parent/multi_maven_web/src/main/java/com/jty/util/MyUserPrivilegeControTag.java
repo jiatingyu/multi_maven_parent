@@ -52,8 +52,10 @@ public class MyUserPrivilegeControTag extends ConditionalTagSupport {
     		List<Privilege> privilegeList = user.getPrivilegeList();
     		if(privilegeList!=null && privilegeList.size()>0){
     			for (Privilege privilege : privilegeList) {
-    				if(privilegeName.equals(privilege.getPrivilegename())){
-    					return true;
+    				if(privilege!=null){
+	    				if(privilegeName.equals(privilege.getPrivilegename())){
+	    					return true;
+	    				}
     				}
     			}
     		}

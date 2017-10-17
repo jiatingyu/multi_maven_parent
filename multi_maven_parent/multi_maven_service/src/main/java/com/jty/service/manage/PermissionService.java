@@ -57,4 +57,7 @@ public interface PermissionService {
 int updateMenu(Menu menu);
 
 Map<String,Object> editRole(String role_id);
+
+int addRoleMenuRelation(String role_id, List<String> menuList);
+
 }

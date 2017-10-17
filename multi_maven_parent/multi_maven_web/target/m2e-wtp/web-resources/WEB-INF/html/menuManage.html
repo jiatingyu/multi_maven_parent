@@ -21,7 +21,7 @@ label{
 	<p>You can append some buttons to the standard datagrid pager bar.</p>
 	<div style="margin: 20px 0;"></div>
 	<table id="dg" title="Custom DataGrid Pager" toolbar="#tb"
-		style="width: 100%; height: 250px"
+		style="width: 100%; height: 50px"
 		data-options="rownumbers:true,singleSelect:true,pagination:true,method:'get'">
 		<thead>
 			<tr>
@@ -36,6 +36,15 @@ label{
 			</tr>
 		</thead>
 	</table>
+	
+	<table id="tt"  style="width:100%;height:350px"></table>
+	<div id="mm" class="easyui-menu" style="width:120px;">
+		<div onclick="append()" data-options="iconCls:'icon-add'">Append</div>
+		<div onclick="removetree()" data-options="iconCls:'icon-remove'">Remove</div>
+		<div class="menu-sep"></div>
+		<div onclick="collapse()">关闭</div>
+		<div onclick="expand()">展开</div>
+	</div>
 	<div id="dlg" class="easyui-dialog"
 		style="width: 400px; height: 350px; padding: 10px 20px" closed="true"
 		buttons="#dlg-buttons">
@@ -111,6 +120,10 @@ label{
 		}
 		function deletMenu(){
 			var row=$("#dg").datagrid('getSelected');
+			deleteMuendialog(row);
+		}
+	
+		function deleteMuendialog(row){
 			$("#dd").dialog({
 				title: "title",
                 width: 300,
@@ -134,6 +147,7 @@ label{
 							dataType : "json",
 							success : function(data) {
 								$('#dg').datagrid('reload');
+								$('#tt').treegrid('reload');
 							}
 						}) 
 						$("#dd").dialog("close")
@@ -147,27 +161,39 @@ label{
 				}]
 			});
 		}
-	
 		$(function() {
-			$('#dg').datagrid({
-				onSelect : function(index, row) {
-					//alert(row.menu_id);
-					
-					/*  $("#dd").append("你确定要删除"+row.username);
-					 $('#dd').dialog({    
-					    title: 'My Dialog',    
-					    width: 200,    
-					    height: 100,    
-					    //modal: true,
-					    buttons:$("#dd")
-					});  */
-					
-				}
-			});
 			var pager = $('#dg').datagrid({
 				url : '../permission/findAllMenu'
 			}).datagrid('getPager'); // get the pager of datagrid
-
+			
+			$('#tt').treegrid({
+				iconCls: 'icon-ok',
+				title:'菜单管理',
+			    url:'../permission/findUserAllMenu1',
+			    idField:'menu_id',
+			    treeField:'name',
+			    columns:[[
+			        {field:'name',title:'菜单名称',width:"15%"},
+			        {field:'resUrl',title:'资源路径',width:"30%"},
+			        {field:'sort',title:'排序',width:80,align:"center"},
+			        {field:'isValid',title:'是否可用',width:"15%",align:"center",formatter: function(value,row,index){
+							if (row.isValid=="1"){
+								return "可用";
+							} else {
+								return value;
+							}
+						}
+					},
+			        {field:'description',title:'描述',width:"20%"}
+			    ]],
+			    loadFilter:myLoadTree,
+			    lines: true,
+			    rownumbers: true,
+			    animate: true,
+				collapsible: true,
+				fitColumns: true,
+				onContextMenu: onContextMenu
+			});
 		});
 		function fixWidth(percent) {
 			return document.body.clientWidth * percent;//根据自身情况更改
@@ -180,9 +206,72 @@ label{
 				success : function(data) {
 					$('#dlg').dialog('close');
 					$('#dg').datagrid('reload');
+					$('#tt').treegrid('reload');
 				}
 			})
 		}
+		function myLoadTree(data,parentId){
+			console.log(data);
+			var arr=[];
+			for (var i = 0; i < data.length; i++) {
+				var map={};
+				map.menu_id=data[i].menu_id;
+				map.name=data[i].menu.name;
+				var arrj=[];
+				for (var j = 0; j < data[i].children.length; j++) {
+					arrj.push(data[i].children[j])
+				}
+				map.children=arrj;
+				arr.push(map)
+			}
+			return arr;
+		}
+		
+		
+		function onContextMenu(e,row){
+			e.preventDefault();
+			$(this).treegrid('select', row.menu_id);
+			$('#mm').menu('show',{
+				left: e.pageX,
+				top: e.pageY
+			});
+		}
+		function append(){
+			/* idIndex++;
+			$('#tg').treegrid('append',{
+				parent: node.id,
+				data: [{
+					id: idIndex,
+					name: 'New Task'+idIndex,
+					persons: parseInt(Math.random()*10),
+					begin: $.fn.datebox.defaults.formatter(d1),
+					end: $.fn.datebox.defaults.formatter(d2),
+					progress: parseInt(Math.random()*100)
+				}]
+			}) */
+			var node = $('#tt').treegrid('getSelected');
+			$('#fm').form('clear');
+			$('#dlg').dialog('open').dialog('setTitle',
+			'New Menu');
+			$("#fm").form("load",{'parentId':node.menu_id});
+		}
+		function removetree(){
+			var node = $('#tt').treegrid('getSelected');
+			deleteMuendialog(node)
+		}
+		function collapse(){
+			var node = $('#tt').treegrid('getSelected');
+			if (node){
+				$('#tt').treegrid('collapse', node.menu_id);
+			}
+		}
+		function expand(){
+			var node = $('#tt').treegrid('getSelected');
+			if (node){
+				$('#tt').treegrid('expand', node.menu_id);
+			}
+		}
+		
 	</script>
 </body>
 </html>
