@@ -25,7 +25,7 @@ label{
 	<div style="margin: 20px 0;"></div>
 	<userContxt:checkHasPermission privilegeName="查看用户列表">
 	<table id="dg" title="Custom DataGrid Pager" toolbar="#tb"
-		style="width: 100%; height: 250px"
+		style="width: 100%; height: 350px"
 		data-options="rownumbers:true,singleSelect:true,pagination:true,method:'get'" >
 		<thead> 
 			<tr>
@@ -97,7 +97,7 @@ label{
 				handler:function(){
 					//alert('ok'+row.menu_id);
 					 $.ajax({
-						url : "../permission/deleteUser",
+						url : "./permission/deleteUser",
 						data : {
 							"id" : row.id
 						},

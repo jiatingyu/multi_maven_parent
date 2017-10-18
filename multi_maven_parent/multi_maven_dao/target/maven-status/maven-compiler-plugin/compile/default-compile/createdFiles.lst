@@ -1,0 +1,11 @@
+com\jty\manage\dao\CommonDao.class
+com\jty\manage\entity\extra\SuperMenu.class
+com\jty\manage\dao\PermissionDao.class
+com\jty\manage\entity\Permission.class
+com\jty\manage\entity\sysLog.class
+com\jty\manage\entity\Menu.class
+com\jty\manage\entity\Resource.class
+com\jty\manage\dao\UserDao.class
+com\jty\manage\entity\Role.class
+com\jty\manage\entity\User.class
+com\jty\manage\entity\Privilege.class
