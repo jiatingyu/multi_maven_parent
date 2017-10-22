@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [YH_sys] 2017-10-22 15:19:39  INFO ContextLoader:307 : Root WebApplicationContext: initialization started
 [YH_sys] 2017-10-22 15:19:39  INFO XmlWebApplicationContext:573 : Refreshing Root WebApplicationContext: startup date [Sun Oct 22 15:19:39 CST 2017]; root of context hierarchy
 [YH_sys] 2017-10-22 15:19:39  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from URL [file:/E:/Project/multi_maven_parent/multi_maven_parent/multi_maven_web/target/classes/applicationContext.xml]
@@ -41,3 +42,136 @@
 [YH_sys] 2017-10-22 15:19:42  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/static/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
 [YH_sys] 2017-10-22 15:19:42  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/easyui/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
 [YH_sys] 2017-10-22 15:19:42  INFO DispatcherServlet:507 : FrameworkServlet 'springMvc': initialization completed in 1593 ms
+=======
+[YH_sys] 2017-10-18 10:40:07  INFO ContextLoader:307 : Root WebApplicationContext: initialization started
+[YH_sys] 2017-10-18 10:40:07  INFO XmlWebApplicationContext:573 : Refreshing Root WebApplicationContext: startup date [Wed Oct 18 10:40:07 GMT+08:00 2017]; root of context hierarchy
+[YH_sys] 2017-10-18 10:40:08  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/applicationContext.xml]
+[YH_sys] 2017-10-18 10:40:08  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/spring-datasource.xml]
+[YH_sys] 2017-10-18 10:40:08  INFO PropertySourcesPlaceholderConfigurer:172 : Loading properties file from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/db.properties]
+[YH_sys] 2017-10-18 10:40:08  INFO DruidDataSource:785 : {dataSource-1} inited
+[YH_sys] 2017-10-18 10:40:09  INFO ContextLoader:347 : Root WebApplicationContext: initialization completed in 1178 ms
+[YH_sys] 2017-10-18 10:40:09  INFO DispatcherServlet:488 : FrameworkServlet 'springMvc': initialization started
+[YH_sys] 2017-10-18 10:40:09  INFO XmlWebApplicationContext:573 : Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Wed Oct 18 10:40:09 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-10-18 10:40:09  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/spring-mvc.xml]
+[YH_sys] 2017-10-18 10:40:09  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/index]}" onto public org.springframework.web.servlet.ModelAndView com.jty.controller.MainController.index() throws java.lang.Exception
+[YH_sys] 2017-10-18 10:40:09  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/test.json]}" onto public java.lang.String com.jty.controller.MainController.testName() throws java.lang.Exception
+[YH_sys] 2017-10-18 10:40:09  INFO RequestMappingHandlerMapping:532 : Mapped "{[/test]}" onto public void com.jty.controller.manage.indexController.index()
+[YH_sys] 2017-10-18 10:40:09  INFO RequestMappingHandlerMapping:532 : Mapped "{[/userManage]}" onto public void com.jty.controller.manage.indexController.userManage()
+[YH_sys] 2017-10-18 10:40:09  INFO RequestMappingHandlerMapping:532 : Mapped "{[/roleManage]}" onto public void com.jty.controller.manage.indexController.roleManage()
+[YH_sys] 2017-10-18 10:40:09  INFO RequestMappingHandlerMapping:532 : Mapped "{[/privilegeManage]}" onto public void com.jty.controller.manage.indexController.privilegeManage()
+[YH_sys] 2017-10-18 10:40:09  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/login]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.login(java.lang.String,java.lang.String)
+[YH_sys] 2017-10-18 10:40:09  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/addRole]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.addRole(com.jty.manage.entity.Role)
+[YH_sys] 2017-10-18 10:40:09  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/generatePrivilege]}" onto public java.lang.String com.jty.controller.manage.PermissionController.generatePrivilege()
+[YH_sys] 2017-10-18 10:40:09  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/findAllPrivilege]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.findAllPrivilege(java.lang.String,java.lang.String)
+[YH_sys] 2017-10-18 10:40:09  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/addRoleMenuRelation]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.addRoleMenuRelation(java.lang.String,java.lang.String[])
+[YH_sys] 2017-10-18 10:40:09  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/findUserAllMenu]}" onto public com.jty.util.AjaxRes com.jty.controller.manage.PermissionController.findUserAllMenu(java.lang.String)
+[YH_sys] 2017-10-18 10:40:09  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/findAllMenu]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.findAllMenu(java.lang.String,java.lang.String)
+[YH_sys] 2017-10-18 10:40:09  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/findAllUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.findAllUser(java.lang.String,java.lang.String)
+[YH_sys] 2017-10-18 10:40:09  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/findAllRole]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.findAllRole()
+[YH_sys] 2017-10-18 10:40:09  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/editRole]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.editRole(java.lang.String)
+[YH_sys] 2017-10-18 10:40:09  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/addMenu]}" onto public com.jty.util.AjaxRes com.jty.controller.manage.PermissionController.addMenu(com.jty.manage.entity.Menu)
+[YH_sys] 2017-10-18 10:40:09  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/deleteUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.deleteUser(java.lang.String)
+[YH_sys] 2017-10-18 10:40:09  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/deleteMenu]}" onto public com.jty.util.AjaxRes com.jty.controller.manage.PermissionController.deleteMenu(java.lang.String)
+[YH_sys] 2017-10-18 10:40:09  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/deleteRole]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.deleteRole(java.lang.String)
+[YH_sys] 2017-10-18 10:40:09  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/editMenu]}" onto public com.jty.util.AjaxRes com.jty.controller.manage.PermissionController.editMenu(java.lang.String)
+[YH_sys] 2017-10-18 10:40:09  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/loginOut]}" onto public void com.jty.controller.manage.PermissionController.loginOut()
+[YH_sys] 2017-10-18 10:40:09  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/addUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.addUser(com.jty.manage.entity.User)
+[YH_sys] 2017-10-18 10:40:09  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/findUserAllMenu1]}" onto public java.lang.Object com.jty.controller.manage.PermissionController.findUserAllMenu1()
+[YH_sys] 2017-10-18 10:40:09  INFO RequestMappingHandlerMapping:532 : Mapped "{[/haha]}" onto public void com.jty.controller.test.client.testName(java.lang.String) throws java.lang.Exception
+[YH_sys] 2017-10-18 10:40:09  INFO RequestMappingHandlerMapping:532 : Mapped "{[/request]}" onto public java.lang.String com.jty.test.TestRequest.testName(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[YH_sys] 2017-10-18 10:40:10  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Wed Oct 18 10:40:09 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-10-18 10:40:10  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Wed Oct 18 10:40:09 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-10-18 10:40:10  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+[YH_sys] 2017-10-18 10:40:10  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/html/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+[YH_sys] 2017-10-18 10:40:10  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/static/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+[YH_sys] 2017-10-18 10:40:10  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/easyui/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
+[YH_sys] 2017-10-18 10:40:10  INFO DispatcherServlet:507 : FrameworkServlet 'springMvc': initialization completed in 1317 ms
+[YH_sys] 2017-10-18 10:48:34  INFO ContextLoader:307 : Root WebApplicationContext: initialization started
+[YH_sys] 2017-10-18 10:48:34  INFO XmlWebApplicationContext:573 : Refreshing Root WebApplicationContext: startup date [Wed Oct 18 10:48:34 GMT+08:00 2017]; root of context hierarchy
+[YH_sys] 2017-10-18 10:48:34  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/applicationContext.xml]
+[YH_sys] 2017-10-18 10:48:34  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/spring-datasource.xml]
+[YH_sys] 2017-10-18 10:48:34  INFO PropertySourcesPlaceholderConfigurer:172 : Loading properties file from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/db.properties]
+[YH_sys] 2017-10-18 10:48:35  INFO DruidDataSource:785 : {dataSource-1} inited
+[YH_sys] 2017-10-18 10:48:35  INFO ContextLoader:347 : Root WebApplicationContext: initialization completed in 1184 ms
+[YH_sys] 2017-10-18 10:48:35  INFO DispatcherServlet:488 : FrameworkServlet 'springMvc': initialization started
+[YH_sys] 2017-10-18 10:48:35  INFO XmlWebApplicationContext:573 : Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Wed Oct 18 10:48:35 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-10-18 10:48:35  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/spring-mvc.xml]
+[YH_sys] 2017-10-18 10:48:35  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/index]}" onto public org.springframework.web.servlet.ModelAndView com.jty.controller.MainController.index() throws java.lang.Exception
+[YH_sys] 2017-10-18 10:48:35  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/test.json]}" onto public java.lang.String com.jty.controller.MainController.testName() throws java.lang.Exception
+[YH_sys] 2017-10-18 10:48:35  INFO RequestMappingHandlerMapping:532 : Mapped "{[/test]}" onto public void com.jty.controller.manage.indexController.index()
+[YH_sys] 2017-10-18 10:48:35  INFO RequestMappingHandlerMapping:532 : Mapped "{[/userManage]}" onto public void com.jty.controller.manage.indexController.userManage()
+[YH_sys] 2017-10-18 10:48:35  INFO RequestMappingHandlerMapping:532 : Mapped "{[/roleManage]}" onto public void com.jty.controller.manage.indexController.roleManage()
+[YH_sys] 2017-10-18 10:48:35  INFO RequestMappingHandlerMapping:532 : Mapped "{[/menuManage]}" onto public void com.jty.controller.manage.indexController.menuManage()
+[YH_sys] 2017-10-18 10:48:35  INFO RequestMappingHandlerMapping:532 : Mapped "{[/privilegeManage]}" onto public void com.jty.controller.manage.indexController.privilegeManage()
+[YH_sys] 2017-10-18 10:48:35  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/login]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.login(java.lang.String,java.lang.String)
+[YH_sys] 2017-10-18 10:48:35  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/addRole]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.addRole(com.jty.manage.entity.Role)
+[YH_sys] 2017-10-18 10:48:35  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/generatePrivilege]}" onto public java.lang.String com.jty.controller.manage.PermissionController.generatePrivilege()
+[YH_sys] 2017-10-18 10:48:35  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/findAllPrivilege]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.findAllPrivilege(java.lang.String,java.lang.String)
+[YH_sys] 2017-10-18 10:48:35  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/addRoleMenuRelation]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.addRoleMenuRelation(java.lang.String,java.lang.String[])
+[YH_sys] 2017-10-18 10:48:35  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/findUserAllMenu]}" onto public com.jty.util.AjaxRes com.jty.controller.manage.PermissionController.findUserAllMenu(java.lang.String)
+[YH_sys] 2017-10-18 10:48:35  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/findAllUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.findAllUser(java.lang.String,java.lang.String)
+[YH_sys] 2017-10-18 10:48:35  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/deleteUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.deleteUser(java.lang.String)
+[YH_sys] 2017-10-18 10:48:35  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/findAllRole]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.findAllRole()
+[YH_sys] 2017-10-18 10:48:35  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/editRole]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.editRole(java.lang.String)
+[YH_sys] 2017-10-18 10:48:35  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/findAllMenu]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.findAllMenu(java.lang.String,java.lang.String)
+[YH_sys] 2017-10-18 10:48:35  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/addMenu]}" onto public com.jty.util.AjaxRes com.jty.controller.manage.PermissionController.addMenu(com.jty.manage.entity.Menu)
+[YH_sys] 2017-10-18 10:48:35  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/deleteMenu]}" onto public com.jty.util.AjaxRes com.jty.controller.manage.PermissionController.deleteMenu(java.lang.String)
+[YH_sys] 2017-10-18 10:48:36  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/deleteRole]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.deleteRole(java.lang.String)
+[YH_sys] 2017-10-18 10:48:36  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/editMenu]}" onto public com.jty.util.AjaxRes com.jty.controller.manage.PermissionController.editMenu(java.lang.String)
+[YH_sys] 2017-10-18 10:48:36  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/loginOut]}" onto public void com.jty.controller.manage.PermissionController.loginOut()
+[YH_sys] 2017-10-18 10:48:36  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/addUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.addUser(com.jty.manage.entity.User)
+[YH_sys] 2017-10-18 10:48:36  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/findUserAllMenu1]}" onto public java.lang.Object com.jty.controller.manage.PermissionController.findUserAllMenu1()
+[YH_sys] 2017-10-18 10:48:36  INFO RequestMappingHandlerMapping:532 : Mapped "{[/haha]}" onto public void com.jty.controller.test.client.testName(java.lang.String) throws java.lang.Exception
+[YH_sys] 2017-10-18 10:48:36  INFO RequestMappingHandlerMapping:532 : Mapped "{[/request]}" onto public java.lang.String com.jty.test.TestRequest.testName(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[YH_sys] 2017-10-18 10:48:36  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Wed Oct 18 10:48:35 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-10-18 10:48:36  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Wed Oct 18 10:48:35 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-10-18 10:48:36  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+[YH_sys] 2017-10-18 10:48:36  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/html/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+[YH_sys] 2017-10-18 10:48:36  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/static/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+[YH_sys] 2017-10-18 10:48:36  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/easyui/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
+[YH_sys] 2017-10-18 10:48:36  INFO DispatcherServlet:507 : FrameworkServlet 'springMvc': initialization completed in 1420 ms
+[YH_sys] 2017-10-18 11:13:18  INFO ContextLoader:307 : Root WebApplicationContext: initialization started
+[YH_sys] 2017-10-18 11:13:18  INFO XmlWebApplicationContext:573 : Refreshing Root WebApplicationContext: startup date [Wed Oct 18 11:13:18 GMT+08:00 2017]; root of context hierarchy
+[YH_sys] 2017-10-18 11:13:18  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/applicationContext.xml]
+[YH_sys] 2017-10-18 11:13:18  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/spring-datasource.xml]
+[YH_sys] 2017-10-18 11:13:18  INFO PropertySourcesPlaceholderConfigurer:172 : Loading properties file from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/db.properties]
+[YH_sys] 2017-10-18 11:13:19  INFO DruidDataSource:785 : {dataSource-1} inited
+[YH_sys] 2017-10-18 11:13:19  INFO ContextLoader:347 : Root WebApplicationContext: initialization completed in 1188 ms
+[YH_sys] 2017-10-18 11:13:19  INFO DispatcherServlet:488 : FrameworkServlet 'springMvc': initialization started
+[YH_sys] 2017-10-18 11:13:19  INFO XmlWebApplicationContext:573 : Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Wed Oct 18 11:13:19 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-10-18 11:13:19  INFO XmlBeanDefinitionReader:317 : Loading XML bean definitions from URL [file:/D:/yhcode/multi_maven_parent/multi_maven_web/target/classes/spring-mvc.xml]
+[YH_sys] 2017-10-18 11:13:20  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/index]}" onto public org.springframework.web.servlet.ModelAndView com.jty.controller.MainController.index() throws java.lang.Exception
+[YH_sys] 2017-10-18 11:13:20  INFO RequestMappingHandlerMapping:532 : Mapped "{[/api/test.json]}" onto public java.lang.String com.jty.controller.MainController.testName() throws java.lang.Exception
+[YH_sys] 2017-10-18 11:13:20  INFO RequestMappingHandlerMapping:532 : Mapped "{[/test]}" onto public void com.jty.controller.manage.indexController.index()
+[YH_sys] 2017-10-18 11:13:20  INFO RequestMappingHandlerMapping:532 : Mapped "{[/userManage]}" onto public void com.jty.controller.manage.indexController.userManage()
+[YH_sys] 2017-10-18 11:13:20  INFO RequestMappingHandlerMapping:532 : Mapped "{[/roleManage]}" onto public void com.jty.controller.manage.indexController.roleManage()
+[YH_sys] 2017-10-18 11:13:20  INFO RequestMappingHandlerMapping:532 : Mapped "{[/menuManage]}" onto public void com.jty.controller.manage.indexController.menuManage()
+[YH_sys] 2017-10-18 11:13:20  INFO RequestMappingHandlerMapping:532 : Mapped "{[/privilegeManage]}" onto public void com.jty.controller.manage.indexController.privilegeManage()
+[YH_sys] 2017-10-18 11:13:20  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/login]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.login(java.lang.String,java.lang.String)
+[YH_sys] 2017-10-18 11:13:20  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/addRole]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.addRole(com.jty.manage.entity.Role)
+[YH_sys] 2017-10-18 11:13:20  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/generatePrivilege]}" onto public java.lang.String com.jty.controller.manage.PermissionController.generatePrivilege()
+[YH_sys] 2017-10-18 11:13:20  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/findAllPrivilege]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.findAllPrivilege(java.lang.String,java.lang.String)
+[YH_sys] 2017-10-18 11:13:20  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/addRoleMenuRelation]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.addRoleMenuRelation(java.lang.String,java.lang.String[])
+[YH_sys] 2017-10-18 11:13:20  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/findUserAllMenu]}" onto public com.jty.util.AjaxRes com.jty.controller.manage.PermissionController.findUserAllMenu(java.lang.String)
+[YH_sys] 2017-10-18 11:13:20  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/deleteUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.deleteUser(java.lang.String)
+[YH_sys] 2017-10-18 11:13:20  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/findAllRole]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.findAllRole()
+[YH_sys] 2017-10-18 11:13:20  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/findAllUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.findAllUser(java.lang.String,java.lang.String)
+[YH_sys] 2017-10-18 11:13:20  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/deleteMenu]}" onto public com.jty.util.AjaxRes com.jty.controller.manage.PermissionController.deleteMenu(java.lang.String)
+[YH_sys] 2017-10-18 11:13:20  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/findAllMenu]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.findAllMenu(java.lang.String,java.lang.String)
+[YH_sys] 2017-10-18 11:13:20  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/addMenu]}" onto public com.jty.util.AjaxRes com.jty.controller.manage.PermissionController.addMenu(com.jty.manage.entity.Menu)
+[YH_sys] 2017-10-18 11:13:20  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/editRole]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.editRole(java.lang.String)
+[YH_sys] 2017-10-18 11:13:20  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/deleteRole]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.deleteRole(java.lang.String)
+[YH_sys] 2017-10-18 11:13:20  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/editMenu]}" onto public com.jty.util.AjaxRes com.jty.controller.manage.PermissionController.editMenu(java.lang.String)
+[YH_sys] 2017-10-18 11:13:20  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/loginOut]}" onto public void com.jty.controller.manage.PermissionController.loginOut()
+[YH_sys] 2017-10-18 11:13:20  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/addUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.addUser(com.jty.manage.entity.User)
+[YH_sys] 2017-10-18 11:13:20  INFO RequestMappingHandlerMapping:532 : Mapped "{[/permission/findUserAllMenu1]}" onto public java.lang.Object com.jty.controller.manage.PermissionController.findUserAllMenu1()
+[YH_sys] 2017-10-18 11:13:20  INFO RequestMappingHandlerMapping:532 : Mapped "{[/haha]}" onto public void com.jty.controller.test.client.testName(java.lang.String) throws java.lang.Exception
+[YH_sys] 2017-10-18 11:13:20  INFO RequestMappingHandlerMapping:532 : Mapped "{[/request]}" onto public java.lang.String com.jty.test.TestRequest.testName(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[YH_sys] 2017-10-18 11:13:20  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Wed Oct 18 11:13:19 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-10-18 11:13:20  INFO RequestMappingHandlerAdapter:532 : Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Wed Oct 18 11:13:19 GMT+08:00 2017]; parent: Root WebApplicationContext
+[YH_sys] 2017-10-18 11:13:20  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+[YH_sys] 2017-10-18 11:13:20  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/html/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+[YH_sys] 2017-10-18 11:13:20  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/static/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+[YH_sys] 2017-10-18 11:13:20  INFO SimpleUrlHandlerMapping:341 : Mapped URL path [/easyui/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
+[YH_sys] 2017-10-18 11:13:21  INFO DispatcherServlet:507 : FrameworkServlet 'springMvc': initialization completed in 1266 ms
+>>>>>>> 274ec1556b9a8a626fda543db5a571eba6c8ff71

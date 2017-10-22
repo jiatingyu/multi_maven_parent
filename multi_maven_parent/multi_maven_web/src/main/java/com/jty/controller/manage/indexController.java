@@ -21,5 +21,9 @@ public class indexController {
 	@RequestMapping("/roleManage")
 	public void roleManage() {
 	}
+	//菜单管理页面
+	@RequestMapping("/menuManage")
+	public void menuManage() {
+	}
 	
 } 

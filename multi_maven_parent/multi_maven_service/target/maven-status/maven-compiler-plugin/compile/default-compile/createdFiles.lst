@@ -1,0 +1,5 @@
+com\jty\service\CommonService.class
+com\jty\ServiceTest.class
+com\jty\service\manage\PermissionService.class
+com\jty\service\UserService.class
+com\jty\service\manage\PermissionServiceImpl.class
