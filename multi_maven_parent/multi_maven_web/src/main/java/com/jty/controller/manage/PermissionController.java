@@ -1,27 +1,15 @@
 package com.jty.controller.manage;
 
 
-import static org.junit.Assert.*;
-
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
-import org.eclipse.jetty.client.HttpResponse;
-import org.junit.Test;
-import org.junit.runners.Parameterized.Parameters;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -31,16 +19,11 @@ import com.jty.manage.entity.Menu;
 import com.jty.manage.entity.Privilege;
 import com.jty.manage.entity.Role;
 import com.jty.manage.entity.User;
-import com.jty.manage.entity.sysLog;
 import com.jty.manage.entity.extra.SuperMenu;
 import com.jty.service.manage.PermissionService;
-import com.jty.test.activemq.recevier;
-import com.jty.test.activemq.subscribe;
 import com.jty.util.AjaxRes;
 import com.jty.util.ClassScaner;
 import com.jty.util.RequestUtils;
-
-import net.sf.json.JSONObject;
 
 @Controller
 @RequestMapping("/permission")

@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.jty.manage.dao.PermissionDao" >
+	<select id="findAllUser" resultType="com.jty.manage.entity.User" >
+		select * from user 
+	</select>
+	<insert id="insertUser" parameterType="com.jty.manage.entity.User" useGeneratedKeys="true"  keyProperty="id">
+		insert into user (username,password) values (#{username},#{password})
+	</insert>
+	<delete id="deleteUser" parameterType="String">
+		delete from user where id=#{id}
+	</delete>
+	
+	<insert id="generatePrivilege" parameterType="map" >
+		insert into privilege 	(privilegename,privilegeurl) values 
+		<foreach collection="priviMap" index="key" separator="," item="value">
+			(#{value},#{key})
+		</foreach>
+	</insert>
+	
+	<select id="findAllPrivilege" resultType="Privilege">
+		select * from privilege
+	</select>
+	<insert id="addRole" parameterType="Role"  useGeneratedKeys="true"  keyProperty="role_id">
+		insert into role (rolename,description) values (#{rolename},#{description})
+	</insert>
+
+	<insert id="addRoleAndPrivilegeRelation" parameterType="Privilege"  >
+		insert into role_privilege (roleid,privilegeid) values
+		<foreach collection="permissions" item="item"  separator=",">
+		 (#{role_id},#{item.privilege_id})
+		</foreach>
+	</insert>
+	
+	<insert id="addRoleMenuRelation" parameterType="String">
+		insert into role_menu (role_id,menu_id) values
+		<foreach collection="menuList" separator="," item="item">
+			(#{role_id},#{item})
+		</foreach>
+	</insert>
+	
+	
+</mapper>

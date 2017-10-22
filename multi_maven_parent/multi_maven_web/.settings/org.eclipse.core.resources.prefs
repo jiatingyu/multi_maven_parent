@@ -3,8 +3,9 @@
 >>>>>>>=4ec6b43dbb3a13846a5c44213fbced748f091f81
 eclipse.preferences.version=1
 encoding//src/main/java=UTF-8
-encoding//src/main/resource/log4j.properties=UTF-8
+encoding//src/main/resources/log4j.properties=UTF-8
 encoding//src/test/java=UTF-8
 encoding//webapp/WEB-INF/html/privilegeManage.jsp=UTF-8
 encoding//webapp/WEB-INF/html/userManage.jsp=UTF-8
 encoding//webapp/index.html=UTF-8
+encoding/<project>=UTF-8

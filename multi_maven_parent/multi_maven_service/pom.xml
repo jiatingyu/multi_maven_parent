@@ -13,7 +13,6 @@
   		<artifactId>multi_maven_dao</artifactId>
   		<version>${project.version}</version>
   	</dependency>
-  
   </dependencies>
   
 </project>

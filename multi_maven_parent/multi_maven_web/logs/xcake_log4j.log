@@ -24750,4 +24750,90 @@ Mapped URL path [/static/**] onto handler 'org.springframework.web.servlet.resou
 Mapped URL path [/easyui/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
  [INFO ][2017/10/17 18:22:13856][org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:507)]
 FrameworkServlet 'springMvc': initialization completed in 1321 ms
+ [INFO ][2017/10/22 15:19:39238][org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:307)]
+Root WebApplicationContext: initialization started
+ [INFO ][2017/10/22 15:19:39377][org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:573)]
+Refreshing Root WebApplicationContext: startup date [Sun Oct 22 15:19:39 CST 2017]; root of context hierarchy
+ [INFO ][2017/10/22 15:19:39415][org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)]
+Loading XML bean definitions from URL [file:/E:/Project/multi_maven_parent/multi_maven_parent/multi_maven_web/target/classes/applicationContext.xml]
+ [INFO ][2017/10/22 15:19:39640][org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)]
+Loading XML bean definitions from URL [file:/E:/Project/multi_maven_parent/multi_maven_parent/multi_maven_web/target/classes/spring-datasource.xml]
+ [INFO ][2017/10/22 15:19:39827][org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)]
+Loading properties file from URL [file:/E:/Project/multi_maven_parent/multi_maven_parent/multi_maven_web/target/classes/db.properties]
+ [INFO ][2017/10/22 15:19:40349][com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:785)]
+{dataSource-1} inited
+ [INFO ][2017/10/22 15:19:40551][org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:347)]
+Root WebApplicationContext: initialization completed in 1271 ms
+ [INFO ][2017/10/22 15:19:40625][org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:488)]
+FrameworkServlet 'springMvc': initialization started
+ [INFO ][2017/10/22 15:19:40628][org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:573)]
+Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Sun Oct 22 15:19:40 CST 2017]; parent: Root WebApplicationContext
+ [INFO ][2017/10/22 15:19:40630][org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)]
+Loading XML bean definitions from URL [file:/E:/Project/multi_maven_parent/multi_maven_parent/multi_maven_web/target/classes/spring-mvc.xml]
+ [INFO ][2017/10/22 15:19:41305][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/api/index]}" onto public org.springframework.web.servlet.ModelAndView com.jty.controller.MainController.index() throws java.lang.Exception
+ [INFO ][2017/10/22 15:19:41307][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/api/test.json]}" onto public java.lang.String com.jty.controller.MainController.testName() throws java.lang.Exception
+ [INFO ][2017/10/22 15:19:41309][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/test]}" onto public void com.jty.controller.manage.indexController.index()
+ [INFO ][2017/10/22 15:19:41310][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/userManage]}" onto public void com.jty.controller.manage.indexController.userManage()
+ [INFO ][2017/10/22 15:19:41310][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/roleManage]}" onto public void com.jty.controller.manage.indexController.roleManage()
+ [INFO ][2017/10/22 15:19:41311][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/privilegeManage]}" onto public void com.jty.controller.manage.indexController.privilegeManage()
+ [INFO ][2017/10/22 15:19:41331][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/login]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.login(java.lang.String,java.lang.String)
+ [INFO ][2017/10/22 15:19:41332][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/addRole]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.addRole(com.jty.manage.entity.Role)
+ [INFO ][2017/10/22 15:19:41333][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/findAllRole]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.findAllRole()
+ [INFO ][2017/10/22 15:19:41333][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/editRole]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.editRole(java.lang.String)
+ [INFO ][2017/10/22 15:19:41334][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/findAllMenu]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.findAllMenu(java.lang.String,java.lang.String)
+ [INFO ][2017/10/22 15:19:41335][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/deleteRole]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.deleteRole(java.lang.String)
+ [INFO ][2017/10/22 15:19:41335][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/deleteMenu]}" onto public com.jty.util.AjaxRes com.jty.controller.manage.PermissionController.deleteMenu(java.lang.String)
+ [INFO ][2017/10/22 15:19:41336][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/addMenu]}" onto public com.jty.util.AjaxRes com.jty.controller.manage.PermissionController.addMenu(com.jty.manage.entity.Menu)
+ [INFO ][2017/10/22 15:19:41337][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/editMenu]}" onto public com.jty.util.AjaxRes com.jty.controller.manage.PermissionController.editMenu(java.lang.String)
+ [INFO ][2017/10/22 15:19:41337][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/deleteUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.deleteUser(java.lang.String)
+ [INFO ][2017/10/22 15:19:41338][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/findAllUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.findAllUser(java.lang.String,java.lang.String)
+ [INFO ][2017/10/22 15:19:41339][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/addUser]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.addUser(com.jty.manage.entity.User)
+ [INFO ][2017/10/22 15:19:41339][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/addRoleMenuRelation]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.addRoleMenuRelation(java.lang.String,java.lang.String[])
+ [INFO ][2017/10/22 15:19:41340][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/findUserAllMenu]}" onto public com.jty.util.AjaxRes com.jty.controller.manage.PermissionController.findUserAllMenu(java.lang.String)
+ [INFO ][2017/10/22 15:19:41340][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/generatePrivilege]}" onto public java.lang.String com.jty.controller.manage.PermissionController.generatePrivilege()
+ [INFO ][2017/10/22 15:19:41341][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/findAllPrivilege]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.jty.controller.manage.PermissionController.findAllPrivilege(java.lang.String,java.lang.String)
+ [INFO ][2017/10/22 15:19:41342][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/loginOut]}" onto public void com.jty.controller.manage.PermissionController.loginOut()
+ [INFO ][2017/10/22 15:19:41342][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/permission/findUserAllMenu1]}" onto public java.lang.Object com.jty.controller.manage.PermissionController.findUserAllMenu1()
+ [INFO ][2017/10/22 15:19:41346][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/haha]}" onto public void com.jty.controller.test.client.testName(java.lang.String) throws java.lang.Exception
+ [INFO ][2017/10/22 15:19:41349][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:532)]
+Mapped "{[/request]}" onto public java.lang.String com.jty.test.TestRequest.testName(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+ [INFO ][2017/10/22 15:19:41765][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:532)]
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Sun Oct 22 15:19:40 CST 2017]; parent: Root WebApplicationContext
+ [INFO ][2017/10/22 15:19:41837][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:532)]
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Sun Oct 22 15:19:40 CST 2017]; parent: Root WebApplicationContext
+ [INFO ][2017/10/22 15:19:41926][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:341)]
+Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+ [INFO ][2017/10/22 15:19:42107][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:341)]
+Mapped URL path [/html/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+ [INFO ][2017/10/22 15:19:42112][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:341)]
+Mapped URL path [/static/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+ [INFO ][2017/10/22 15:19:42116][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:341)]
+Mapped URL path [/easyui/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
+ [INFO ][2017/10/22 15:19:42218][org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:507)]
+FrameworkServlet 'springMvc': initialization completed in 1593 ms
  
